@@ -1,5 +1,13 @@
+@extends('layouts.layout')
 
+@section('css')
 <link rel="stylesheet" href="/css/welcome.css">
+@endsection
+
+@section('content')
+<p>This is to test</p>
 
 
-<h1>Testing!</h1>
+<a class="active" href="/contact" style = "color: red;">Contact</a><br>
+
+@endsection
