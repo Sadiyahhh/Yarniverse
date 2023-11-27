@@ -1,3 +1,157 @@
-h1 {
-    color: blueviolet;
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600italic,700,500,600,400italic");
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #D0B7B4;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+#account-icon, #shopping-icon, #heart-icon {
+  color: #7A524E;
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1.1fr;
+  grid-template-rows: .6fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.navigation a {
+  color: #7A524E;
+  text-decoration: none;
+}
+
+.navigation .nav-logo {
+  grid-area: 1 / 1 / 2 / 2;
+    width: 10%;
+  height: 10%;
+  left: 43%;
+}
+
+.nav-logo img {
+  width: 24vw;
+  height: 32vh;
+}
+
+.navigation .nav-search{
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.navigation .nav-items {
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+.footer {
+  background-color: #DADDDC;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer img {
+  height: 160px;
+  width: auto;
+  margin: 40px 40px;
+  margin-left: 50px;
+}
+
+.footer-content {
+  display: flex;
+  width: 100%;
+  height: 30vh;
+}
+
+.footer-content #foot-content-box {
+  width: 100%;
+  display: flex;
+}
+
+@media screen and (max-width:800px) {
+  .footer-content #foot-content-box {
+    display: block;
+  }
+
+  .footer-links {
+    padding-top: 8%;
+  }
+
+  .footer-links #footer-logout,
+  .footer-links #footer-login {
+    margin-top: 5%;
+    margin-right: 60%;
+  }
+
+}
+
+.footer .footer-content .footer-links a {
+  color: #B39836;
+  text-decoration: none;
+  font-size: medium;
+  font-weight: bold;
+  padding: 8px;
+  margin-right: 90px;
+  margin-top: 40px;
+  height: 35px;
+}
+
+.footer .footer-content .footer-links .login-foot {
+  padding: 8px;
+  right: 0%;
+  background: #B39836;
+  border-radius: 6px;
+  font-weight: bold;
+  border-color: transparent;
+  color: #FFFFFF;
+  padding: 2px 15px;
+  margin-right: 0px;
+  margin-top: 40px;
+  height: 40px;
+
+}
+
+.footer .footer-content .footer-links :hover {
+  color: #5e4b05;
+  font-size: medium;
+  transition: 0.2s;
+} 
+
+hr {
+  color:#6B756B;
+  width: 80%;
+  margin: auto;
+}
+
+.footer-bottom {
+  padding: 0 50px;
+}
+
+#footer-logout {
+  margin-top: 44%;
+}
+
+.social {
+  display:flex;
+  color: black;
+  margin-left: -20px;
+}
+
+.social div a i {
+  padding-left: 40px;
+  color: black;
 }
