@@ -41,14 +41,13 @@
                     <form action="/welcome" class="search-bar">
                         <input type="Search" name="search" id="search" placeholder="Search our patterns">
                     </form>
-                </div>
-                
+                </div>    
             <!-- </div> -->
         </div>
         <div class="nav-items"> 
-            <span class="material-symbols-outlined" id="account-icon" href="/myaccount">person</span>
-            <span class="material-symbols-outlined" id="heart-icon" href="/wishlist">favorite</span>                
-            <span class="material-symbols-outlined" id="shopping-icon" href="/basket">shopping_bag</span>
+            <i class="material-symbols-outlined" id="account-icon" href="/myaccount">person</i>
+            <i class="material-symbols-outlined" id="heart-icon" href="/wishlist">favorite</i>                
+            <i class="material-symbols-outlined" id="shopping-icon" href="/basket">shopping_bag</i>
         </div>
     </div>
 

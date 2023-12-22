@@ -101,7 +101,20 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .navigation .nav-items {
-  width: 5.5%;
+  width: 10%;
+  display: flex;
+  margin-left: 70%;
+  margin-top: -5%;
+  justify-content: space-between;
+}
+
+.nav-items i {
+  font-size: 80px;
+  padding: 3% 12%;
+}
+
+#account-icon {
+  size: 200px;;
 }
 
 .footer {
