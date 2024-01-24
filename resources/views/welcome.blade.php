@@ -8,6 +8,6 @@
 <p>This is to test</p>
 
 
-<a class="active" href="/contact" style = "color: red;">Contact</a><br>
+<a class="active" href="/contact">Contact</a><br>
 
 @endsection

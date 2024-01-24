@@ -30,7 +30,7 @@
 
     <div class="navigation">
         <div class="nav-logo" id="nav-logo">
-            <img src="/site-images/y-nobg.png" alt="" href="/"></img>
+            <img src="/site-images/y-nobg.png" alt="" href="/welcome"></img>
         </div>
         <div class="nav-search"> 
             <!-- <div class="overlap-group"> -->
@@ -55,12 +55,12 @@
     <div class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <a href="/" class="logo"><img src="/site-images/lightvert-nobg.png" alt="" /></a>
+                <a href="/welcome" class="logo"><img src="/site-images/lightvert-nobg.png" alt="" /></a>
             </div>
 
             <div class="footer-links" id="foot-content-box">
                     <a href="/faq">FAQs</a><br>
-                    <a href="/contact">Contact Us</a><br>
+                    <a href="/contactus">Contact Us</a><br>
                     <a href="/tc">T&Cs</a><br>
                     <a href="/privacy">Privacy Policy</a><br>
             </div>
