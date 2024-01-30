@@ -51,6 +51,7 @@
         </div>
     </div>
 
+@yield('content')
 
     <div class="footer">
         <div class="footer-content">
