@@ -9,6 +9,10 @@ body {
   margin: 0;
 }
 
+.container {
+  padding: 1% 2% 1% 2%;
+}
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -21,7 +25,7 @@ body {
   color: #7A524E;
 }
 
-.navigation {
+.header {
   /* display: grid;
   grid-template-columns: 1fr 1.2fr 1.1fr;
   grid-template-rows: .6fr;
@@ -32,67 +36,50 @@ body {
   width: 100%;
 }
 
-.navigation a {
+.header a {
   color: #7A524E;
   text-decoration: none;
 }
 
-.navigation .nav-logo {
+.header .header-logo {
   /* grid-area: 1 / 1 / 2 / 2; */
   width: 10%;
   height: 10%;
   left: 43%;
 }
 
-.nav-logo img {
+.header-logo img {
   width: 22vw;
   height: 18vh;
   margin-left: 5%;
 }
 
-
-.navigation .nav-search {
-  /* display: flex; */
-  flex-direction: row;
-  left: 20%;
-  position: absolute;
-  top: 0;
-  height: 0; 
-  /* may cause issues later */
+.search-container {
+  width: 30%;
+  background: #E8E3E3;
+  border-style: solid;
+  border-radius: 40px;
+  border-color: #7A524E;
+  padding: 0.6%;
+  margin-left: 33%;
+  margin-top: -6.5%;
 }
 
-.navigation .nav-search input {
-  background: transparent;
-  flex: 1;
-  border: 0;
-  outline: none;
-  padding: 15px 20px;
-  margin-left: 9%;
-  font-size: 15px;
+.search-container form {
+  padding: 2%;
 }
 
 #search-icon {
   background: transparent;
   border: transparent;
   color: #7A524E;
-  /* margin-left: 55%; */
-  /* margin-top: -20%; */
-  font-size: 305%;
+  font-size: 70%;
 }
 
-#search {
-  width: 100%;
-}
-
-.search-1 {
-  background: #E8E3E3;
-  border-style: solid;
-  border-radius: 40px;
-  border-color: #7A524E;
-  margin-left: 50%;
-  margin-top: 10%;
-  width: 250%;
-  padding: 2%;
+#search-input {
+  background: transparent;
+  border: transparent;
+  color: black;
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -100,21 +87,59 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none; }
 
-.navigation .nav-items {
+.header .header-items {
   width: 10%;
   display: flex;
-  margin-left: 70%;
+  margin-left: 79%;
   margin-top: -5%;
   justify-content: space-between;
 }
 
-.nav-items i {
-  font-size: 80px;
+.header-items i {
+  font-size: 60px;
   padding: 3% 12%;
 }
 
 #account-icon {
   size: 200px;;
+}
+
+/* .navigation {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 0.4fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+} */
+
+.navigation {
+  overflow: hidden;
+  font-weight: bold;
+  margin-left: 16%;
+  padding-top: 3%;
+}
+
+.navigation a {
+  float: left;
+  display: block;
+  color: #573B38;
+  text-align: center;
+  padding: 20px 54px;
+  text-decoration: none;
+  font-size: 130%;
+}
+
+.navigation a:hover {
+  background-color: transparent;
+  color: #7A524E;
+}
+
+.navigation a.active {
+  color: #7A524E;
+}
+
+#amigurumi, #clothing, #accessories, #pets {
+  border-right: 3px solid #573B38;
 }
 
 .footer {
@@ -175,21 +200,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   height: 35px;
 }
 
-/* .footer .footer-content .footer-links .login-foot {
-  padding: 8px;
-  right: 0%;
-  background: #D0B7B4;
-  border-radius: 6px;
-  font-weight: bold;
-  border-color: transparent;
-  color: #FFFFFF;
-  padding: 2px 15px;
-  margin-right: 0px;
-  margin-top: 40px;
-  height: 40px;
-
-} */
-
 .footer .footer-content .footer-links :hover {
   color: #A06F6A;
   font-size: medium;
@@ -210,32 +220,6 @@ hr {
   text-align: center;
   vertical-align: middle;
 }
-
-/* .footer .footer-content .newsletter input[type=text]{
-  width:250;
-  padding: 10px 0;
-  margin: 5px 0;
-  border-left: 0;
-  border-top: 0;
-  border-right: 0;
-  border-bottom: 1px solid #999;
-  outline: none;
-  background: transparent;
-  color: white;
-}
-
-.footer .footer-content .newsletter  input[type=submit]{
-  padding: 10px 30px;
-  cursor: pointer;
-  margin:auto;
-  display:block;
-  background: #D49E4A;
-  border: 0;
-  outline: none;
-  border-radius: 10px;
-  color: white;
-  justify-content: center;
-} */
 
 .news-text {
   border-style: solid;
@@ -297,4 +281,22 @@ hr {
 .social div a i {
   padding-left: 40px;
   color: #D0B7B4;
+}
+
+/* Welcome Page */
+
+.carousel-contain {
+  background-color: transparent;
+}
+
+.carousel-control.left, .carousel-control.right {
+  background-image:none !important;
+  filter:none !important;
+}
+
+.carousel,
+.carousel-inner .item,
+.carousel-inner img {
+  height: 520px;
+  width: 100%;
 }

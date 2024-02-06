@@ -7,8 +7,8 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
         <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
 
@@ -28,30 +28,38 @@
         <a href="/contact">Contact</a>
     </div> -->
 
-    <div class="navigation">
-        <div class="nav-logo" id="nav-logo">
+    <div class="header">
+        <div class="header-logo" id="header-logo">
             <img src="/site-images/y-nobg.png" alt="" href="/welcome"></img>
         </div>
-        <div class="nav-search"> 
-            <!-- <div class="overlap-group"> -->
-                <div class="search-1">
-                    <div class="search-icon">
-                        <button type="submit" id="search-icon"><iconify-icon icon="heroicons:magnifying-glass"></iconify-icon></button>
-                    </div>
-                    <form action="/welcome" class="search-bar">
-                        <input type="Search" name="search" id="search" placeholder="Search our patterns">
-                    </form>
-                </div>    
-            <!-- </div> -->
+      
+        <div class="search-container">
+            <form action="/action_page.php">
+                <button type="submit" id="search-icon"><iconify-icon icon="heroicons:magnifying-glass"></iconify-icon></button>
+                <input type="text" id="search-input" placeholder="Search our patterns" name="search">
+            </form>
         </div>
-        <div class="nav-items"> 
+
+        <div class="header-items"> 
             <i class="material-symbols-outlined" id="account-icon" href="/myaccount">person</i>
             <i class="material-symbols-outlined" id="heart-icon" href="/wishlist">favorite</i>                
             <i class="material-symbols-outlined" id="shopping-icon" href="/basket">shopping_bag</i>
         </div>
     </div>
 
+    <div class="navigation" id="navigation">
+        <a href="#amigurumi" id="amigurumi">Amigurumi</a>
+        <a href="#clothing" id="clothing">Clothing</a>
+        <a href="#accessories" id="accessories">Accessories</a>
+        <a href="#pets" id="pets">Pets</a>
+        <a href="#homedecor" id="homedecor">Home Decor</a>
+    </div>
+
+
+<div class="container">
 @yield('content')
+
+</div>
 
     <div class="footer">
         <div class="footer-content">
