@@ -21,8 +21,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/contactus', )
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/register', function () {
+    return view('register');
+});
+
+Route::get('/faqs', function () {
+    return view('faqs');
+});
 
 Route::get('/contactus', function () {
     return view('contactus');
 });
+

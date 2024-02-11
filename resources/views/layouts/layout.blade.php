@@ -16,18 +16,6 @@
         <link rel="icon" type="image/x-icon" href="/site-images/icon-nobg.png">
     </head>
 
-    <!-- <div class="navigation">
-        <div class="nav-logo">
-            <a class="li" href="/myaccount"><img src="/site-images/y-nobg.png" alt="" ></a></img>
-        </div>
-        <span class="material-symbols-outlined" id="account-icon" href="/myaccount">person</span>
-        <span class="material-symbols-outlined" id="heart-icon" href="/wishlist">favorite</span>                
-        <span class="material-symbols-outlined" id="shopping-icon" href="/basket">shopping_bag</span>
-        <a class="active" href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-    </div> -->
-
     <div class="header">
         <div class="header-logo" id="header-logo">
             <img src="/site-images/y-nobg.png" alt="" href="/welcome"></img>
@@ -41,9 +29,14 @@
         </div>
 
         <div class="header-items"> 
-            <i class="material-symbols-outlined" id="account-icon" href="/myaccount">person</i>
-            <i class="material-symbols-outlined" id="heart-icon" href="/wishlist">favorite</i>                
-            <i class="material-symbols-outlined" id="shopping-icon" href="/basket">shopping_bag</i>
+            <!-- Whilst user is not logged in -->
+            <a href="/login" i class="material-symbols-outlined" id="account-icon">person</i></a>
+            <a href="/login" i class="material-symbols-outlined" id="heart-icon">favorite</i></a>                
+            <a href="/login" i class="material-symbols-outlined" id="shopping-icon">shopping_bag</i>
+            <!-- Once user is logged in -->
+            <!-- <a href="/myaccount" i class="material-symbols-outlined" id="account-icon">person</i></a>
+            <a href="/wishlist" i class="material-symbols-outlined" id="heart-icon">favorite</i></a>                
+            <a href="/basket" i class="material-symbols-outlined" id="shopping-icon">shopping_bag</i> -->
         </div>
     </div>
 
@@ -54,7 +47,6 @@
         <a href="#pets" id="pets">Pets</a>
         <a href="#homedecor" id="homedecor">Home Decor</a>
     </div>
-
 
 <div class="container">
 @yield('content')
@@ -68,7 +60,7 @@
             </div>
 
             <div class="footer-links" id="foot-content-box">
-                    <a href="/faq">FAQs</a><br>
+                    <a href="/faqs">FAQs</a><br>
                     <a href="/contactus">Contact Us</a><br>
                     <a href="/tc">T&Cs</a><br>
                     <a href="/privacy">Privacy Policy</a><br>

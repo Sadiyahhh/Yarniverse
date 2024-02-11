@@ -28,7 +28,7 @@
             <label for="subject">Your Enquiry</label>
             <textarea id="contact_subject" name="subject" placeholder="Write something.."></textarea>
 
-            <input type="submit" value="Submit">
+            <input type="submit" id="contact_submit" value="Submit">
         </form>
     </div>
 </div>
