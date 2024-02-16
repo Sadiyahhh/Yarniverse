@@ -2,6 +2,8 @@
 
 @section('content')
 
+<link rel="stylesheet" href="/css/contact.css">
+
 <div class="contact-contain">
     <div class="contact-text">
     <h1>Contact our help team</h1>

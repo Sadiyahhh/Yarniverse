@@ -62,8 +62,8 @@
             <div class="footer-links" id="foot-content-box">
                     <a href="/faqs">FAQs</a><br>
                     <a href="/contactus">Contact Us</a><br>
+                    <a href="/about">About Us</a><br>
                     <a href="/tc">T&Cs</a><br>
-                    <a href="/privacy">Privacy Policy</a><br>
             </div>
         </div>
         <div class="newsletter" id="foot-content-box" style="width:20%; margin-left: 75%; margin-top:-10%;">

@@ -2,6 +2,8 @@
 
 @section('content')
 
+<link rel="stylesheet" href="/css/faqs.css">
+
 <div class="faqs-contain">
     <h1>FAQs</h1>
 
@@ -27,6 +29,7 @@
     <div class="panel">
     <p>Yes, confirmation is sent to the email address provided at checkout/registered in your account.</p>
     </div>
+    <br>
 
     <p id="acc2">Project Tracking</p>
     <button class="accordion" id="dd-start">How do I upload a new crochet pattern to my account?</button>
@@ -46,6 +49,7 @@
     <p>We support various file formats for pattern uploads, including PDF, JPG, and PNG. Refer to our pattern
         guidelines for the complete list.</p>
     </div>
+    <br>
 
     <p id="acc3">Interaction Features</p>
     <button class="accordion" id="dd-start">Can other users see my reviews and ratings?</button>
@@ -64,6 +68,7 @@
     <p>Simply navigate to a product via the navigation tab with our pattern categories, or use the search bar to find 
         a product.</p>
     </div>
+    <br>
 
     <p id="acc4">Payment</p>
     <button class="accordion" id="dd-start">How long does it take for payment to process?</button>

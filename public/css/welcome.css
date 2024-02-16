@@ -1,8 +1,24 @@
-p {
-    color: green;
-}
+.carousel-contain {
+    background-color: transparent;
+    width: 100%;
+  }
+  
+  .carousel-control.left, .carousel-control.right {
+    background-image:none !important;
+    filter:none !important;
+  }
+  
+  .carousel,
+  .carousel-inner .item,
+  .carousel-inner img {
+    height: 520px;
+    width: 100%;
+  }
 
-a {
-    color: red;
-    text-decoration: none;
-}
+  #left-arrow {
+    margin-left: 5%;
+  }
+
+  #right-arrow {
+    margin-left: 45%;
+  }

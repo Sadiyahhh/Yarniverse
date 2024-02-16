@@ -33,7 +33,14 @@ Route::get('/faqs', function () {
     return view('faqs');
 });
 
+Route::get('/about', function () {
+    return view('about');
+});
+
 Route::get('/contactus', function () {
     return view('contactus');
 });
 
+Route::get('/myaccount', function () {
+    return view('contactus');
+});
