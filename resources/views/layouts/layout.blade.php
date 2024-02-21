@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
 
@@ -18,7 +20,7 @@
 
     <div class="header">
         <div class="header-logo" id="header-logo">
-            <img src="/site-images/y-nobg.png" alt="" href="/welcome"></img>
+            <img src="/site-images/y-nobg.png" alt="">
         </div>
       
         <div class="search-container">
@@ -28,17 +30,23 @@
             </form>
         </div>
 
-        <div class="header-items"> 
-            <!-- Whilst user is not logged in -->
-            <a href="/login" i class="material-symbols-outlined" id="account-icon">person</i></a>
-            <a href="/login" i class="material-symbols-outlined" id="heart-icon">favorite</i></a>                
-            <a href="/login" i class="material-symbols-outlined" id="shopping-icon">shopping_bag</i>
-            <!-- Once user is logged in -->
-            <!-- <a href="/myaccount" i class="material-symbols-outlined" id="account-icon">person</i></a>
-            <a href="/wishlist" i class="material-symbols-outlined" id="heart-icon">favorite</i></a>                
-            <a href="/basket" i class="material-symbols-outlined" id="shopping-icon">shopping_bag</i> -->
+        <div class="icon-items">
+            <div class="header-items"> 
+                <!-- Whilst user is not logged in -->
+                <a href="/login" i class="material-symbols-outlined" id="header-icons">person</i></a>
+                <a href="/login" i class="material-symbols-outlined" id="header-icons">favorite</i></a>                
+                <a href="/login" i class="material-symbols-outlined" id="header-icons">shopping_bag</i></a>
+            </div>
+            <div class="icon-text">
+                <a href="/login" id="text-a">My Account</a>
+                <a href="/login" id="text-w">Wishlist</a>
+                <a href="/login" id="text-b">Basket</a>
+            </div>
+                <!-- Once user is logged in -->
+                <!-- <a href="/myaccount" i class="material-symbols-outlined" id="account-icon">person</i></a>
+                <a href="/wishlist" i class="material-symbols-outlined" id="heart-icon">favorite</i></a>                
+                <a href="/basket" i class="material-symbols-outlined" id="shopping-icon">shopping_bag</i> -->
         </div>
-    </div>
 
     <div class="navigation" id="navigation">
         <a href="#amigurumi" id="amigurumi">Amigurumi</a>
