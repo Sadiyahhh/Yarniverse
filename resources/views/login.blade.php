@@ -11,7 +11,7 @@
                 <button type="button" class="toggle-btn" onclick="login()">Sign In</button>
                 <button type="button" class="toggle-btn" onclick="register()">Register</button>
         </div>
-            <form id="login" class="form-group">
+            <form id="login" action="/myprojects" class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" class="input-field" placeholder="Your username">
 

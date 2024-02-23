@@ -41,6 +41,6 @@ Route::get('/contactus', function () {
     return view('contactus');
 });
 
-Route::get('/myaccount', function () {
-    return view('contactus');
+Route::get('/myprojects', function () {
+    return view('myprojects');
 });
