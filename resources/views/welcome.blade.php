@@ -86,158 +86,182 @@
     <div class="pcards">
 
       <div class="pcard1">
-            <div class="image">
+        <div class="prod-card">
+          <div class="image">
             <i class="fa fa-heart-o"></i>
-            </div>
-          <div class="prod-contain">
-              <p id="card-text"><b>Product Name</b></p>
-              <p class="price" id="card-text"><b>$19.99</b></p>
-              <div class="rating-stars">
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span><b>(0)<b>
-              </div>
-              <div class="p-button">
-                <!-- <p>Add to basket</p>
-                <input type="submit" id="p-button" value="Add to basket"> -->
-                <p><button><i class="material-symbols-outlined">shopping_bag</i><weak>Add to basket</weak></button></p>
-              </div>
           </div>
+          <div class="prod-contain">
+            <h1>Tailored Jeans</h1>
+            <p class="price">£9.99
+                <div class="rating-stars">
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span><b>(0)</b>
+                </div>
+            </p>
+          </div>
+          <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
+        </div>
       </div>
 
       <div class="pcard2">
-            <div class="image">
-            <i class="fa fa-heart-o" #id="heart"></i>
-            </div>
-          <div class="prod-contain">
-              <p id="card-text"><b>Product Name</b></p>
-              <p class="price" id="card-text"><b>$19.99</b></p>
-              <div class="rating-stars">
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span><b>(0)<b>
-              </div>
-              <div class="p-button">
-                <!-- <p>Add to basket</p>
-                <input type="submit" id="p-button" value="Add to basket"> -->
-                <p><button><i class="material-symbols-outlined">shopping_bag</i><weak>Add to basket</weak></button></p>
-              </div>
-          </div>
-      </div>
-
-      <div class="pcard3">
-            <div class="image">
-            <i class="fa fa-heart-o" #id="heart"></i>
-            </div>
-          <div class="prod-contain">
-              <p id="card-text"><b>Product Name</b></p>
-              <p class="price" id="card-text"><b>$19.99</b></p>
-              <div class="rating-stars">
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span><b>(0)<b>
-              </div>
-              <div class="p-button">
-                <!-- <p>Add to basket</p>
-                <input type="submit" id="p-button" value="Add to basket"> -->
-                <p><button><i class="material-symbols-outlined">shopping_bag</i><weak>Add to basket</weak></button></p>
-              </div>
-          </div>
-      </div>
-
-      <div class="pcard4">
-            <div class="image">
-            <i class="fa fa-heart-o" #id="heart"></i>
-            </div>
-          <div class="prod-contain">
-              <p id="card-text"><b>Product Name</b></p>
-              <p class="price" id="card-text"><b>$19.99</b></p>
-              <div class="rating-stars">
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span><b>(0)<b>
-              </div>
-              <div class="p-button">
-                <!-- <p>Add to basket</p>
-                <input type="submit" id="p-button" value="Add to basket"> -->
-                <p><button><i class="material-symbols-outlined">shopping_bag</i><weak>Add to basket</weak></button></p>
-              </div>
-        </div>
-        
-      </div>
-
-
-      <!-- <div class="pcard2">
         <div class="prod-card">
-            <div class="image">
-            <i class="fa fa-heart-o" #id="heart"></i>
-            </div>
-          <div class="prod-contain">
-              <p id="card-text"><b>Product Name</b></p>
-              <p class="price" id="card-text"><b>$19.99</b></p>
-              <div class="rating-stars">
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span><b>(0)<b>
-              </div>
-              <p><button><i class="material-symbols-outlined">shopping_bag</i>Add to basket</button></p>
+          <div class="image">
+            <i class="fa fa-heart-o"></i>
           </div>
+          <div class="prod-contain">
+            <h1>Tailored Jeans</h1>
+            <p class="price">£9.99
+                <div class="rating-stars">
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span><b>(0)</b>
+                </div>
+            </p>
+          </div>
+          <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
         </div>
       </div>
 
       <div class="pcard3">
         <div class="prod-card">
-            <div class="image">
-            <i class="fa fa-heart-o" #id="heart"></i>
-            </div>
-          <div class="prod-contain">
-              <p id="card-text"><b>Product Name</b></p>
-              <p class="price" id="card-text"><b>$19.99</b></p>
-              <div class="rating-stars">
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span><b>(0)<b>
-              </div>
-              <p><button><i class="material-symbols-outlined">shopping_bag</i>Add to basket</button></p>
+          <div class="image">
+            <i class="fa fa-heart-o"></i>
           </div>
+          <div class="prod-contain">
+            <h1>Tailored Jeans</h1>
+            <p class="price">£9.99
+                <div class="rating-stars">
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span><b>(0)</b>
+                </div>
+            </p>
+          </div>
+          <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
         </div>
       </div>
 
       <div class="pcard4">
         <div class="prod-card">
-            <div class="image">
-            <i class="fa fa-heart-o" #id="heart"></i>
-            </div>
-          <div class="prod-contain">
-              <p id="card-text"><b>Product Name</b></p>
-              <p class="price" id="card-text"><b>$19.99</b></p>
-              <div class="rating-stars">
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span><b>(0)<b>
-              </div>
-              <p><button><i class="material-symbols-outlined">shopping_bag</i>Add to basket</button></p>
+          <div class="image">
+            <i class="fa fa-heart-o"></i>
           </div>
+          <div class="prod-contain">
+            <h1>Tailored Jeans</h1>
+            <p class="price">£9.99
+                <div class="rating-stars">
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span><b>(0)</b>
+                </div>
+            </p>
+          </div>
+          <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
         </div>
-      </div> -->
+      </div>
 
     </div>
 
+    <div class="pyl">
+      <h1>Patterns You'll Love</h1>
+    </div>
 
+    <div class="pcards">
+
+      <div class="pcard1">
+        <div class="prod-card">
+          <div class="image">
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="prod-contain">
+            <h1>Tailored Jeans</h1>
+            <p class="price">£9.99
+                <div class="rating-stars">
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span><b>(0)</b>
+                </div>
+            </p>
+          </div>
+          <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
+        </div>
+      </div>
+
+      <div class="pcard2">
+        <div class="prod-card">
+          <div class="image">
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="prod-contain">
+            <h1>Tailored Jeans</h1>
+            <p class="price">£9.99
+                <div class="rating-stars">
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span><b>(0)</b>
+                </div>
+            </p>
+          </div>
+          <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
+        </div>
+      </div>
+
+      <div class="pcard3">
+        <div class="prod-card">
+          <div class="image">
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="prod-contain">
+            <h1>Tailored Jeans</h1>
+            <p class="price">£9.99
+                <div class="rating-stars">
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span><b>(0)</b>
+                </div>
+            </p>
+          </div>
+          <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
+        </div>
+      </div>
+
+      <div class="pcard4">
+        <div class="prod-card">
+          <div class="image">
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <div class="prod-contain">
+            <h1>Tailored Jeans</h1>
+            <p class="price">£9.99
+                <div class="rating-stars">
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span>
+                  <span id="star-icon">&star;</span><b>(0)</b>
+                </div>
+            </p>
+          </div>
+          <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
+        </div>
+      </div>
+
+    </div>
 
 
 </div>

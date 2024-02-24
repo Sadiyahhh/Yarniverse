@@ -1,0 +1,14 @@
+.details-contain {
+    margin: 1%;
+}
+
+.accountoverview {
+    background-color: transparent;
+    margin-bottom: 1%;
+    margin-top: -34%;
+}
+
+.profile-det p, .billing-address p, .payment-details p {
+    text-decoration: none;
+}
+

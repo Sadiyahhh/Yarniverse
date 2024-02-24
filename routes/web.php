@@ -44,3 +44,19 @@ Route::get('/contactus', function () {
 Route::get('/myprojects', function () {
     return view('myprojects');
 });
+
+Route::get('/details', function () {
+    return view('details');
+});
+
+Route::get('/wishlist', function () {
+    return view('wishlist');
+});
+
+Route::get('/myprojects', function () {
+    return view('myprojects');
+});
+
+Route::get('/purchasehistory', function () {
+    return view('purchasehistory');
+});

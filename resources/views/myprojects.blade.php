@@ -25,28 +25,28 @@
 
                 <div class="acc-tab-active">
                     <div class="myprojects">
-                        <img src="/site-images/yarn-removebg-preview.png"><p>My Projects</p>
+                        <img src="/site-images/yarn-removebg-preview.png"><p><a href="/myprojects">My Projects</a></p>
                     </div>
                 </div>
 
                 
                 <div class="acc-tab">
                     <div class="accountdetails">
-                        <i class="material-symbols-outlined" id="account-icons">person</i><p>Account Details</p>
+                        <i class="material-symbols-outlined" id="account-icons">person</i><p><a href="/details">Account Details</a></p>
                     </div>
                 </div>
 
                 
                 <div class="acc-tab">
                     <div class="mywishlist">
-                        <i class="material-symbols-outlined" id="account-icons">favorite</i><p>My Wishlist</p>
+                        <i class="material-symbols-outlined" id="account-icons">favorite</i><p><a href="/wishlist">My Wishlist</a></p>
                     </div>
                 </div>
 
                 
                 <div class="acc-tab">
                     <div class="purchasehistory">
-                    <span class="material-symbols-outlined" id="account-icons">package_2</span><p>Purchase History</p>
+                    <span class="material-symbols-outlined" id="account-icons">package_2</span><p><a href="/purchasehistory">Purchase History</a></p>
                     </div>
                 </div>
         </div>
