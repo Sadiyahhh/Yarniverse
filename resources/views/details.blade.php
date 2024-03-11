@@ -19,14 +19,14 @@
                     </div>
                 </div>
 
-                <div class="acc-tab-active">
+                <div class="acc-tab">
                     <div class="myprojects">
                         <img src="/site-images/yarn-removebg-preview.png"><p><a href="/myprojects">My Projects</a></p>
                     </div>
                 </div>
 
                 
-                <div class="acc-tab">
+                <div class="acc-tab-active">
                     <div class="accountdetails">
                         <i class="material-symbols-outlined" id="account-icons">person</i><p><a href="/details">Account Details</a></p>
                     </div>
@@ -51,7 +51,8 @@
             <h1>Account Overview</h1>
             <div class="profile-det">
             <!-- Profile details table, will be fetched from database -->
-                <h1>Profile Details</h1>
+                <p id="prof-det">Profile Details</p>
+                <br>
                 <p><b>Name: </b>name</p>
                 <p><b>Username: </b>username</p>
                 <p><b>Email address: </b>email address</p>
@@ -59,7 +60,8 @@
             </div>
             <hr>
             <div class="billing-address">
-                <h1>Profile Details</h1>
+                <p id="bill-add">Billing Address</p>
+                <br>
                 <p><b>Name: </b>name</p>
                 <p><b>Address Line 1: </b>address</p>
                 <p><b>Address Line 2: </b>address</p>
@@ -69,7 +71,8 @@
             </div>
             <hr>
             <div class="payment-details">
-                <h1>Payment Details</h1>
+                <p id="pay-det">Payment Details</p>
+                <br>
                 <p><b>Banking group: </b>bank</p>
                 <p><b>Name on card: </b>name</p>
                 <p><b>Card number: </b>**** **** **** 0000</p>

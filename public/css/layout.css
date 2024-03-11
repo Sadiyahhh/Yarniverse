@@ -276,6 +276,13 @@ hr {
   vertical-align: middle;
 }
 
+.newsletter {
+  width: 20%;
+  position: absolute;
+  left: 75%;
+  margin-top: 3%;
+}
+
 .news-text {
   border-style: solid;
   border-radius: 30px;
@@ -319,8 +326,13 @@ hr {
 #news-submit {
   background: transparent;
   border-radius: 11px;
-  font: #D0B7B4;
+  color: #D0B7B4;
+  font-weight: bold;
   border-color: transparent;
+}
+
+#news-submit:hover {
+  color: #A06F6A;
 }
 
 .social {
@@ -359,7 +371,7 @@ hr {
 
 
 .user-info span {
-  background-color: grey;
+  background-color: #CCC7C7;
   display: inline-flex;
   position: relative;
   width: 65px;

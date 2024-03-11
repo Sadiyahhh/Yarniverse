@@ -4,11 +4,23 @@
 
 .accountoverview {
     background-color: transparent;
-    margin-bottom: 1%;
-    margin-top: -34%;
+    width: 58%;
+    margin-left: 31%;
+    /* margin-top: 1%; */
+    margin-top: -33%;
+}
+
+.accountoverview hr {
+    border: 2px solid;
+    right: 3%;
+    position: relative;
 }
 
 .profile-det p, .billing-address p, .payment-details p {
     text-decoration: none;
+    font-weight: 600;
 }
 
+#prof-det, #bill-add, #pay-det {
+    font-size: larger;
+}

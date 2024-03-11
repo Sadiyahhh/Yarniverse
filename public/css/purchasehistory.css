@@ -1,0 +1,69 @@
+.ph-contain {
+    margin: 2%;
+}
+
+.ph {
+    position: absolute;
+    left: 30%;
+    top: 28%;
+    width: 68%;
+}
+
+.purchase-card {
+    background-color: #AF8683;
+    border: 2px solid #573B38;
+    display: grid;
+    grid-template-columns: .25fr .8fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.ph-img {
+    width: 185px;
+    height: 180px;
+    margin: 6% 9%;
+    background-color: #CCC7C7;
+    border: 1px solid;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.ph hr {
+    border: 1px solid;
+    width: 75%;
+    position: absolute;
+    left: 23%;
+    bottom: 52%;
+}
+
+.ph-text {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.ph-text h1 {
+    font-size: larger;
+    margin: 2% 0% 2% -1%
+}
+
+.ph-text-content {
+    padding: 1%;
+    margin-left: -2%;
+}
+
+.ph-text-content h1{
+    position: absolute;
+    font-size: large;
+    right: 3%;
+    top: 48%;
+}
+
+.ph-text p {
+    font-weight: 500;
+}
+
+.ph-det {
+    position: absolute;
+    font-size: large;
+    right: 3%;
+    top: 81%;
+}

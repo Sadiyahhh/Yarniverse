@@ -75,7 +75,7 @@
                     <a href="/tc">T&Cs</a><br>
             </div>
         </div>
-        <div class="newsletter" id="foot-content-box" style="width:20%; margin-left: 75%; margin-top:-10%;">
+        <div class="newsletter" id="foot-content-box">
                 <form action="/" method="post" >
                 @csrf
                     <div class="news-text">
@@ -96,6 +96,7 @@
                     </div>
                 </form>
         </div>
+        <br>
         <br>
         <br>
         <hr>
