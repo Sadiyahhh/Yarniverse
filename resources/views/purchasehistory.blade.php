@@ -48,14 +48,18 @@
         </div>
 
         <div class="ph">
-            <h1>Purchase History</h1>
+            <h2>Purchase History</h2>
             <div class="purchase-card">
                 <div class="ph-img"></div>
                 <div class="ph-text">
                     <h1>Pattern Title</h1>
                     <hr>
                     <div class="ph-text-content">
-                        <p>Creator: <b>Creator</b> <h1>£0.00</h1></p>
+                        <div class="ph-grid">
+                            <div class="ph-creator"> <p>Creator: <b>Creator</b></p></div>
+                            <div class="ph-empty"> </div>
+                            <div class="ph-price"> <h1>£0.00</h1></div>
+                        </div>
                         <p>Category: <b>Category</b></p>
                         <p>Quantity: <b>Quantity</b></p>
                         <p class="ph-det"><u><b>View Details</b></u></p>

@@ -45,7 +45,7 @@
                 <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
                 <label for="checkbox" id="label-v"><span> I agree to the <u>Yarniverse Terms and Conditions.<u></span></label><br>
 
-                <input type="submit" id="login_submit" value="Sign In">
+                <input type="submit" id="login_submit" value="Register">
             </form>
      
     </div>

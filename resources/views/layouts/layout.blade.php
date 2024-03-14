@@ -31,26 +31,25 @@
             </form>
         </div>
 
-        <div class="icon-items">
             <div class="header-items"> 
                 <!-- Whilst user is not logged in -->
                 <a href="/login" i class="material-symbols-outlined" id="header-icons">person</i></a>
-                <a href="/login" i class="material-symbols-outlined" id="header-icons">favorite</i></a>                
-                <a href="/login" i class="material-symbols-outlined" id="header-icons">shopping_bag</i></a>
+                <a href="/wishlist" i class="material-symbols-outlined" id="header-icons">favorite</i></a>                
+                <a href="/basket" i class="material-symbols-outlined" id="header-icons">shopping_bag</i></a>
             </div>
             <div class="icon-text">
                 <a href="/login" id="text-a">My Account</a>
-                <a href="/login" id="text-w">Wishlist</a>
-                <a href="/login" id="text-b">Basket</a>
+                <a href="/wishlist" id="text-w">Wishlist</a>
+                <a href="/basket" id="text-b">Basket</a>
             </div>
                 <!-- Once user is logged in -->
                 <!-- <a href="/myaccount" i class="material-symbols-outlined" id="account-icon">person</i></a>
                 <a href="/wishlist" i class="material-symbols-outlined" id="heart-icon">favorite</i></a>                
                 <a href="/basket" i class="material-symbols-outlined" id="shopping-icon">shopping_bag</i> -->
-        </div>
+    </div>
 
     <div class="navigation" id="navigation">
-        <a href="#amigurumi" id="amigurumi">Amigurumi</a>
+        <a href="/shop" id="amigurumi">Amigurumi</a>
         <a href="#clothing" id="clothing">Clothing</a>
         <a href="#accessories" id="accessories">Accessories</a>
         <a href="#pets" id="pets">Pets</a>
@@ -99,6 +98,7 @@
         <br>
         <br>
         <br>
+        <br>
         <hr>
         
         <div class="footer-bottom">
@@ -106,8 +106,7 @@
             <div class="col-md-4 d-flex align-items-center" style="width: 31%;">
               <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
               </a>
-              <br>
-              <span class= "mb-md-0 text-muted" style="color: #D0B7B4;">&copy; Copyright Yarniverse LTD, 2023</span>
+              <p class= "mb-md-0 text-muted" style="color: #D0B7B4; margin-top:3%;">&copy; Copyright Yarniverse LTD, 2023</p>
             </div>
 
             <div class="social">

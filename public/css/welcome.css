@@ -1,5 +1,6 @@
 .welcome-contain {
-  padding: 1%;
+  /* padding: 1%; */
+    padding: 1% 2% 1% 2%;
 }
 
 /* Carousel */
@@ -91,7 +92,7 @@ ol, li {
   filter: drop-shadow(0 0 10px #0003);
   perspective: 100px;
   object-fit: fill;
-  width: 106%;
+  width: 104%;
   right: 3%;
 }
 
@@ -249,7 +250,7 @@ ol, li {
   text-align: center;
 }
 
-.pcards {
+/* .pcards {
   margin: 5% 0%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -334,7 +335,7 @@ ol, li {
   color: #573B38;
   font-size: 30px;
   position: relative;
-  left: 87%;
+  left: 82%;
   top: 3%;
 }
 
@@ -356,4 +357,4 @@ ol, li {
 
 #star-icon:hover {
   color: #A06F6A;
-}
+} */

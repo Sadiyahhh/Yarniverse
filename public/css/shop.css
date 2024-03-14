@@ -1,25 +1,62 @@
-.wishlist-contain {
-  margin: 3%;
-  /* display: grid;
-  grid-template-columns: .3fr .8fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px; */
+.shop-title {
+    background-color: #AF8683;
+    border: 1px solid;
+    /* width: 100%; */
+    height: 180px;
 }
 
-/* .account-nav {
-  grid-area: 1 / 1 / 2 / 2;
-}
-*/
-
-.wishlist {
-  /* grid-area: 1 / 2 / 2 / 3; */
-  width: 58%;
-  margin-left: 31%;
-  margin-top: -47%;
+.shop-title-text {
+    padding: 2%;
+    width: 87%;
+    text-align: left;
 }
 
-  /* .pcards {
+.shop-main {
+    display: grid;
+    grid-template-columns: .3fr 1fr;
+    grid-template-rows: 2fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.shop-sidebar {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: #A06F6A;
+    border: 1px solid;
+    padding: 8%;
+}
+
+.shop-sidebar hr {
+    border: 1px solid;
+}
+
+input[type="checkbox"] {
+    width: 1.5em;
+    height: 1.5rem;
+    accent-color: #CCC7C7;
+    border: 1px solid black;
+}
+
+/* span {
+    position: absolute;
+    bottom: 46px;
+} */
+
+#label-v {
+	margin-bottom: 1%;
+	margin-left: 1%;
+}
+
+.shop-body {
+    grid-area: 1 / 2 / 2 / 3;
+    /* width: 78%;
+    float: right;
+    margin-top: -108%; */
+}
+
+/* Product Cards */
+
+/* .pcards {
     margin: 1%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);

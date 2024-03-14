@@ -29,6 +29,14 @@ Route::get('/register', function () {
     return view('register');
 });
 
+Route::get('/basket', function () {
+    return view('basket');
+});
+
+Route::get('/shop', function () {
+    return view('shop');
+});
+
 Route::get('/faqs', function () {
     return view('faqs');
 });

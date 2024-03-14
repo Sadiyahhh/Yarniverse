@@ -47,7 +47,7 @@
         </div>
 
         <div class="wishlist">
-            <h1>[User]'s Wishlist</h1><p>4 items</p>
+            <h2>[User]'s Wishlist</h2><p>4 items</p>
             <div class="pcards">
 
                 <div class="pcard1">
