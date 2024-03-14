@@ -21,7 +21,7 @@
 
     <div class="header">
         <div class="header-logo" id="header-logo">
-            <img src="/site-images/y-nobg.png" alt="">
+            <a href="/welcome"><img src="/site-images/y-nobg.png" alt=""></a>
         </div>
       
         <div class="search-container">

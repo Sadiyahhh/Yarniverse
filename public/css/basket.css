@@ -1,11 +1,17 @@
 .basket-contain {
-    width: 60%;
+    /* width: 60%;
     position: relative;
-    left: 5%;
+    left: 5%; */
+    display: grid;
+    grid-template-columns: 1.5fr .8fr;
+    grid-template-rows: 2fr;
+    grid-column-gap: 26px;
+    grid-row-gap: 0px;
 }
 
 .basket-card {
-    padding: 1%;
+    /* padding: 1%; */
+    grid-area: 1 / 1 / 2 / 2;
 }
 
 .purchase-card {
@@ -100,9 +106,12 @@
 }
   
 .order-summary {
-    width: 50%;
+    /* width: 50%; */
+    height: 11rem;
+    top: 2%;
     background-color: #AF8683;
     border: 3px solid #7A524E;
+    grid-area: 1 / 2 / 2 / 3;
 }
 
 .order-summary p {

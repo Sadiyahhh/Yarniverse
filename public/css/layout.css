@@ -585,7 +585,7 @@ hr {
   
   .fa-heart-o {
     color: #573B38;
-    font-size: 35px;
+    font-size: 30px !important;
     position: relative;
     left: 87%;
     top: 3%;

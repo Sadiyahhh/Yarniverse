@@ -4,9 +4,12 @@
 
 <link rel="stylesheet" href="css/basket.css">
 
+<div class="basket-title">
+    <h2>Your Basket (0)</h2>
+</div>
+
 <div class="basket-contain">
     <!-- Insert function to automatically fetch no. of items from basket table -->
-    <h2>Your Basket (0)</h2>
 
     <div class="basket-card">
  
