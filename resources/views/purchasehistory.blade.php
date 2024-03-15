@@ -62,7 +62,7 @@
                         </div>
                         <p>Category: <b>Category</b></p>
                         <p>Quantity: <b>Quantity</b></p>
-                        <p class="ph-det"><u><b>View Details</b></u></p>
+                        <p class="ph-det"><u><b>Buy Again</b></u></p>
                     </div>
                 </div>
             </div>
