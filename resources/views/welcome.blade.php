@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/css/welcome.css">
 
 <div class="welcome-contain">
-  <!-- <section class="carousel" aria-label="Gallery">
+  <section class="carousel" aria-label="Gallery">
     <ol class="carousel__viewport">
       <li id="carousel__slide1"
           tabindex="0"
@@ -62,10 +62,10 @@
         </li>
       </ol>
     </aside>
-  </section> -->
-  <div class="welcome-gif">
+  </section>
+  <!-- <div class="welcome-gif">
     <h2>Shop Now</h2>
-  </div>
+  </div> -->
 
     <div class="most-liked">
       <h1>Most Liked by Users</h1>
@@ -103,11 +103,11 @@
             <h1>Tailored Jeans</h1>
             <p class="price">£9.99
                 <div class="rating-stars">
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span><b>(0)</b>
+                  <span id="star-icon" data-rating="1">&star;</span>
+                  <span id="star-icon" data-rating="2">&star;</span>
+                  <span id="star-icon" data-rating="3">&star;</span>
+                  <span id="star-icon" data-rating="4">&star;</span>
+                  <span id="star-icon" data-rating="5">&star;</span><b>(0)</b>
                 </div>
             </p>
           </div>
