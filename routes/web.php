@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/contactus', function () {
-    return view('contactus');
+Route::get('/', function () {
+    return view('welcome');
 });
 
 Route::get('/login', function () {
@@ -32,3 +32,43 @@ Route::get('/register', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/basket', function () {
+    return view('basket');
+});
+
+Route::get('/shop', function () {
+    return view('shop');
+});
+
+Route::get('/faqs', function () {
+    return view('faqs');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/contactus', function () {
+    return view('contactus');
+});
+
+Route::get('/myprojects', function () {
+    return view('myprojects');
+});
+
+Route::get('/details', function () {
+    return view('details');
+});
+
+Route::get('/wishlist', function () {
+    return view('wishlist');
+});
+
+Route::get('/myprojects', function () {
+    return view('myprojects');
+});
+
+Route::get('/purchasehistory', function () {
+    return view('purchasehistory');
+});

@@ -1,0 +1,158 @@
+.about-contain {
+    padding: 1%;
+  }
+  
+  .about-contain h1 {
+    /* margin-left: 5%; */
+    text-align: center;
+  }
+  
+  .about-contain hr {
+    border: 2.5px solid #573B38;
+    margin-bottom: 2%;
+  }
+    
+  .about-who {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: 1.5fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 0px;
+    padding: 2%;
+  }
+  
+  .who-text { 
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: #AF8683;
+    border: 1px solid black;
+    margin-left: 4%;
+    height: 81.5%;
+    padding: 2% 4%;
+  }
+  
+  .who-text p {
+    padding: 1%;
+  }
+  
+  .who-text h1 {
+    text-align: left;
+  }
+  
+  .who-img {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  
+  .who-img img {
+    width: 92%;
+    height: 90%;
+    border: 1px solid black;
+  }
+  
+  .about-purpose { 
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    grid-template-rows: 1.5fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 0% 3.5% 3.5% 3.5%}
+  
+  .purpose-text {
+    grid-area: 1 / 2 / 2 / 3;
+    margin-right: 2.5%;  
+    background-color: #AF8683;
+    border: 1px solid black;
+    /* width: 92%; */
+    height: 81.5%;
+    padding: 2% 4%;
+  }
+  
+  .purpose-text p {
+    padding: 1%;
+  }
+  
+  .purpose-text h1 {
+    text-align: left;
+  }
+  
+  .purpose-img {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  
+  .purpose-img img {
+    margin-left: 1%;
+    width: 92%;
+    height: 90%;
+    border: 1px solid black;
+  }
+  
+  /* Loyal Customers  */
+  
+  .loyal {
+    padding: 2%;
+  }
+  
+  #l-h {
+    text-align: center;
+  }
+  
+  #l-p {
+    text-align: center;
+    padding: 1% 16%;
+  }
+  
+  .loyal-contain {
+    max-width: 100%;
+    padding: 4%;
+    padding-left: 12%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  
+  @media screen and (max-width: 750px) {
+    .loyal-contain {
+        display: block;
+    }  
+  
+    .image1, .image2, .image3 {
+       margin-top: 5%;
+       margin-bottom: 5%;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+  }
+  
+  .image1, .image2, .image3 {
+    width: 323px;
+    height: 306px;
+    background-color: #CCC7C7;
+    border: 1px solid;
+  }
+  
+  .loyal-text {
+    width: 80%;
+  }
+  
+  .loyal-text h1 {
+    text-align: left;
+    font-size: x-large;
+  }
+  
+  .loyal-text p {
+    text-align: left;
+  }
+  
+  /* .image1 {
+  
+  }
+  
+  .image2 {
+  
+  }
+  
+  .image3 {
+  
+  } */

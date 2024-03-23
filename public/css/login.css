@@ -1,0 +1,145 @@
+.login-contain {
+    /* padding: 1%; */
+    padding: 0;
+}
+
+.form-box {
+    position: relative;
+    width: 40vw;
+    height: 90vh;
+    margin: auto;
+    background-color: #AF8683;
+    border: 2px solid;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.box-button {
+    width: 276px;
+    /* height: 8vh; */
+    margin: 5% auto;
+    position: relative;
+    /* border-radius: 30px;
+    box-shadow: 0 0 20px 9px blue; */
+    border-bottom: 2px solid;
+}
+
+.box-button:active {
+    border-bottom: 3px solid;
+}
+
+.toggle-btn {
+    position: relative;
+    font-size: larger;
+    font-weight: 500;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+}
+
+.toggle-btn:hover {
+    color: #573B38;
+}
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 138px;
+    height: 100%;
+    /* background: linear-gradient(to right, white, yellow); */
+    background: transparent;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.form-group {
+    /* padding: 0% 0% 3% 10%; */
+    width: 415px;
+    position: absolute;
+    transition: .5s;
+}
+
+#login {
+    left: 100px;
+}
+
+#register {
+    left: 630px;
+}
+
+/* #username, #email, #password {
+    width: 116%;
+    padding: 2%;
+    padding-bottom: 2%;
+    background-color: #CCC7C7;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 1%;
+    margin-bottom: 4.5%;
+    resize: vertical;
+} */
+
+.input-field {
+    width: 100%;
+    padding: 2%;
+    padding-bottom: 2%;
+    background-color: #CCC7C7;
+    border: 1px solid black;
+    border-radius: 4px;
+    /* box-sizing: border-box; */
+    margin-top: 1%;
+    margin-bottom: 4.5%;
+    /* resize: vertical; */
+}
+
+/* #registerform #username, #email, #emailc, #password, #passwordc {
+    width: 95%;
+    padding: 2%;
+    padding-bottom: 2%;
+    background-color: #CCC7C7;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 1%;
+    margin-bottom: 4.5%;
+    resize: vertical;
+} */
+
+input[type="checkbox"] {
+    width: 1.5em;
+    height: 1.5rem;
+    accent-color: #CCC7C7;
+    border: 1px solid black;
+}
+
+.form-group span {
+    position: absolute;
+    bottom: 46px;
+}
+
+#label-v {
+	margin-bottom: 1%;
+	margin-left: 1%;
+}
+
+#login_submit {
+    /* grid-area: 3 / 1 / 4 / 2; */
+    background-color: #7A524E;
+    border: 1px solid #573B38;
+    color: #D0B7B4;
+    font-weight: bold;
+    padding: 2% 8%;
+    margin-left: 38%;
+    margin-top: 2%;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+  
+#login_submit:hover {
+background-color: #7A524E;
+}
