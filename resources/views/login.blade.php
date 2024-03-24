@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+<!-- @extends('layouts.layout')
 
 @section('content')
 
@@ -17,7 +17,7 @@
 
                 <label for="password">Password</label>
                 <input type="password" id="password" class="input-field" placeholder="Your password">
-                <!-- Add forgot password hyperlink for later function -->
+                Add forgot password link later.
                 <br>
 
                 <input type="checkbox" id="checkbox" value="checkbox">
@@ -73,4 +73,4 @@
 
 @endsection
 
-
+ -->

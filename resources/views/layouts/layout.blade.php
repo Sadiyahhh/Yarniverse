@@ -1,17 +1,14 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+  
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/css/layout.css">
+
+          <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -22,58 +19,51 @@
         <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
         <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
-    <link rel="stylesheet" href="/css/layout.css">
-
-    <title>Yarniverse</title>
-
-    <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-</head>
-
-<body>
-        <h1>Testing!</h1>
-
-            <a class="active" href="/" style = "color: red;">Welcome</a><br>
-            <a class="active" href="/contactus" style = "color: red;">Contact</a><br>
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                        @yield('content')
-
-</body>
         <title>Yarniverse</title>
         <link rel="icon" type="image/x-icon" href="/site-images/icon-nobg.png">
+
+        <!-- Scripts -->
+        @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     </head>
 
+            <!-- Authentication Links -->
+            @if (Route::has('register'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    </li>
+                @endif
+            <!-- @guest
+                @if (Route::has('login'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    </li>
+                @endif
+
+                @if (Route::has('register'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    </li>
+                @endif
+            @else
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }}
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+            @endguest -->
+ 
     <div class="header">
         <div class="header-logo" id="header-logo">
             <a href="/welcome"><img src="/site-images/y-nobg.png" alt=""></a>
@@ -86,21 +76,43 @@
             </form>
         </div>
 
+        @guest
+            @if (Route::has('login'))
             <div class="header-items"> 
                 <!-- Whilst user is not logged in -->
-                <a href="/login" i class="material-symbols-outlined" id="header-icons">person</i></a>
+                <a href="{{ route('login') }}" i class="material-symbols-outlined" id="header-icons">person</i></a>
                 <a href="/wishlist" i class="material-symbols-outlined" id="header-icons">favorite</i></a>                
                 <a href="/basket" i class="material-symbols-outlined" id="header-icons">shopping_bag</i></a>
             </div>
             <div class="icon-text">
-                <a href="/login" id="text-a">My Account</a>
+                <a href="{{ route('login') }}" id="text-a">Sign In</a>
                 <a href="/wishlist" id="text-w">Wishlist</a>
                 <a href="/basket" id="text-b">Basket</a>
             </div>
+            @endif
+        @else
                 <!-- Once user is logged in -->
-                <!-- <a href="/myaccount" i class="material-symbols-outlined" id="account-icon">person</i></a>
-                <a href="/wishlist" i class="material-symbols-outlined" id="heart-icon">favorite</i></a>                
-                <a href="/basket" i class="material-symbols-outlined" id="shopping-icon">shopping_bag</i> -->
+            <div class="header-items"> 
+                <a href="/myprojects" i class="material-symbols-outlined" id="header-icons">person</i></a>
+                <a href="/wishlist" i class="material-symbols-outlined" id="header-icons">favorite</i></a>                
+                <a href="/basket" i class="material-symbols-outlined" id="header-icons">shopping_bag</i></a>
+            </div>
+            <div class="icon-text">
+                <!-- <a href="/myprojects" class="loggedin-icons" id="logged-a">My Account</a>
+                <a href="/wishlist" class="loggedin-icons" id="logged-w">Wishlist</a>
+                <a href="/basket" class="loggedin-icons" id="logged-b">Basket</a> -->
+                <a href="/myprojects" class="loggedin-icons" id="text-a">My Account</a>
+                <a href="/wishlist" class="loggedin-icons" id="text-w">Wishlist</a>
+                <a href="/basket" class="loggedin-icons" id="text-b">Basket</a>
+            </div>
+
+        @endguest
+<!-- 
+        @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif -->
     </div>
 
     <div class="navigation" id="navigation">
@@ -110,6 +122,19 @@
         <a href="#pets" id="pets">Pets</a>
         <a href="#homedecor" id="homedecor">Home Decor</a>
     </div>
+
+<!--     
+    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+            {{ __('Logout') }}
+        </a>
+
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+        </form>
+    </div> -->
 
 <div class="container">
 @yield('content')

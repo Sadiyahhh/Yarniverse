@@ -1,7 +1,9 @@
 @extends('layouts.layout')
 
+<link rel="stylesheet" href="/css/login.css">
+
 @section('content')
-<div class="container">
+<!-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -58,7 +60,7 @@
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <a href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
@@ -69,5 +71,131 @@
             </div>
         </div>
     </div>
+</div> -->
+
+
+<div class="login-contain">
+    <div class="form-box">
+        <div class="box-button">
+            <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Sign In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+        </div>
+            <form method="POST" id="login" action="{{ route('login') }}" class="form-group">
+                @csrf
+                <label for="email">{{ __('Email Address') }}</label>
+                <!-- <input type="text" id="username" class="input-field" placeholder="Your username"> -->
+                <input id="email" type="text" class="form-control @error('email') is-invalid @enderror input-field" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                    @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>Oops! That doesn't match, please try again.</strong>
+                        </span>
+                    @enderror
+
+                <label for="password">{{ __('Password') }}</label>
+                <!-- <input type="password" id="password" class="input-field" placeholder="Your password"> -->
+
+                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror input-field" name="password" required autocomplete="current-password">
+                @error('password')
+                    <span class="invalid-feedback" id="login-error" role="alert">
+                        <strong>Oops! That doesn't match, please try again.</strong>
+                    </span>
+                @enderror
+
+                @if (Route::has('password.request'))
+                    <a href="{{ route('password.request') }}" id="forgotpass">
+                        {{ __('Forgot Your Password?') }}
+                    </a>
+                @endif
+                <br>
+
+                <!-- <input type="checkbox" id="checkbox" value="checkbox">
+                <label for="checkbox" id="label-v"><span> {{ __('Remember Me') }} <span></label><br> -->
+
+                <input class="form-check-input" type="checkbox" name="remember" id="remember checkbox label-v" value="checkbox" {{ old('remember') ? 'checked' : '' }}>
+                <!-- <label class="form-check-label" id="label-v" for="checkbox"> -->
+                <span>
+                    {{ __('Remember Me') }}
+                </span>
+                <!-- </label> -->
+                <br>
+
+                <input type="submit" id="login_submit" value="Sign In"></input>
+                
+            </form>
+            
+            <form id="register" class="form-group">
+            <form method="POST" id="register" action="{{ route('register') }}" class="form-group">
+                @csrf
+                <!-- <label for="name">Name</label>
+                <input type="text" id="name" class="input-field" placeholder="Enter your name"> -->
+
+                <label for="name">{{ __('Name') }}</label>
+                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror input-field" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+                @error('name')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+
+                <!-- <label for="email">Email address</label>
+                <input type="text" id="email" class="input-field" placeholder="Enter your email address"> -->
+
+                <label for="email">{{ __('Email Address') }}</label>
+                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror input-field" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                @error('email')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+                
+                <!-- <label for="password">Password</label>
+                <input type="password" id="password" class="input-field" placeholder="Your password"> -->
+
+                <label for="password">{{ __('Password') }}</label>
+                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror input-field" name="password" required autocomplete="new-password">
+
+                @error('password')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+
+                <!-- <label for="passwordc">Confirm password</label>
+                <input type="passwordc" id="passwordc" class="input-field" placeholder="Confirm your password"> -->
+
+                <label for="password-confirm">{{ __('Confirm Password') }}</label>
+                <input id="password-confirm" type="password" class="form-control input-field" name="password_confirmation" required autocomplete="new-password">
+                <br>
+
+                <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
+                <label for="checkbox" id="label-v"><span> I agree to the <u>Yarniverse Terms and Conditions.<u></span></label><br>
+
+                <input type="submit" id="login_submit" value="Register">
+            </form>
+     
+    </div>
+ 
 </div>
+
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register(){
+            x.style.left = "-500px";
+            y.style.left = "100px";
+            z.style.left = "110px";
+        }
+
+        function login(){
+            x.style.left = "100px";
+            y.style.left = "650px";
+            z.style.left = "0";        
+        }
+    
+    </script>
 @endsection

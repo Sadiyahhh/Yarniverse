@@ -14,11 +14,21 @@
                     <span class="dot"></span>
                     <div class="userinfo-t">
                         <div class="user"> 
-                        <p> Hello, <b>[user]<b>! <i class="fa fa-pencil"></i></p>
+                            @if (Auth::check())
+                                <p> Hello, <b>{{ Auth::user()->name }}<b>! <i class="fa fa-pencil"></i></p>
+                            @endif
                         </div>
                                 <!-- Sign out function -->
                         <div class="user-signout"> 
-                        <p><a href="/login"><u>Sign out</u></a></p>
+                        <p><a href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                            <u>{{ __('Sign Out') }}</u>
+                        </a></p>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                            <!-- <p><u> {{ __('Sign Out') }}</u></p> -->
+                        </form>
                         </div>
                     </div>
                 </div>

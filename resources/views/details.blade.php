@@ -10,7 +10,9 @@
                     <span class="dot"></span>
                     <div class="userinfo-t">
                         <div class="user"> 
-                        <p> Hello, <b>[user]<b>! <i class="fa fa-pencil"></i></p>
+                            @if (Auth::check())
+                                <p> Hello, <b>{{ Auth::user()->name }}<b>! <i class="fa fa-pencil"></i></p>
+                            @endif
                         </div>
                                 <!-- Sign out function -->
                         <div class="user-signout"> 

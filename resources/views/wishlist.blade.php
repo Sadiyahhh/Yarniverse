@@ -9,7 +9,9 @@
                     <span class="dot"></span>
                     <div class="userinfo-t">
                         <div class="user"> 
-                        <p> Hello, <b>[user]<b>! <i class="fa fa-pencil"></i></p>
+                            @if (Auth::check())
+                                <p> Hello, <b>{{ Auth::user()->name }}<b>! <i class="fa fa-pencil"></i></p>
+                            @endif                        
                         </div>
                                 <!-- Sign out function -->
                         <div class="user-signout"> 
@@ -47,7 +49,9 @@
         </div>
 
         <div class="wishlist">
-            <h2>[User]'s Wishlist</h2><p>4 items</p>
+            @if (Auth::check())                        
+                <h2>{{ Auth::user()->name }}'s Wishlist</h2><p>4 items</p>
+            @endif
             <div class="pcards">
 
                 <div class="pcard1">

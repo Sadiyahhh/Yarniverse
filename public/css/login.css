@@ -14,6 +14,16 @@
     overflow: hidden;
 }
 
+.form-group span #login-error {
+    top: 59%;
+}
+
+#forgotpass {
+    position: absolute;
+    right: 1%;
+    top: 34%;
+}
+
 .box-button {
     width: 276px;
     /* height: 8vh; */

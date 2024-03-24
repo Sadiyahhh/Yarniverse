@@ -436,10 +436,10 @@ hr {
 .acc-tab p {
   text-align: center;
   position: relative;
-  margin-top: -14%;
-  padding: 2%;
-  left: 26%;
-  width: 52%;
+  margin-top: -15%;
+  padding: 3%;
+  left: 24%;
+  width: 66%;
 }
 
 .acc-tab a, .acc-tab-active a {
