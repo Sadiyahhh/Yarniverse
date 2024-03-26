@@ -27,8 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::create('orders', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('orders');
     }
 };

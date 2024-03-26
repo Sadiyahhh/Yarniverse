@@ -29,8 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::create('reviews', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('reviews');
     }
 };

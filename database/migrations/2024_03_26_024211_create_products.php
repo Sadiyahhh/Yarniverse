@@ -16,15 +16,13 @@ return new class extends Migration
             $table->string('productName');
             $table->string('productCreator');
             $table->string('productCategory');
+            $table->longText('productInfo');
             $table->longText('productDescription');
+            $table->longText('productMaterials');
             $table->decimal('productPrice', 8, 2);
             $table->string('productImage');
-
-            $table->integer('ratingID')->references('id')->on('ratings');
-            $table->integer('reviewID')->references('id')->on('reviews');
-            // $table->foreign('ratingID')->references('id')->on('ratings')->onDelete('cascade');
-            // $table->foreign('reviewID')->references('id')->on('reviews')->onDelete('cascade');
         });
+        
     }
 
     /**
@@ -32,8 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::create('products', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('products');
     }
 };
