@@ -16,13 +16,12 @@ return new class extends Migration
             $table->string('productName');
             $table->string('productCreator');
             $table->string('productCategory');
-            $table->longText('productInfo');
+            $table->string('productLevel');
             $table->longText('productDescription');
             $table->longText('productMaterials');
             $table->decimal('productPrice', 8, 2);
             $table->string('productImage');
         });
-        
     }
 
     /**
