@@ -28,27 +28,29 @@
             <div class="pcards">
 
                 <div class="pcard1">
-                    <div class="prod-card">
-                        <div class="image">
-                        <i class="fa fa-heart-o"></i>
-                        </div>
-                        <div class="prod-contain">
-                        <h1>Tailored Jeans</h1>
-                        <p class="price">£9.99
-                            <div class="rating-stars">
-                                <span id="star-icon">&star;</span>
-                                <span id="star-icon">&star;</span>
-                                <span id="star-icon">&star;</span>
-                                <span id="star-icon">&star;</span>
-                                <span id="star-icon">&star;</span><b>(0)</b>
-                            </div>
-                        </p>
-                        </div>
-                        <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
-                    </div>
-                </div>
+                    @foreach ($products as $product)
 
-                <div class="pcard2">
+                        <div class="prod-card">
+                            <div class="image"><img src="{{ $product->productImage }}" alt="Image">
+                            <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="prod-contain">
+                            <h1>{{ $product->productName }}</h1>
+                            <p class="price">£{{ $product->productPrice }}
+                                <div class="rating-stars">
+                                    <span id="star-icon">&star;</span>
+                                    <span id="star-icon">&star;</span>
+                                    <span id="star-icon">&star;</span>
+                                    <span id="star-icon">&star;</span>
+                                    <span id="star-icon">&star;</span><b>(0)</b>
+                                </div>
+                            </p>
+                            </div>
+                            <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
+                        </div>
+                    @endforeach 
+                </div>
+                <!-- <div class="pcard2">
                     <div class="prod-card">
                         <div class="image">
                         <i class="fa fa-heart-o"></i>
@@ -381,4 +383,4 @@
     </div>
 
 @endsection
-
+ -->
