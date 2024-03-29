@@ -76,4 +76,8 @@ Route::get('/purchasehistory', function () {
 });
 
 //Route for all products
-Route::get('/shop', [ProductController::class, 'index'])->name('products.index');
+Route::get('/shop', [ProductController::class, 'allProducts'])->name('products.allProducts');
+
+//Route for a single product
+Route::get('/pattern/{id}', [ProductController::class, 'item']);
+

@@ -7,9 +7,15 @@ use App\Models\Product;
 
 class ProductController extends Controller
 {
-    public function index () 
+    public function allProducts () 
     {
         $products = Product::all();
-        return view ('shop', ['products' => $products,]);
+        return view ('shop', ['products' => $products]);
+    }
+
+    public function item ($productID) 
+    {
+        $item = Product::findOrFail($productID);
+        return view ('pattern', ['item' => $item]);
     }
 }
