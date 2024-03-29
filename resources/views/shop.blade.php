@@ -7,9 +7,10 @@
 <div class="shop-title">
     <div class="shop-title-text">
         <h3>Shop our Products</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate veli</p>
+        <p>Explore our collection of handcrafted patterns and unique finds below. From artisanal goods to one-of-a-kind creations,
+            we have something special for everyone. Browse our categories and discover the perfect addition to your home, wardrobe,
+            or gift list. Can't find what you're looking for? Don't hesitate to reach out if you have any questions – check out our
+            FAQs or contact us via our form.</p>
     </div>
 </div>
 
@@ -25,39 +26,16 @@
         </div>
 
         <div class="shop-body">
-            <!-- <div class="pcards"> -->
+            <div class="cards-contain">
+                @foreach ($products as $product)
 
-                <!-- <div class="pcard1"> -->
-                    @foreach ($products as $product)
-
-                        <div class="prod-card">
-                            <div class="image"><img src="{{ $product->productImage }}" alt="Image">
-                            <i class="fa fa-heart-o"></i>
-                            </div>
-                            <div class="prod-contain">
-                            <a href="/pattern/{{$product->productID}}"><h1>{{ $product->productName }}</h1></a>
-                            <p class="price">£{{ $product->productPrice }}
-                                <div class="rating-stars">
-                                    <span id="star-icon">&star;</span>
-                                    <span id="star-icon">&star;</span>
-                                    <span id="star-icon">&star;</span>
-                                    <span id="star-icon">&star;</span>
-                                    <span id="star-icon">&star;</span><b>(0)</b>
-                                </div>
-                            </p>
-                            </div>
-                            <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
-                        </div>
-                    @endforeach 
-                <!-- </div> -->
-                <!-- <div class="pcard2">
                     <div class="prod-card">
-                        <div class="image">
+                        <div class="image"><img src="{{ $product->productImage }}" alt="Image">
                         <i class="fa fa-heart-o"></i>
                         </div>
                         <div class="prod-contain">
-                        <h1>Tailored Jeans</h1>
-                        <p class="price">£9.99
+                        <a href="/pattern/{{$product->productID}}"><h1>{{ $product->productName }}</h1></a>
+                        <p class="price">£{{ $product->productPrice }}
                             <div class="rating-stars">
                                 <span id="star-icon">&star;</span>
                                 <span id="star-icon">&star;</span>
@@ -69,56 +47,10 @@
                         </div>
                         <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
                     </div>
-                </div>
-
-                <div class="pcard3">
-                    <div class="prod-card">
-                        <div class="image">
-                        <i class="fa fa-heart-o"></i>
-                        </div>
-                        <div class="prod-contain">
-                        <h1>Tailored Jeans</h1>
-                        <p class="price">£9.99
-                            <div class="rating-stars">
-                                <span id="star-icon">&star;</span>
-                                <span id="star-icon">&star;</span>
-                                <span id="star-icon">&star;</span>
-                                <span id="star-icon">&star;</span>
-                                <span id="star-icon">&star;</span><b>(0)</b>
-                            </div>
-                        </p>
-                        </div>
-                        <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
-                    </div>
-                </div>
-
-                <div class="pcard4">
-                    <div class="prod-card">
-                        <div class="image">
-                        <i class="fa fa-heart-o"></i>
-                        </div>
-                        <div class="prod-contain">
-                        <h1>Tailored Jeans</h1>
-                        <p class="price">£9.99
-                            <div class="rating-stars">
-                                <span id="star-icon">&star;</span>
-                                <span id="star-icon">&star;</span>
-                                <span id="star-icon">&star;</span>
-                                <span id="star-icon">&star;</span>
-                                <span id="star-icon">&star;</span><b>(0)</b>
-                            </div>
-                        </p>
-                        </div>
-                        <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
-                    </div>
-                </div>
-
+                @endforeach 
             </div>
-
-           
-            -->
         </div>
-
+        {{ $products->links() }}
     </div>
 
 @endsection

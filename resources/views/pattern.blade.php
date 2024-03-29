@@ -2,7 +2,7 @@
 
 @section('content')
 
-<link rel="stylesheet" href="css/patterns.css">
+<link rel="stylesheet" href="css/pattern.css">
 
 <h1>Pattern page</h1>
 <p>{{$item->productDescription}}</p>

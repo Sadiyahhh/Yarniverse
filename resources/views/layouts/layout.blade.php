@@ -70,7 +70,7 @@
         </div>
       
         <div class="search-container">
-            <form action="/action_page.php">
+            <form action="{{ route('search') }}">
                 <button type="submit" id="search-icon"><iconify-icon icon="heroicons:magnifying-glass"></iconify-icon></button>
                 <input type="text" id="search-input" placeholder="Search our patterns" name="search">
             </form>

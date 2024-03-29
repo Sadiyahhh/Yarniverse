@@ -81,3 +81,5 @@ Route::get('/shop', [ProductController::class, 'allProducts'])->name('products.a
 //Route for a single product
 Route::get('/pattern/{id}', [ProductController::class, 'item']);
 
+// Route for search function
+Route::get('/search', [ProductController::class, 'search'])->name('search');
