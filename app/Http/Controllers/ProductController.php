@@ -48,5 +48,51 @@ class ProductController extends Controller
         })->orderBy('productPrice')->paginate();
 
     return view('shop', compact('products'));
-}
+    }
+
+    public function amigurumi (Request $request) {
+        if ($request->exists('sort')) {
+            $products = Product::where('productCategory', '=', 'Amigurumi')->orderBy('productPrice', $request->query('sort'))->paginate();
+       } else {
+            $products = Product::where('productCategory', '=', 'Amigurumi')->paginate();
+       }
+        return view('shop', [ 'products' => $products ]);
+    }
+
+    public function clothing (Request $request) {
+        if ($request->exists('sort')) {
+            $products = Product::where('productCategory', '=', 'Clothing')->orderBy('productPrice', $request->query('sort'))->paginate();
+       } else {
+            $products = Product::where('productCategory', '=', 'Clothing')->paginate();
+       }
+        return view('shop', ['products' => $products ]);
+    }
+
+    public function accessories (Request $request) {
+        if ($request->exists('sort')) {
+            $products = Product::where('productCategory', '=', 'Accessories')->orderBy('productPrice', $request->query('sort'))->paginate();
+       } else {
+            $products = Product::where('productCategory', '=', 'Accessories')->paginate();
+       }
+        return view('shop', ['products' => $products ]);
+    }
+
+    public function pets (Request $request) {
+        if ($request->exists('sort')) {
+            $products = Product::where('productCategory', '=', 'Pets')->orderBy('productPrice', $request->query('sort'))->paginate();
+       } else {
+            $products = Product::where('productCategory', '=', 'Pets')->paginate();
+       }
+        return view('shop', ['products' => $products ]);
+    }
+
+    public function homedecor (Request $request) {
+        if ($request->exists('sort')) {
+            $products = Product::where('productCategory', '=', 'Home Decor')->orderBy('productPrice', $request->query('sort'))->paginate();
+       } else {
+            $products = Product::where('productCategory', '=', 'Home Decor')->paginate();
+       }
+        return view('shop', ['products' => $products ]);
+    }
+
 }

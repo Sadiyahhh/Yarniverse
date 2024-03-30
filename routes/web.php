@@ -83,3 +83,19 @@ Route::get('/pattern/{id}', [ProductController::class, 'item']);
 
 // Route for search function
 Route::get('/search', [ProductController::class, 'search'])->name('search');
+
+//Route for amigurumi patterns
+Route::get('/amigurumi', [ProductController::class, 'amigurumi'])->name('amigurumi');
+
+//Route for clothing patterns
+Route::get('/clothing', [ProductController::class, 'clothing'])->name('clothing');
+
+//Route for accessories patterns
+Route::get('/accessories', [ProductController::class, 'accessories'])->name('accessories');
+
+//Route for pets patterns
+Route::get('/pets', [ProductController::class, 'pets'])->name('pets');
+
+//Route for home decor patterns
+Route::get('/homedecor', [ProductController::class, 'homedecor'])->name('homedecor');
+

@@ -116,11 +116,11 @@
     </div>
 
     <div class="navigation" id="navigation">
-        <a href="/shop" id="amigurumi">Amigurumi</a>
-        <a href="#clothing" id="clothing">Clothing</a>
-        <a href="#accessories" id="accessories">Accessories</a>
-        <a href="#pets" id="pets">Pets</a>
-        <a href="#homedecor" id="homedecor">Home Decor</a>
+        <a href="{{route('amigurumi')}}" id="amigurumi">Amigurumi</a>
+        <a href="{{route('clothing')}}" id="clothing">Clothing</a>
+        <a href="{{route('accessories')}}" id="accessories">Accessories</a>
+        <a href="{{route('pets')}}" id="pets">Pets</a>
+        <a href="{{route('homedecor')}}" id="homedecor">Home Decor</a>
     </div>
 
 <!--     

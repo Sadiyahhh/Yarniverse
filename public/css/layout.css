@@ -530,19 +530,19 @@ hr {
 
   .cards-contain {
     position: relative;
-    left: 5%;
+    left: 7%;
     margin-top: 4%;
     display: grid;
-    grid-template-columns: repeat(3, .35fr);
+    grid-template-columns: repeat(3, .3fr);
     grid-template-rows: .7fr;
     grid-column-gap: 0px;
-    grid-row-gap: 16px;
+    grid-row-gap: 38px;
   }
 
   .prod-card {
     /* grid-area: 1 / 1 / 2 / 4;  */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 14rem;
+    max-width: 15rem;
     max-height: 30rem;
     border: 1px solid;
     margin: 1%;

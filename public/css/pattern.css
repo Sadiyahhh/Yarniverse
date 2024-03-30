@@ -1,3 +1,106 @@
-h1 {
-    color:aliceblue;
+.prod-body {
+    display: grid;
+    grid-template-columns: 2fr .8fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
+
+.pattern-left {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: #AF8683;
+}
+
+.pattern-img {
+    /* grid-area: 1 / 1 / 2 / 2; */
+}
+
+.pattern-img-cont {
+    background-color: grey;
+    border: 1px solid;
+    width: 10rem;
+    height: 10rem;
+}
+
+.pattern-img-cont img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.pattern-rec {
+    /* grid-area: 2 / 1 / 3 / 2; */
+}
+
+.pattern-desc {
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: #A06F6A;
+}
+
+.pattern-desc .pattern-text {
+    padding: 4%;
+}
+
+.addto-basket {
+    background-color: #573B38;
+    border: 1px solid black;
+    border-radius: 11px;
+    padding: 2%;
+    color: white;
+    margin-left: 15%;
+    width: 14rem;
+}
+
+button span {
+    position: relative;
+    left: 10px;
+    bottom: 5.5px;
+  }
+
+/* Dropdown Formatting */
+
+.accordion {
+    color: #A06F6A;
+  }
+  
+  .accordion {
+    background-color: #A06F6A;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    /* margin-left: 13%; */
+    border: transparent;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.2s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #AF8683;
+    font-weight: 500;
+  }
+  
+  .accordion:after {
+    content: '\002B';
+    color: black;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .panel {
+    padding: 0 18px;
+    width: 75%;
+    margin-left: 13%;
+    background-color: #A06F6A;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
