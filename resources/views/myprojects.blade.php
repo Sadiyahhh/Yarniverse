@@ -62,7 +62,38 @@
         </div>
 
     <div class="projects">
-        <div class="project">
+
+        <form action="{{ url('save-student') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+
+            <div class="form-control">
+                <label>Project Title</label>
+                <input type="text" name="projectTitle" required class="form-control" placeholder="Enter a title">
+            </div>
+
+            <div class="form-control">
+                <label>Project Description</label>
+                <input type="textarea" name="projectDescription" required class="form-control" placeholder="Enter a description">
+            </div>
+
+            <div class="input-group">
+                <div class="custom-file">
+                    <input type="file" name="image" class="custom-file-input">
+                    <label class="custom-file-label">Upload Image</label>
+                </div>
+            </div>
+
+            <div class="form-control">
+                <label>Notes</label>
+                <!-- <input type="text" name="notes" required class="form-control" placeholder="Your notes:"> -->
+                <textarea id="notes" name="notes" placeholder="Your notes:"></textarea>
+                <input type="submit" value="Submit">
+            </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+
+        </form>
+
+        <!-- <div class="project">
             <h1>Project Name&nbsp<i class="fa fa-pencil" id="pencil"></i></h1>
             <div class="p-desc">
                 <p><b>Project Description</b></p>
@@ -89,9 +120,9 @@
                 </div>
 
             </div>
-        </div>
+        </div> -->
 
-        <div class="project1">
+        <!-- <div class="project1">
             <h1>Project Name&nbsp<i class="fa fa-pencil" id="pencil"></i></h1>
             <div class="p-desc">
                 <p><b>Project Description</b></p>
@@ -118,7 +149,7 @@
                 </div>
 
             </div>
-        </div>
+        </div> -->
     </div>
 
 </div>

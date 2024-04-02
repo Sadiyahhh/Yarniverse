@@ -20,6 +20,13 @@ class ProductController extends Controller
         return view ('shop', ['products' => $products]);
     }
 
+    public function carousel()
+    {
+        //Method created to get data from the 'product' table and to show them on the products view in carousel.
+        $products = Product::skip(0)->take(12)->get();
+        return $products;
+    }
+
     public function item ($productID) 
     {
         // Method to fetch/return single product - used on pattern details page.
@@ -27,12 +34,13 @@ class ProductController extends Controller
         return view ('pattern', ['item' => $item]);
     }
 
+    // Search function to filter searches by product name, category, creator. 
     public function search(Request $request)
     {
-        // Search function to filter searches by product name, category, creator. 
         // Products that appear are then sorted by price, lowest upward.
         $products = Product::when($request->search, function ($query, $search) {
 
+            //Searchbar functionality to only show results that match name, category or creator.
             return $query->where(function ($query) use ($search) {
             $query->where('productName', 'like', $search = "%{$search}%")
                 ->orWhere('productCategory', 'like', $search)
@@ -50,6 +58,7 @@ class ProductController extends Controller
     return view('shop', compact('products'));
     }
 
+    //Below functions are to fetch respective product categories when clicked on via navbar. 
     public function amigurumi (Request $request) {
         if ($request->exists('sort')) {
             $products = Product::where('productCategory', '=', 'Amigurumi')->orderBy('productPrice', $request->query('sort'))->paginate();

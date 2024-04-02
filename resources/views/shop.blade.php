@@ -6,7 +6,7 @@
 
 <div class="shop-title">
     <div class="shop-title-text">
-        <h3>Shop our Products</h3>
+        <h3><a href="/shop">Shop our Products</a></h3>
         <p>Explore our collection of handcrafted patterns and unique finds below. From artisanal goods to one-of-a-kind creations,
             we have something special for everyone. Browse our categories and discover the perfect addition to your home, wardrobe,
             or gift list. Can't find what you're looking for? Don't hesitate to reach out if you have any questions – check out our

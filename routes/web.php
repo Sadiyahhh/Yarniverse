@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\BasketController;
+use App\Http\Controllers\ProjectController;
+
 
 
 /*
@@ -99,3 +102,17 @@ Route::get('/pets', [ProductController::class, 'pets'])->name('pets');
 //Route for home decor patterns
 Route::get('/homedecor', [ProductController::class, 'homedecor'])->name('homedecor');
 
+//Basket routing
+Route::get('/basket', [BasketController::class, 'index'])->name('basket');
+
+// Adding a product to basket
+Route::post('/basket/add', [BasketController::class, 'add'])->name('basket.add');
+
+//Removing product from basket
+Route::post('/basket/remove', [BasketController::class, 'remove'])->name('basket.remove');
+
+//Checkout function
+Route::post('/basket/checkout', [BasketController::class, 'checkout'])->name('basket.checkout');
+
+//Project routes
+Route::get('/myprojects', [ProjectController::class, 'index']);

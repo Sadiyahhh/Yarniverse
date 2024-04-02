@@ -15,10 +15,6 @@ return new class extends Migration
             $table->id('basketID')->autoIncrement();
             $table->integer('userID')->references('id')->on('users');
             $table->integer('productID')->references('id')->on('products');
-            // $table->foreign('userID')->references('id')->on('users')->onDelete('cascade');
-            // $table->foreign('productID')->references('id')->on('products')->onDelete('cascade');
-            $table->integer('quantity');
-            $table->decimal('total', 8, 2);
         });
     }
 
