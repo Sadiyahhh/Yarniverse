@@ -42,6 +42,10 @@ Route::get('/basket', function () {
     return view('basket');
 });
 
+Route::get('/checkout', function () {
+    return view('checkout');
+});
+
 Route::get('/shop', function () {
     return view('shop');
 });
@@ -114,5 +118,9 @@ Route::post('/basket/remove', [BasketController::class, 'remove'])->name('basket
 //Checkout function
 Route::post('/basket/checkout', [BasketController::class, 'checkout'])->name('basket.checkout');
 
+//Route to show subtotal
+// Route::get('/basket', [BasketController::class, 'getBasketTotalAmount']);
+
 //Project routes
 Route::get('/myprojects', [ProjectController::class, 'index']);
+Route::post('/addproject', [ProjectController::class, 'store'])->name('addproject');

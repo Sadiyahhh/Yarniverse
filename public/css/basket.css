@@ -34,6 +34,12 @@
     grid-area: 1 / 1 / 2 / 2;
 }
 
+.ph-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
 .ph hr {
     border: 1px solid black;
     width: 75%;

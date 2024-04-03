@@ -21,6 +21,12 @@ class BasketController extends Controller
         //     return view('emptybasket');
         // }
 
+         // Calculate basket total
+    // $basketTotal = $this->getBasketTotalAmount();
+
+    // Pass both basket information and total to the view
+    // return view('basket', [ 'basket' => $basket, 'basketTotal' => $basketTotal ]);
+
         return view('basket', [
             'basket' => $basket,
         ]);
@@ -36,7 +42,7 @@ class BasketController extends Controller
             'productID' => $productID, 
         ]);
 
-        return back()->with('success', 'Product added to your basket.');
+        return redirect()->back()->with('add', 'Product added to your basket.');
         return view('basket', [ 'products' => $products ]);
     }
 
@@ -53,7 +59,24 @@ class BasketController extends Controller
             ->where('baskets.userID', '=', auth()->id())
             ->join('products', 'baskets.productID', '=', 'products.productID')
             ->sum('products.productPrice');
+        
+        // $basketTotal = DB::table('baskets')
+        // ->where('baskets.userID', '=', auth()->id())
+        // ->join('products', 'baskets.productID', '=', 'products.productID')
+        // ->sum('products.productPrice');
+
+        // return $basketTotal;
+        return view('basket', [ 'basket' => $basketTotal ]);
+
+
+
     }
+
+    // public function showBasket() {
+    //     $subtotal = $this->getBasketTotalAmount();
+
+    //     return view('basket', compact('subtotal'));
+    // }
 
     //Get basket for user with product price included (does not need total column on basket table)
     public function getDetailedBasket(Request $request) {
@@ -69,7 +92,7 @@ class BasketController extends Controller
         error_log($request->basketID);
         Basket::where('basketID', $request->basketID)->delete();
 
-        return back()->with('success', 'Product removed from your basket.');
+        return redirect()->back()->with('remove', 'Product removed from your basket.');
     }
 
     //Checkout function 
@@ -83,6 +106,6 @@ class BasketController extends Controller
     $basket->completed = true;
     $basket->save();
 
-    return redirect()->route('shop')->with('success', 'Checkout completed successfully.');
+    return redirect()->route('shop')->with('checkout', 'Checkout completed successfully.');
     }
 }

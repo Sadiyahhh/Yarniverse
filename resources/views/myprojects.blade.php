@@ -63,7 +63,7 @@
 
     <div class="projects">
 
-        <form action="{{ url('save-student') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('addproject') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             <div class="form-control">
@@ -73,7 +73,7 @@
 
             <div class="form-control">
                 <label>Project Description</label>
-                <input type="textarea" name="projectDescription" required class="form-control" placeholder="Enter a description">
+                <textarea id="projectDescription" name="projectDescription" required class="form-control" placeholder="Enter a description:"></textarea>
             </div>
 
             <div class="input-group">
@@ -87,7 +87,7 @@
                 <label>Notes</label>
                 <!-- <input type="text" name="notes" required class="form-control" placeholder="Your notes:"> -->
                 <textarea id="notes" name="notes" placeholder="Your notes:"></textarea>
-                <input type="submit" value="Submit">
+                <!-- <input type="submit" value="Submit"> -->
             </div>
                 <button type="submit" class="btn btn-primary">Save</button>
 

@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('projects', function (Blueprint $table) {
-            $table->id('projectID')->autoIncrement();
+        Schema::create('orders', function (Blueprint $table) {
+            $table->id('orderID')->autoIncrement();
             $table->integer('userID')->references('id')->on('users');
-            $table->string('projectTitle');
-            $table->longText('projectDescription');
-            $table->mediumText('image')->nullable();
-            $table->longText('notes');
+            $table->string('name');
+            $table->decimal('orderTotal', 8, 2);
+            $table->timestamps();
         });
     }
 
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('projects');
+        Schema::dropIfExists('orders');
     }
 };

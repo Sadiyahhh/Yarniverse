@@ -1,15 +1,30 @@
+
 @extends('layouts.layout')
 
 @section('content')
 
 <link rel="stylesheet" href="css/basket.css">
 
+
+
+@if($basket->count()==0)
+        <div class="test">
+            <h1>Basket Empty!</h1>
+        </div>
+@else
+
 <div class="basket-title">
-    <h2>Your Basket (0)</h2>
+    <h2>Your Basket</h2>
 </div>
 
 <div class="basket-contain">
     <!-- Insert function to automatically fetch no. of items from basket table -->
+
+    @if(session()->has('remove'))
+    <div class="alert alert-success" role="alert" id="go-to-basket">
+        {{session()->get('remove')}}
+    </div>
+    @endif
 
     <div class="basket-card">
 
@@ -106,9 +121,14 @@
         <p>Subtotal:&nbsp;£0.00</p>
         <hr>
         <p><b>Subtotal:&nbsp;£0.00</b></p>
-        <input type="submit" id="basket_submit" value="Checkout">
+        <a href="/checkout"><input type="submit" id="basket_submit" value="Checkout"></a>
+        <!-- <form action="{{ route('basket.checkout') }}" method="POST">
+            <input type="hidden" name="basketID" id="basketID" value="{{ $product->basketID }}">
+            @csrf
+            <input type="submit" id="basket_submit" value="Checkout">
+        </form> -->
     </div>
 
 </div>
-
+@endif
 @endsection
