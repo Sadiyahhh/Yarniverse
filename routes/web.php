@@ -2,9 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\BasketController;
 use App\Http\Controllers\ProjectController;
-
+use App\Http\Controllers\BasketController;
+use App\Http\Controllers\DownloadController;
+use App\Http\Controllers\PurchaseController;
 
 
 /*
@@ -42,10 +43,6 @@ Route::get('/basket', function () {
     return view('basket');
 });
 
-Route::get('/checkout', function () {
-    return view('checkout');
-});
-
 Route::get('/shop', function () {
     return view('shop');
 });
@@ -74,9 +71,10 @@ Route::get('/wishlist', function () {
     return view('wishlist');
 });
 
-Route::get('/myprojects', function () {
-    return view('myprojects');
-});
+// Route::get('/myprojects', function () {
+//     return view('myprojects');
+// });
+Route::get('/myprojects', [PurchaseController::class, 'index'])->name('myProjects');
 
 Route::get('/purchasehistory', function () {
     return view('purchasehistory');
@@ -118,9 +116,9 @@ Route::post('/basket/remove', [BasketController::class, 'remove'])->name('basket
 //Checkout function
 Route::post('/basket/checkout', [BasketController::class, 'checkout'])->name('basket.checkout');
 
-//Route to show subtotal
-// Route::get('/basket', [BasketController::class, 'getBasketTotalAmount']);
+//Download file
+Route::get('/download', [DownloadController::class, 'download'])->name('download');
 
 //Project routes
-Route::get('/myprojects', [ProjectController::class, 'index']);
-Route::post('/addproject', [ProjectController::class, 'store'])->name('addproject');
+// Route::get('/myprojects', [ProjectController::class, 'index']);
+// Route::post('/addproject', [ProjectController::class, 'store'])->name('addproject');

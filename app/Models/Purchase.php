@@ -5,19 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Basket extends Model
+class Purchase extends Model
 {
-    protected $table = 'baskets';
+    protected $table = 'purchases';
 
-    protected $primaryKey = 'basketID';
+    protected $primaryKey = 'id';
 
     public $timestamps = false;
 
     protected $fillable = ['userID', 'productID'];
-
-    // protected $fillable = ['user_id', 'products', 'completed'];
-
-    // protected $casts = ['products' => 'array'];
 
     use HasFactory;
 

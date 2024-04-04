@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Basket;
 use App\Models\Product;
+use App\Models\Purchase;
 
 class BasketController extends Controller
 {
@@ -20,12 +21,6 @@ class BasketController extends Controller
         // if (count($basket) == 0) {
         //     return view('emptybasket');
         // }
-
-         // Calculate basket total
-    // $basketTotal = $this->getBasketTotalAmount();
-
-    // Pass both basket information and total to the view
-    // return view('basket', [ 'basket' => $basket, 'basketTotal' => $basketTotal ]);
 
         return view('basket', [
             'basket' => $basket,
@@ -42,7 +37,7 @@ class BasketController extends Controller
             'productID' => $productID, 
         ]);
 
-        return redirect()->back()->with('add', 'Product added to your basket.');
+        return back()->with('success', 'Product added to your basket.');
         return view('basket', [ 'products' => $products ]);
     }
 
@@ -59,24 +54,7 @@ class BasketController extends Controller
             ->where('baskets.userID', '=', auth()->id())
             ->join('products', 'baskets.productID', '=', 'products.productID')
             ->sum('products.productPrice');
-        
-        // $basketTotal = DB::table('baskets')
-        // ->where('baskets.userID', '=', auth()->id())
-        // ->join('products', 'baskets.productID', '=', 'products.productID')
-        // ->sum('products.productPrice');
-
-        // return $basketTotal;
-        return view('basket', [ 'basket' => $basketTotal ]);
-
-
-
     }
-
-    // public function showBasket() {
-    //     $subtotal = $this->getBasketTotalAmount();
-
-    //     return view('basket', compact('subtotal'));
-    // }
 
     //Get basket for user with product price included (does not need total column on basket table)
     public function getDetailedBasket(Request $request) {
@@ -89,23 +67,30 @@ class BasketController extends Controller
     //Removing product from basket
     public function remove(Request $request)
     {
-        error_log($request->basketID);
         Basket::where('basketID', $request->basketID)->delete();
 
-        return redirect()->back()->with('remove', 'Product removed from your basket.');
+        return back()->with('success', 'Product removed from your basket.');
     }
 
     //Checkout function 
-    public function checkout(Request $request)
+    public function checkout()
     {
-    $basket = Basket::where('userID', auth()->id())->where('completed', false)->firstOrFail();
+        $basket =  DB::table('baskets')
+        ->where('baskets.userID', '=', auth()->id())
+        ->select('baskets.*')
+        ->get();
 
-    // Here, you might add payment processing before completing the order
-    // For simplicity, we're directly marking it as completed
+        foreach ($basket as $item) {
+            $purchase = Purchase::create([
+                'userID' => $item->userID,
+                'productID' => $item->productID, 
+            ]);
+        }
 
-    $basket->completed = true;
-    $basket->save();
+        DB::table('baskets')->where('userID', '=', auth()->id())->delete();
 
-    return redirect()->route('shop')->with('checkout', 'Checkout completed successfully.');
+        return view('basket');
+
+        //return redirect()->route('shop')->with('success', 'Checkout completed successfully.');
     }
 }

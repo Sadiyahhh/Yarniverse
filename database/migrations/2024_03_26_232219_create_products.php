@@ -21,6 +21,7 @@ return new class extends Migration
             $table->longText('productMaterials');
             $table->decimal('productPrice', 8, 2);
             $table->string('productImage');
+            $table->string('location');
         });
     }
 
