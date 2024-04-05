@@ -8,7 +8,7 @@
                 <span class="dot"></span>
                 <div class="userinfo-t">
                     <div class="user"> 
-                    <p> Hello, <b>[user]<b>! <i class="fa fa-pencil"></i></p>
+                    <p> Hello, <b>[user]<b>!</p>
                     </div>
                     <div class="user-signout"> 
                     <p><a href="/login"><u>Sign out</u></a></p>
@@ -18,7 +18,7 @@
 
             <div class="acc-tab-active">
                 <div class="myprojects">
-                    <img src="/site-images/yarn-removebg-preview.png"><p>My Projects</p>
+                        <span class="material-symbols-outlined" id="account-icons">edit_square</span><p><a href="/myprojects">My Projects</a></p>
                 </div>
             </div>
 

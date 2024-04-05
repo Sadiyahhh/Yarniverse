@@ -31,11 +31,13 @@
   }
   
   .who-text p {
-    padding: 1%;
+    /* padding: 1%; */
+    font-size: medium;
   }
   
   .who-text h1 {
     text-align: left;
+    font-size: x-large;
   }
   
   .who-img {
@@ -67,15 +69,19 @@
   }
   
   .purpose-text p {
-    padding: 1%;
+    /* padding: 1%; */
+    font-size: medium;
   }
   
   .purpose-text h1 {
     text-align: left;
+    font-size: x-large;
   }
   
   .purpose-img {
     grid-area: 1 / 1 / 2 / 2;
+    height: 19.6rem;
+
   }
   
   .purpose-img img {
@@ -103,7 +109,8 @@
   .loyal-contain {
     max-width: 100%;
     padding: 4%;
-    padding-left: 12%;
+    position: relative;
+    left: 3%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
@@ -126,8 +133,8 @@
   }
   
   .image1, .image2, .image3 {
-    width: 323px;
-    height: 306px;
+    width: 17rem;
+    height: 17rem;
     background-color: #CCC7C7;
     border: 1px solid;
   }

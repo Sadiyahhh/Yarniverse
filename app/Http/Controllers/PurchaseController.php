@@ -17,7 +17,7 @@ class PurchaseController extends Controller
         ->where('purchases.userID', '=', auth()->id())
         ->select('products.*')
         ->get();
-        return view('myprojects', [
+        return view('purchasehistory', [
             'purchases' => $purchases,
         ]);
     }

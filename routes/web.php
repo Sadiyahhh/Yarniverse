@@ -74,11 +74,11 @@ Route::get('/wishlist', function () {
 // Route::get('/myprojects', function () {
 //     return view('myprojects');
 // });
-Route::get('/myprojects', [PurchaseController::class, 'index'])->name('myProjects');
+Route::get('/purchasehistory', [PurchaseController::class, 'index']);
 
-Route::get('/purchasehistory', function () {
-    return view('purchasehistory');
-});
+// Route::get('/purchasehistory', function () {
+//     return view('purchasehistory');
+// });
 
 //Route for all products
 Route::get('/shop', [ProductController::class, 'allProducts'])->name('products.allProducts');
@@ -120,5 +120,5 @@ Route::post('/basket/checkout', [BasketController::class, 'checkout'])->name('ba
 Route::get('/download', [DownloadController::class, 'download'])->name('download');
 
 //Project routes
-// Route::get('/myprojects', [ProjectController::class, 'index']);
-// Route::post('/addproject', [ProjectController::class, 'store'])->name('addproject');
+Route::get('/myprojects', [ProjectController::class, 'index']);
+Route::post('/addproject', [ProjectController::class, 'store'])->name('addproject');

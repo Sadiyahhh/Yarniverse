@@ -15,7 +15,7 @@
                     <div class="userinfo-t">
                         <div class="user"> 
                             @if (Auth::check())
-                                <p> Hello, <b>{{ Auth::user()->name }}<b>! <i class="fa fa-pencil"></i></p>
+                                <p> Hello, <b>{{ Auth::user()->name }}<b>!</p>
                             @endif
                         </div>
                                 <!-- Sign out function -->
@@ -35,17 +35,9 @@
 
                 <div class="acc-tab-active">
                     <div class="myprojects">
-                        <img src="/site-images/yarn-removebg-preview.png"><p><a href="/myprojects">My Projects</a></p>
+                    <span class="material-symbols-outlined" id="account-icons">edit_square</span><p><a href="/myprojects">My Projects</a></p>
                     </div>
                 </div>
-
-                
-                <div class="acc-tab">
-                    <div class="accountdetails">
-                        <i class="material-symbols-outlined" id="account-icons">person</i><p><a href="/details">Account Details</a></p>
-                    </div>
-                </div>
-
                 
                 <div class="acc-tab">
                     <div class="mywishlist">
@@ -60,109 +52,74 @@
                     </div>
                 </div>
         </div>
+</div>
 
-        <div class="projects">
-        @foreach ($purchases as $product)
-        <div class="project">
-            <h1>{{ $product->productName }}&nbsp<i class="fa fa-pencil" id="pencil"></i></h1>
-            <!-- <a href="{{ route('download', ['filename' => 'test.pdf']) }}" target="_blank">Download</a> -->
-            <form action="{{ route('download') }}" method="GET">
-                <input type="hidden" name="filename" id="filename" value="{{ $product->location }}">
-                @csrf
-                <button class="btn btn-danger" id = "download_button">Download</button>
-            </form>
-            <div class="p-desc">
-                <p><b>Project Description</b></p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                     et dolore magna aliqua. Ut enim ad minim veniam, </p>
-                <p><b>My Progress</b></p>
-                <div class="progress-bar"></div>
-                <div class="progress-tabs">
-                    <div class="tab1">
-                        <p>Starting Slipknot</p>
-                    </div>
-                    <div class="tab2">
-                        <p>In the Loop</p>
-                    </div>
-                    <div class="tab3">
-                        <p>Halfway Hooked</p>
-                    </div>
-                    <div class="tab4">
-                        <p>Final Stitches</p>
-                    </div>
-                    <div class="tab5">
-                        <p>Complete!</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        @endforeach
-
+<!-- Old download file  -->
+    
+    
     <div class="projects">
 
-    
+        <form action="{{ route('addproject') }}" method="POST" enctype="multipart/form-data">
+            @csrf
 
-        
-        <!-- <div class="project">
-            <h1>Project Name&nbsp<i class="fa fa-pencil" id="pencil"></i></h1>
-            <div class="p-desc">
-                <p><b>Project Description</b></p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                     et dolore magna aliqua. Ut enim ad minim veniam, </p>
-                <p><b>My Progress</b></p>
-                <div class="progress-bar"></div>
-                <div class="progress-tabs">
-                    <div class="tab1">
-                        <p>Starting Slipknot</p>
-                    </div>
-                    <div class="tab2">
-                        <p>In the Loop</p>
-                    </div>
-                    <div class="tab3">
-                        <p>Halfway Hooked</p>
-                    </div>
-                    <div class="tab4">
-                        <p>Final Stitches</p>
-                    </div>
-                    <div class="tab5">
-                        <p>Complete!</p>
-                    </div>
-                </div>
-
+            <div class="form-control">
+                <label>Project Title</label>
+                <input type="text" name="projectTitle" required class="form-control" placeholder="Enter a title">
             </div>
-        </div> -->
 
-        <!-- <div class="project1">
-            <h1>Project Name&nbsp<i class="fa fa-pencil" id="pencil"></i></h1>
-            <div class="p-desc">
-                <p><b>Project Description</b></p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                     et dolore magna aliqua. Ut enim ad minim veniam, </p>
-                <p><b>My Progress</b></p>
-                <div class="progress-bar"></div>
-                <div class="progress-tabs">
-                    <div class="tab1">
-                        <p>Starting Slipknot</p>
-                    </div>
-                    <div class="tab2">
-                        <p>In the Loop</p>
-                    </div>
-                    <div class="tab3">
-                        <p>Halfway Hooked</p>
-                    </div>
-                    <div class="tab4">
-                        <p>Final Stitches</p>
-                    </div>
-                    <div class="tab5">
-                        <p>Complete!</p>
-                    </div>
-                </div>
-
+            <div class="form-control">
+                <label>Project Description</label>
+                <textarea id="projectDescription" name="projectDescription" required class="form-control" placeholder="Enter a description:"></textarea>
             </div>
-        </div> -->
+
+            <div class="input-group">
+                <div class="custom-file">
+                    <input type="file" name="image" class="custom-file-input">
+                    <label class="custom-file-label">Upload Image</label>
+                </div>
+            </div>
+
+            <div class="form-control">
+                <label>Notes</label>
+                <!-- <input type="text" name="notes" required class="form-control" placeholder="Your notes:"> -->
+                <textarea id="notes" name="notes" placeholder="Your notes:"></textarea>
+                <!-- <input type="submit" value="Submit"> -->
+            </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+
     </div>
 
-</div>
+    <!-- <div class="projects"> -->
+            <!-- <div class="project">
+                <h1>Project Name&nbsp<i class="fa fa-pencil" id="pencil"></i></h1>
+                <div class="p-desc">
+                    <p><b>Project Description</b></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, </p>
+                    <p><b>My Progress</b></p>
+                    <div class="progress-bar"></div>
+                    <div class="progress-tabs">
+                        <div class="tab1">
+                            <p>Starting Slipknot</p>
+                        </div>
+                        <div class="tab2">
+                            <p>In the Loop</p>
+                        </div>
+                        <div class="tab3">
+                            <p>Halfway Hooked</p>
+                        </div>
+                        <div class="tab4">
+                            <p>Final Stitches</p>
+                        </div>
+                        <div class="tab5">
+                            <p>Complete!</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div> -->
+    <!-- </div> -->
+
 
 @endsection

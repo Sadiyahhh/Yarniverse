@@ -13,11 +13,12 @@
 
 @else
 
+<h1>Your Basket</h1>
+
 <div class="basket-contain">
     <!-- Insert function to automatically fetch no. of items from basket table -->
 
     <div class="basket-card">
-
     <?php 
         $total = 0;
     ?>
@@ -56,59 +57,6 @@
                 </div>
             </div>
     @endforeach
-
-            <!-- <div class="purchase-card">
-                <div class="ph-img"></div>
-                <div class="ph-text">
-                    <div class="ph-head">
-                        <div class="ph-title">
-                            <h2>Pattern Title&nbsp;</h2>
-                        </div>
-                        <div class="ph-empty"></div>
-                        <div class="ph-pencil">
-                            <i class="fa fa-pencil" id="pencil"></i>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="ph-text-content">
-                        <div class="ph-grid">
-                            <div class="ph-creator"> <p>Creator: <b>Creator</b></p></div>
-                            <div class="ph-empty"> </div>
-                            <div class="ph-price"> <h2>£0.00</h></div>
-                        </div>
-                        <p>Category: <b>Category</b></p>
-                        <p>Quantity: <b>Quantity</b></p>
-                        <p class="ph-det"><u><b>View Details</b></u></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="purchase-card">
-                <div class="ph-img"></div>
-                <div class="ph-text">
-                    <div class="ph-head">
-                        <div class="ph-title">
-                            <h2>Pattern Title&nbsp;</h2>
-                        </div>
-                        <div class="ph-empty"></div>
-                        <div class="ph-pencil">
-                            <i class="fa fa-pencil" id="pencil"></i>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="ph-text-content">
-                        <div class="ph-grid">
-                            <div class="ph-creator"> <p>Creator: <b>Creator</b></p></div>
-                            <div class="ph-empty"> </div>
-                            <div class="ph-price"> <h2>£0.00</h></div>
-                        </div>
-                        <p>Category: <b>Category</b></p>
-                        <p>Quantity: <b>Quantity</b></p>
-                        <p class="ph-det"><u><b>View Details</b></u></p>
-                    </div>
-                </div>
-            </div> -->
-
     </div>
 
     <div class="order-summary">

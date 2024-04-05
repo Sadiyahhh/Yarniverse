@@ -10,9 +10,8 @@
         <div class="who-text"> 
             <h1>Who Are We?</h1>
             <p>Yarniverse is a hybrid between project planning and a vibrant online community born out of a shared passion for crochet and creativity. 
-                We are more than just a platform – we are a gathering space for crochet enthusiasts, dreamers, and makers.</p>
-            <p>We offer more than just a digital space; here lies a dynamic community fostering connections, 
-                sparking ideas, and celebrating the art of crochet.
+                We are a gathering space for crochet enthusiasts, dreamers, and makers.</p>
+            <p>We offer more than just a digital space; here lies a dynamic community celebrating the art of crochet.
                 Whether you're a seasoned pro or just starting your crochet journey, Yarniverse is here to 
                 support and amplify your creative endeavors.</p>
         </div>

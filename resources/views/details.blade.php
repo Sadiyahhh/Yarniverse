@@ -11,7 +11,7 @@
                     <div class="userinfo-t">
                         <div class="user"> 
                             @if (Auth::check())
-                                <p> Hello, <b>{{ Auth::user()->name }}<b>! <i class="fa fa-pencil"></i></p>
+                                <p> Hello, <b>{{ Auth::user()->name }}<b>!</p>
                             @endif
                         </div>
                                 <!-- Sign out function -->
@@ -23,18 +23,10 @@
 
                 <div class="acc-tab">
                     <div class="myprojects">
-                        <img src="/site-images/yarn-removebg-preview.png"><p><a href="/myprojects">My Projects</a></p>
+                    <span class="material-symbols-outlined" id="account-icons">edit_square</span><p><a href="/myprojects">My Projects</a></p>
                     </div>
                 </div>
 
-                
-                <div class="acc-tab-active">
-                    <div class="accountdetails">
-                        <i class="material-symbols-outlined" id="account-icons">person</i><p><a href="/details">Account Details</a></p>
-                    </div>
-                </div>
-
-                
                 <div class="acc-tab">
                     <div class="mywishlist">
                         <i class="material-symbols-outlined" id="account-icons">favorite</i><p><a href="/wishlist">My Wishlist</a></p>

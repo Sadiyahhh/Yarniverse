@@ -63,9 +63,9 @@
       </ol>
     </aside>
   </section>
-  <!-- <div class="welcome-gif">
-    <h2>Shop Now</h2>
-  </div> -->
+  <div class="welcome-gif">
+    <img src="/site-images/homepage.mp4" alt="gif">
+  </div>
 
     <div class="most-liked">
       <h1>Most Liked by Users</h1>
