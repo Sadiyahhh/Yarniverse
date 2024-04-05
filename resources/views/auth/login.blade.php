@@ -75,14 +75,15 @@
 
 
 <div class="login-contain">
-    <div class="form-box">
-        <div class="box-button">
+    <div class="login-box">
+        <!-- <div class="box-button">
             <div id="btn"></div>
                 <button type="button" class="toggle-btn" onclick="login()">Sign In</button>
                 <button type="button" class="toggle-btn" onclick="register()">Register</button>
-        </div>
+        </div> -->
             <form method="POST" id="login" action="{{ route('login') }}" class="form-group">
                 @csrf
+                <h2>Sign In</h2>
                 <label for="email">{{ __('Email Address') }}</label>
                 <!-- <input type="text" id="username" class="input-field" placeholder="Your username"> -->
                 <input id="email" type="text" class="form-control @error('email') is-invalid @enderror input-field" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -123,10 +124,12 @@
                 <input type="submit" id="login_submit" value="Sign In"></input>
                 
             </form>
+    </div>
 
+    <div class="register-box">
             <form method="POST" action="{{ route('register') }}" id="register" class="form-group">
                         @csrf
-
+                <h2>Register</h2>
                 <div class="row mb-3">
                     <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
 

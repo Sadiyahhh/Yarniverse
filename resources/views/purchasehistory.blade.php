@@ -70,7 +70,7 @@
                             <form action="{{ route('download') }}" method="GET">
                                 <input type="hidden" name="filename" id="filename" value="{{ $product->location }}">
                                 @csrf
-                                <button class="btn btn-danger" id = "download_button">Download</button>
+                                <button class="btn btn-danger" id = "download_button"><span class="material-symbols-outlined">download</span></button><span>Download</span>
                             </form>
                         </div>
                     </div>

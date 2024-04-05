@@ -113,15 +113,25 @@
   
 .order-summary {
     /* width: 50%; */
-    height: 11rem;
+    height: 14rem;
     margin-top: 4%;
     background-color: #AF8683;
     border: 3px solid #7A524E;
     grid-area: 1 / 2 / 2 / 3;
 }
 
+.order-summary h3 {
+    text-align: center;
+}
+
 .order-summary p {
-    padding: 1% 2%;
+    padding: 1% 7%;
+}
+
+.order-summary span {
+    float: right;
+    margin: -10% 8% 0% 0%;
+
 }
 
 /* .order-summary h3 {
@@ -139,7 +149,7 @@
     color: #D0B7B4;
     font-weight: bold;
     padding: 2% 8%;
-    margin-left: 38%;
+    margin-left: 36%;
     margin-top: 2%;
     outline: none;
     border-radius: 20px;
@@ -149,3 +159,15 @@
 #basket_submit:hover {
 background-color: #7A524E;
 }
+
+#remove_button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    float: right;
+}
+
+.bask-subtotal {
+    float: right;
+}
+

@@ -37,7 +37,7 @@ class BasketController extends Controller
             'productID' => $productID, 
         ]);
 
-        return back()->with('success', 'Product added to your basket.');
+        return back()->with('add', 'Added to basket.');
         return view('basket', [ 'products' => $products ]);
     }
 

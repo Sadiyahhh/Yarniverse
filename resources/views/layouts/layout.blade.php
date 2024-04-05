@@ -81,19 +81,19 @@
             <div class="header-items"> 
                 <!-- Whilst user is not logged in -->
                 <a href="{{ route('login') }}" i class="material-symbols-outlined" id="header-icons">person</i></a>
-                <a href="/wishlist" i class="material-symbols-outlined" id="header-icons">favorite</i></a>                
-                <a href="/basket" i class="material-symbols-outlined" id="header-icons">shopping_bag</i></a>
+                <a href="{{ route('login') }}" i class="material-symbols-outlined" id="header-icons">favorite</i></a>                
+                <a href="{{ route('login') }}" i class="material-symbols-outlined" id="header-icons">shopping_bag</i></a>
             </div>
             <div class="icon-text">
-                <a href="{{ route('login') }}" id="text-a">Sign In</a>
-                <a href="/wishlist" id="text-w">Wishlist</a>
-                <a href="/basket" id="text-b">Basket</a>
+                <a href="{{ route('login') }}" id="text-a-u">Sign In</a>
+                <a href="{{ route('login') }}" id="text-w-u">Wishlist</a>
+                <a href="{{ route('login') }}" id="text-b-u">Basket</a>
             </div>
             @endif
         @else
                 <!-- Once user is logged in -->
             <div class="header-items"> 
-                <a href="/myprojects" i class="material-symbols-outlined" id="header-icons">person</i></a>
+                <a href="/purchasehistory" i class="material-symbols-outlined" id="header-icons">person</i></a>
                 <a href="/wishlist" i class="material-symbols-outlined" id="header-icons">favorite</i></a>                
                 <a href="/basket" i class="material-symbols-outlined" id="header-icons">shopping_bag</i></a>
             </div>
@@ -101,7 +101,7 @@
                 <!-- <a href="/myprojects" class="loggedin-icons" id="logged-a">My Account</a>
                 <a href="/wishlist" class="loggedin-icons" id="logged-w">Wishlist</a>
                 <a href="/basket" class="loggedin-icons" id="logged-b">Basket</a> -->
-                <a href="/myprojects" class="loggedin-icons" id="text-a">My Account</a>
+                <a href="/purchasehistory" class="loggedin-icons" id="text-a">My Account</a>
                 <a href="/wishlist" class="loggedin-icons" id="text-w">Wishlist</a>
                 <a href="/basket" class="loggedin-icons" id="text-b">Basket</a>
             </div>

@@ -159,6 +159,18 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   right: 7%;
 }
 
+#text-a-u {
+  right: 6%;
+}
+
+#text-w-u {
+  right: 0%;
+}
+
+#text-b-u {
+  right: -6%;
+}
+
 #text-a, #text-w, #text-b {
   padding: 0% 2%;
   position: relative;
@@ -166,7 +178,18 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   text-decoration: none;
 }
 
+#text-a-u, #text-w-u, #text-b-u {
+  padding: 0% 2%;
+  position: relative;
+  color: #7A524E;
+  text-decoration: none;
+}
+
 #text-a:hover, #text-w:hover, #text-b:hover {
+  color: #A06F6A;
+}
+
+#text-a-u:hover, #text-w-u:hover, #text-b-u:hover {
   color: #A06F6A;
 }
 
@@ -595,16 +618,23 @@ hr {
     padding: 12px;
     color: white;
     background-color: #573B38;
-    text-align: center;
+    /* text-align: center; */
     cursor: pointer;
     width: 100%;
+    /* font-size: 17px; */
+  }
+
+  .prod-card button a {
+    text-decoration: none;
+    color: white;
     font-size: 17px;
+    text-align: center;
   }
   
   .prod-card button span {
     position: relative;
     left: 10px;
-    bottom: 4px;
+    bottom: 2px;
   }
   
   .prod-card button:hover {
@@ -652,4 +682,14 @@ hr {
   
   #star-icon:hover {
     color: #A06F6A;
+  }
+
+  .alert {
+    background: #9cb78e;
+    /* border: 1px solid; */
+    /* border-radius: 10px; */
+    padding: .5% 2%;
+    /* width: 45%; */
+    /* left: 4%; */
+    text-align: center;
   }

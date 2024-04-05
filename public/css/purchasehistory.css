@@ -9,8 +9,9 @@
     width: 68%; */
     left: 30%;
     float: right;
-    margin-top: -35%;
+    margin-top: -37%;
     width: 68%;
+    padding-bottom: 3%;
 }
 
 .purchase-card {
@@ -86,3 +87,14 @@
     grid-area: 1 / 3 / 2 / 4; 
     margin-top: 22%;
   }
+
+#download_button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    float: right;
+}
+
+.ph-text-content span {
+    float: right;
+}

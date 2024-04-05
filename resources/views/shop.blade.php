@@ -45,7 +45,7 @@
                             </div>
                         </p>
                         </div>
-                        <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
+                        <button><a href="/pattern/{{$product->productID}}"i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></a></button>
                     </div>
                 @endforeach 
             </div>

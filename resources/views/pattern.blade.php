@@ -4,12 +4,11 @@
 
 <link rel="stylesheet" href="/css/pattern.css">
 
+   
+ 
+    <br>
+
 <div class="prod-body">
-    @if (session('add'))
-      <div class="alert alert-success" role="alert">
-        <p>{{ session('add') }}: <a href="{{ route('basket', auth()->user()->id) }}">Want to view your basket?</a>
-      </div>
-    @endif
 
         <div class="pattern-left">
                 <div class="pattern-img-cont"><img src="{{ $item->productImage }}" alt="Image"></div>
@@ -30,13 +29,26 @@
                 <span id="star-icon">&star;</span><b><u>Read all reviews</u></b>
             </div>
             <br>
+            <br>
+            @if (Auth::check())
             <form action="{{ route ('basket.add') }}" method="POST">
             <input type="hidden" name="product" id="product" value="{{ $item->productID }}">
                 @csrf
-                <button type="submit">Add to Basket</button>
+                <button type="submit" class="addto-basket"><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
+                <!-- <button type="submit">Add to Basket</button> -->
             </form>
+            @else
+            <form action="/login" class="form-group">
+                <button type="submit" class="addto-basket"><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
             <!-- <button type="submit" class="addto-basket"><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button> -->
+            </form>
+            @endif
             <br>
+            @if (session('add'))
+            <div class="alert alert-success" role="alert">
+                <p>{{ session('add') }} <a href="{{ route('basket', auth()->user()->id) }}">View basket</a>
+            </div>
+            @endif
             <button class="accordion" id="dd-start">Pattern Description</button>
                 <div class="panel">
                     <p>{{$item->productDescription}}</p>
