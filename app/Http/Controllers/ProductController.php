@@ -23,7 +23,7 @@ class ProductController extends Controller
     public function carousel()
     {
         //Method created to get data from the 'product' table and to show them on the products view in carousel.
-        $products = Product::skip(0)->take(12)->get();
+        $products = Product::skip(5)->take(16)->get();
         return $products;
     }
 
@@ -61,45 +61,45 @@ class ProductController extends Controller
     //Below functions are to fetch respective product categories when clicked on via navbar. 
     public function amigurumi (Request $request) {
         if ($request->exists('sort')) {
-            $products = Product::where('productCategory', '=', 'Amigurumi')->orderBy('productPrice', $request->query('sort'))->paginate();
+            $products = Product::where('productCategory' , 'Amigurumi')->orderBy('productPrice', $request->query('sort'))->paginate();
        } else {
-            $products = Product::where('productCategory', '=', 'Amigurumi')->paginate();
+            $products = Product::where('productCategory' , 'Amigurumi')->paginate();
        }
         return view('shop', [ 'products' => $products ]);
     }
 
     public function clothing (Request $request) {
         if ($request->exists('sort')) {
-            $products = Product::where('productCategory', '=', 'Clothing')->orderBy('productPrice', $request->query('sort'))->paginate();
+            $products = Product::where('productCategory' , 'Clothing')->orderBy('productPrice', $request->query('sort'))->paginate();
        } else {
-            $products = Product::where('productCategory', '=', 'Clothing')->paginate();
+            $products = Product::where('productCategory' , 'Clothing')->paginate();
        }
         return view('shop', ['products' => $products ]);
     }
 
     public function accessories (Request $request) {
         if ($request->exists('sort')) {
-            $products = Product::where('productCategory', '=', 'Accessories')->orderBy('productPrice', $request->query('sort'))->paginate();
+            $products = Product::where('productCategory' , 'Accessories')->orderBy('productPrice', $request->query('sort'))->paginate();
        } else {
-            $products = Product::where('productCategory', '=', 'Accessories')->paginate();
+            $products = Product::where('productCategory' , 'Accessories')->paginate();
        }
         return view('shop', ['products' => $products ]);
     }
 
     public function pets (Request $request) {
         if ($request->exists('sort')) {
-            $products = Product::where('productCategory', '=', 'Pets')->orderBy('productPrice', $request->query('sort'))->paginate();
+            $products = Product::where('productCategory' , 'Pets')->orderBy('productPrice', $request->query('sort'))->paginate();
        } else {
-            $products = Product::where('productCategory', '=', 'Pets')->paginate();
+            $products = Product::where('productCategory' , 'Pets')->paginate();
        }
         return view('shop', ['products' => $products ]);
     }
 
     public function homedecor (Request $request) {
         if ($request->exists('sort')) {
-            $products = Product::where('productCategory', '=', 'Home Decor')->orderBy('productPrice', $request->query('sort'))->paginate();
+            $products = Product::where('productCategory' , 'Home Decor')->orderBy('productPrice', $request->query('sort'))->paginate();
        } else {
-            $products = Product::where('productCategory', '=', 'Home Decor')->paginate();
+            $products = Product::where('productCategory' , 'Home Decor')->paginate();
        }
         return view('shop', ['products' => $products ]);
     }

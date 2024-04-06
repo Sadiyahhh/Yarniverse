@@ -406,19 +406,17 @@ hr {
   width: 65px;
   height: 65px;
   left: 12.5%;
-  /* margin-top: 4.5%; */
   margin-bottom: -27%;
-  /* margin: 3%; */
   border-radius: 90px;
   border: 1px solid;
 }
 
-.user-info img {
+/* .user-info img {
   width: 100%;
   height: 100%;
   object-fit: fill;
   border-radius: 90px;
-}
+} */
 
 .user-info {
   background-color: #A06F6A;
@@ -569,10 +567,10 @@ hr {
 
   .cards-contain {
     position: relative;
-    left: 7%;
+    left: 3%;
     margin-top: 4%;
     display: grid;
-    grid-template-columns: repeat(3, .3fr);
+    grid-template-columns: repeat(3, 0.5fr);
     grid-template-rows: .7fr;
     grid-column-gap: 0px;
     grid-row-gap: 38px;
@@ -680,9 +678,9 @@ hr {
     font-size: 37px;
   }
   
-  #star-icon:hover {
+  /* #star-icon:hover {
     color: #A06F6A;
-  }
+  } */
 
   .alert {
     background: #9cb78e;
@@ -693,3 +691,20 @@ hr {
     /* left: 4%; */
     text-align: center;
   }
+
+/* Checkbox */
+
+input[type="checkbox"] {
+  width: 1.5em;
+  height: 1.5rem;
+  accent-color: #CCC7C7;
+  border: 1px solid black;
+}
+
+#label-v {
+	margin-bottom: 1%;
+	margin-left: 1%;
+}
+
+/* Pagination */
+

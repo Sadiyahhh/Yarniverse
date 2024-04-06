@@ -19,10 +19,30 @@
         <div class="shop-sidebar">
             <h3>Filter:</h3>
             <hr>
-            <h3>Skill level:&nbsp;<i class="fa-solid fa-caret-down"></i></h3>
-            <label for="checkbox" id="label-v"><span>Beginner (0)</span></label><br>
-            <label for="checkbox" id="label-v"><span>Intermediate (0)</span></label><br>
-            <label for="checkbox" id="label-v"><span>Expert (0)</span></label><br>
+            <div class="skill-level">
+                <h3>Skill level:</h3>
+
+                <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
+                <label for="checkbox" id="label-v"><span>Beginner (0)</span></label><br>
+
+                <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
+                <label for="checkbox" id="label-v"><span>Intermediate (0)</span></label><br>
+
+                <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
+                <label for="checkbox" id="label-v"><span>Expert (0)</span></label><br>
+            </div>
+
+            <div class="shop-pricing">
+                <h3>Pricing:</h3>
+
+                <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
+                <label for="checkbox" id="label-v"><span>High to low</span></label><br>
+
+                <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
+                <label for="checkbox" id="label-v"><span>Low to high</span></label><br>
+
+            </div>
+
         </div>
 
         <div class="shop-body">
@@ -37,11 +57,13 @@
                         <a href="/pattern/{{$product->productID}}"><h1>{{ $product->productName }}</h1></a>
                         <p class="price">£{{ $product->productPrice }}
                             <div class="rating-stars">
-                                <span id="star-icon">&star;</span>
-                                <span id="star-icon">&star;</span>
-                                <span id="star-icon">&star;</span>
-                                <span id="star-icon">&star;</span>
-                                <span id="star-icon">&star;</span><b>(0)</b>
+                                <a href="/pattern/{{$product->productID}}">
+                                    <span id="star-icon">&star;</span>
+                                    <span id="star-icon">&star;</span>
+                                    <span id="star-icon">&star;</span>
+                                    <span id="star-icon">&star;</span>
+                                    <span id="star-icon">&star;</span><b>(0)</b>
+                                </a>
                             </div>
                         </p>
                         </div>

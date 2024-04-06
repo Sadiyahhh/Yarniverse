@@ -30,6 +30,10 @@
     border: 1px solid;
 }
 
+.skill-level {
+  padding: 1% 0%;
+}
+
 input[type="checkbox"] {
     width: 1.5em;
     height: 1.5rem;
@@ -45,6 +49,10 @@ input[type="checkbox"] {
 #label-v {
 	margin-bottom: 1%;
 	margin-left: 1%;
+}
+
+#label-v span {
+  margin-bottom: 2%;
 }
 
 .shop-body {

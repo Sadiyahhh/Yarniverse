@@ -2,10 +2,10 @@
     <nav class="d-flex justify-items-center justify-content-between">
         <div class="d-flex justify-content-between flex-fill d-sm-none">
             <ul class="pagination">
-                {{-- Previous Page Link --}}
+                <!-- {{-- Previous Page Link --}}
                 @if ($paginator->onFirstPage())
                     <li class="page-item disabled" aria-disabled="true">
-                        <span class="page-link">@lang('pagination.previous')</span>
+                        <a>@lang('pagination.previous')</a>
                     </li>
                 @else
                     <li class="page-item">
@@ -20,21 +20,21 @@
                     </li>
                 @else
                     <li class="page-item disabled" aria-disabled="true">
-                        <span class="page-link">@lang('pagination.next')</span>
+                        <a class="page-link">@lang('pagination.next')</a>
                     </li>
-                @endif
+                @endif -->
             </ul>
         </div>
 
         <div class="d-none flex-sm-fill d-sm-flex align-items-sm-center justify-content-sm-between">
             <div>
-                <p class="small text-muted">
+                <p class="small text-muted" id="display-text">
                     {!! __('Displaying') !!}
-                    <span class="fw-semibold">{{ $paginator->firstItem() }}</span>
+                    <a class="fw-semibold"><b>{{ $paginator->firstItem() }}</b></a>
                     {!! __('to') !!}
-                    <span class="fw-semibold">{{ $paginator->lastItem() }}</span>
+                    <a class="fw-semibold"><b>{{ $paginator->lastItem() }}</b></a>
                     {!! __('of') !!}
-                    <span class="fw-semibold">{{ $paginator->total() }}</span>
+                    <a class="fw-semibold"><b>{{ $paginator->total() }}</b></a>
                     {!! __('results') !!}
                 </p>
             </div>
@@ -44,7 +44,7 @@
                     {{-- Previous Page Link --}}
                     @if ($paginator->onFirstPage())
                         <li class="page-item disabled" aria-disabled="true" aria-label="@lang('pagination.previous')">
-                            <span class="page-link" aria-hidden="true">&lsaquo;</span>
+                            <a class="page-link" aria-hidden="true">&lsaquo;</a>
                         </li>
                     @else
                         <li class="page-item">
@@ -56,14 +56,14 @@
                     @foreach ($elements as $element)
                         {{-- "Three Dots" Separator --}}
                         @if (is_string($element))
-                            <li class="page-item disabled" aria-disabled="true"><span class="page-link">{{ $element }}</span></li>
+                            <li class="page-item disabled" aria-disabled="true"><a class="page-link">{{ $element }}</a></li>
                         @endif
 
                         {{-- Array Of Links --}}
                         @if (is_array($element))
                             @foreach ($element as $page => $url)
                                 @if ($page == $paginator->currentPage())
-                                    <li class="page-item active" aria-current="page"><span class="page-link">{{ $page }}</span></li>
+                                    <li class="page-item active" aria-current="page"><a class="page-link">{{ $page }}</a></li>
                                 @else
                                     <li class="page-item"><a class="page-link" href="{{ $url }}">{{ $page }}</a></li>
                                 @endif
@@ -78,11 +78,57 @@
                         </li>
                     @else
                         <li class="page-item disabled" aria-disabled="true" aria-label="@lang('pagination.next')">
-                            <span class="page-link" aria-hidden="true">&rsaquo;</span>
+                            <a class="page-link" aria-hidden="true">&rsaquo;</a>
                         </li>
                     @endif
                 </ul>
             </div>
         </div>
     </nav>
+
+    <style>
+.pagination {
+  display: inline-flex;
+  position: relative;
+  left: 50rem;
+  bottom: 4rem;
+}
+
+.pagination a {
+  color: black;
+  background-color: #AF8683;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid;
+}
+
+.pagination a.active {
+  background-color: #A06F6A;
+  color: white;
+  /* border: 1px solid #4CAF50; */
+}
+
+.pagination a:hover:not(.active) {background-color: #A06F6A;}
+
+.pagination a:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.pagination a:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.pagination .page-item::marker {    
+     color: transparent;
+ }
+
+#display-text {
+    position: relative;
+    left: 36rem;
+}
+
+</style>
 @endif

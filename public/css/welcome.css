@@ -1,7 +1,7 @@
 .welcome-contain {
-  /* padding: 1%; */
     padding: 1% 2% 1% 2%;
 }
+
 /* 
 .welcome-gif {
   position: relative;
@@ -16,7 +16,7 @@
   object-fit: fill;
 } */
 
-/* Carousel */
+/* Carousel*/
 
 @keyframes tonext {
   75% {
@@ -257,6 +257,31 @@ ol, li {
   left: 43%;
 }
 
+/* Carousel for Product Cards */
+
+.carousel-w {
+  position: relative;
+  /* padding-top: 35%; */
+  filter: drop-shadow(0 0 10px #0003);
+  perspective: 100px;
+  object-fit: fill;
+  width: 104%;
+  right: 3%;
+}
+
+.carousel-control-next,
+.carousel-control-prev  {
+    filter: invert(100%);
+    background-color: transparent;
+    border-color: transparent;
+    padding-bottom: 1%;
+}
+
+.row {
+  width: 80%; 
+  padding-bottom: 15px;
+}
+
 /* Product Cards */
 
 .most-liked h1, .pyl h1 {
@@ -288,7 +313,7 @@ ol, li {
   grid-area: 1 / 4 / 2 / 5;
 }
 
-.prod-card {
+/* .prod-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 280px;
   border: 1px solid;
@@ -370,4 +395,4 @@ ol, li {
 
 #star-icon:hover {
   color: #A06F6A;
-}
+} */

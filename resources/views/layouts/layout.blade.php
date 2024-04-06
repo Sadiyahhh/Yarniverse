@@ -150,15 +150,15 @@
             <div class="footer-links" id="foot-content-box">
                     <a href="/faqs">FAQs</a><br>
                     <a href="/contactus">Contact Us</a><br>
-                    <a href="/about">About Us</a><br>
-                    <a href="/tc">T&Cs</a><br>
+                    <a href="/about">About Yarniverse</a><br>
+                    <a href="/shop">Shop</a><br>
             </div>
         </div>
         <div class="newsletter" id="foot-content-box">
                 <form action="/" method="post" >
                 @csrf
                     <div class="news-text">
-                        <h3>Get 20% off your next pattern purchase</h3>
+                        <h3>Sign up to our weekly newsletter</h3>
                         <p>Be the first to hear about our latest deals and more!</p>
                     </div>
 

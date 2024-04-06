@@ -4,10 +4,6 @@
 
 <link rel="stylesheet" href="/css/pattern.css">
 
-   
- 
-    <br>
-
 <div class="prod-body">
 
         <div class="pattern-left">
