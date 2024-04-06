@@ -104,4 +104,31 @@ class ProductController extends Controller
         return view('shop', ['products' => $products ]);
     }
 
+    public function beginner (Request $request) {
+        if ($request->exists('sort')) {
+            $products = Product::where('productLevel' , 'Beginner')->orderBy('productPrice', $request->query('sort'))->paginate();
+       } else {
+            $products = Product::where('productLevel' , 'Beginner')->paginate();
+       }
+        return view('shop', ['products' => $products ]);
+    }
+
+    public function intermediate (Request $request) {
+        if ($request->exists('sort')) {
+            $products = Product::where('productLevel' , 'Intermediate')->orderBy('productPrice', $request->query('sort'))->paginate();
+       } else {
+            $products = Product::where('productLevel' , 'Intermediate')->paginate();
+       }
+        return view('shop', ['products' => $products ]);
+    }
+
+    public function advanced (Request $request) {
+        if ($request->exists('sort')) {
+            $products = Product::where('productLevel' , 'Advanced')->orderBy('productPrice', $request->query('sort'))->paginate();
+       } else {
+            $products = Product::where('productLevel' , 'Advanced')->paginate();
+       }
+        return view('shop', ['products' => $products ]);
+    }
+
 }

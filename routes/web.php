@@ -104,6 +104,15 @@ Route::get('/pets', [ProductController::class, 'pets'])->name('pets');
 //Route for home decor patterns
 Route::get('/homedecor', [ProductController::class, 'homedecor'])->name('homedecor');
 
+//Route for beginner patterns
+Route::get('/beginner', [ProductController::class, 'beginner'])->name('beginner');
+
+//Route for intermediate patterns
+Route::get('/intermediate', [ProductController::class, 'intermediate'])->name('intermediate');
+
+//Route for advanced patterns
+Route::get('/advanced', [ProductController::class, 'advanced'])->name('advanced');
+
 //Basket routing
 Route::get('/basket', [BasketController::class, 'index'])->name('basket');
 

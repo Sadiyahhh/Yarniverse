@@ -30,7 +30,23 @@
     border: 1px solid;
 }
 
-.skill-level {
+.skill-level, .pricing {
+  padding: 3% 0%;
+}
+
+.skill-level a, .shop-pricing a{
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.skill-level a:hover, .shop-pricing a:hover {
+  color: #573B38;
+}
+
+#filter {
+  margin-left: 1%;
+  margin-top: 1%;
   padding: 1% 0%;
 }
 

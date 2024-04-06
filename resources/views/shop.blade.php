@@ -19,57 +19,53 @@
         <div class="shop-sidebar">
             <h3>Filter:</h3>
             <hr>
+
             <div class="skill-level">
                 <h3>Skill level:</h3>
-
-                <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
-                <label for="checkbox" id="label-v"><span>Beginner (0)</span></label><br>
-
-                <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
-                <label for="checkbox" id="label-v"><span>Intermediate (0)</span></label><br>
-
-                <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
-                <label for="checkbox" id="label-v"><span>Expert (0)</span></label><br>
+                <label id="filter"><a href="/beginner">Beginner</a></label><br>     
+                <label id="filter"><a href="/intermediate">Intermediate</a></label><br>
+                <label id="filter"><a href="/advanced">Advanced</a></label><br>
             </div>
+            <br>
+            <hr>
 
             <div class="shop-pricing">
                 <h3>Pricing:</h3>
-
-                <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
-                <label for="checkbox" id="label-v"><span>High to low</span></label><br>
-
-                <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
-                <label for="checkbox" id="label-v"><span>Low to high</span></label><br>
-
+                <div>
+                <a class="sort-by-link" href="{{ URL::current()."?sort=desc" }}"><div>High To Low</div></a>
+                <a class="sort-by-link" href="{{ URL::current()."?sort=asc" }}"><div>Low To High</div></a>
+                </div>
             </div>
 
         </div>
 
         <div class="shop-body">
-            <div class="cards-contain">
-                @foreach ($products as $product)
+            <div id="productList">
+                <div class="cards-contain">
+                    @foreach ($products as $product)
 
-                    <div class="prod-card">
-                        <div class="image"><img src="{{ $product->productImage }}" alt="Image">
-                        <i class="fa fa-heart-o"></i>
-                        </div>
-                        <div class="prod-contain">
-                        <a href="/pattern/{{$product->productID}}"><h1>{{ $product->productName }}</h1></a>
-                        <p class="price">£{{ $product->productPrice }}
-                            <div class="rating-stars">
-                                <a href="/pattern/{{$product->productID}}">
-                                    <span id="star-icon">&star;</span>
-                                    <span id="star-icon">&star;</span>
-                                    <span id="star-icon">&star;</span>
-                                    <span id="star-icon">&star;</span>
-                                    <span id="star-icon">&star;</span><b>(0)</b>
-                                </a>
+                        <div class="prod-card">
+                            <div class="image"><img src="{{ $product->productImage }}" alt="Image">
+                            <i class="fa fa-heart-o"></i>
                             </div>
-                        </p>
+                            <div class="prod-contain">
+                            <a href="/pattern/{{$product->productID}}"><h1>{{ $product->productName }}</h1></a>
+                            <p class="price">£{{ $product->productPrice }}
+                                <div class="rating-stars">
+                                    <a href="/pattern/{{$product->productID}}">
+                                        <span id="star-icon">&star;</span>
+                                        <span id="star-icon">&star;</span>
+                                        <span id="star-icon">&star;</span>
+                                        <span id="star-icon">&star;</span>
+                                        <span id="star-icon">&star;</span><b>(0)</b>
+                                    </a>
+                                </div>
+                            </p>
+                            </div>
+                            <button><a href="/pattern/{{$product->productID}}"i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></a></button>
                         </div>
-                        <button><a href="/pattern/{{$product->productID}}"i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></a></button>
-                    </div>
-                @endforeach 
+                    @endforeach 
+                </div>
             </div>
         </div>
         {{ $products->links() }}

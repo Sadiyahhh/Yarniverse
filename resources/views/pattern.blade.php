@@ -14,6 +14,7 @@
         <div class="pattern-desc"> 
             <div class="pattern-text">
                 <h2>{{$item->productName}}</h2>
+                <p>Skill Level: <b>{{$item->productLevel}}</b></p>
                 <h4>£{{$item->productPrice}}</h4>
             </div>
             <div class="rating-stars">
