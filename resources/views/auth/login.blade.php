@@ -165,7 +165,7 @@
                         <input id="password" type="password" class="form-control @error('password') is-invalid @enderror input-field" name="password" required autocomplete="new-password">
 
                         @error('password')
-                            <span class="invalid-feedback" role="alert">
+                            <span class="invalid-feedback" id="register-error" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
@@ -183,14 +183,14 @@
                 <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
                 <label for="checkbox" id="label-v"><span> I agree to the <u>Yarniverse Terms and Conditions.<u></span></label><br>
 
-                <input type="submit" id="login_submit" value="Sign In"></input>
+                <input type="submit" id="login_submit" value="Register"></input>
 
             </form>
     </div>
  
 </div>
 
-    <script>
+    <!-- <script>
         var x = document.getElementById("login");
         var y = document.getElementById("register");
         var z = document.getElementById("btn");
@@ -207,5 +207,5 @@
             z.style.left = "0";        
         }
     
-    </script>
+    </script> -->
 @endsection
