@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Project;
 
 
@@ -10,9 +12,9 @@ class ProjectController extends Controller
 {
     public function index ()
     {
-        // $project =  DB::table('projects')
-        // ->where('projects.userID', '=', auth()->id())
-        // ->get();
+        $project =  DB::table('projects')
+        ->where('projects.userID', '=', auth()->id())
+        ->get();
 
         return view ('myprojects');
     }

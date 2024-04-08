@@ -49,96 +49,45 @@
         </div>
 
         <div class="wishlist">
-            @if (Auth::check())                        
-                <h2>{{ Auth::user()->name }}'s Wishlist</h2><p>4 items</p>
+
+            @if($wishlist->count()==0)
+            <div class="wishlist-empty">
+                <h4>Wishlist is Empty.</h4>
+                </div>
+            @else
+                <h2>{{ Auth::user()->name }}'s Wishlist</h2>
+
+                <div class="wcards-contain">
+                    @foreach ($wishlist as $product)
+
+                        <div class="prod-card">
+                            <div class="image"><img src="{{ $product->productImage }}" alt="Image">
+                            <form action="{{ route('wishlist.removeFromWishlist') }}" method="POST">
+                                <input type="hidden" name="wishlistID" id="wishlistID" value="{{ $product->wishlistID }}">
+                                @csrf
+                                <button class="btn btn-danger" id = "wishlist-remove">✕</button>
+                            </form>
+                            </div>
+                            <div class="prod-contain">
+                            <a href="/pattern/{{$product->productID}}"><h1>{{ $product->productName }}</h1></a>
+                            <p class="price">£{{ $product->productPrice }}
+                                <div class="rating-stars">
+                                    <a href="/pattern/{{$product->productID}}">
+                                        <span id="star-icon">&star;</span>
+                                        <span id="star-icon">&star;</span>
+                                        <span id="star-icon">&star;</span>
+                                        <span id="star-icon">&star;</span>
+                                        <span id="star-icon">&star;</span><b>(0)</b>
+                                    </a>
+                                </div>
+                            </p>
+                            </div>
+                            <button><a href="/pattern/{{$product->productID}}"i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></a></button>
+                        </div>
+                    @endforeach 
+                </div>
             @endif
-            <div class="pcards">
 
-                <div class="pcard1">
-                <div class="prod-card">
-                    <div class="image">
-                    <i class="fa fa-heart-o"></i>
-                    </div>
-                    <div class="prod-contain">
-                    <h1>Tailored Jeans</h1>
-                    <p class="price">£9.99
-                        <div class="rating-stars">
-                            <span id="star-icon">&star;</span>
-                            <span id="star-icon">&star;</span>
-                            <span id="star-icon">&star;</span>
-                            <span id="star-icon">&star;</span>
-                            <span id="star-icon">&star;</span><b>(0)</b>
-                        </div>
-                    </p>
-                    </div>
-                    <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
-                </div>
-                </div>
-
-                <div class="pcard2">
-                <div class="prod-card">
-                    <div class="image">
-                    <i class="fa fa-heart-o"></i>
-                    </div>
-                    <div class="prod-contain">
-                    <h1>Tailored Jeans</h1>
-                    <p class="price">£9.99
-                        <div class="rating-stars">
-                            <span id="star-icon">&star;</span>
-                            <span id="star-icon">&star;</span>
-                            <span id="star-icon">&star;</span>
-                            <span id="star-icon">&star;</span>
-                            <span id="star-icon">&star;</span><b>(0)</b>
-                        </div>
-                    </p>
-                    </div>
-                    <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
-                </div>
-                </div>
-
-                <div class="pcard3">
-                <div class="prod-card">
-                    <div class="image">
-                    <i class="fa fa-heart-o"></i>
-                    </div>
-                    <div class="prod-contain">
-                    <h1>Tailored Jeans</h1>
-                    <p class="price">£9.99
-                        <div class="rating-stars">
-                            <span id="star-icon">&star;</span>
-                            <span id="star-icon">&star;</span>
-                            <span id="star-icon">&star;</span>
-                            <span id="star-icon">&star;</span>
-                            <span id="star-icon">&star;</span><b>(0)</b>
-                        </div>
-                    </p>
-                    </div>
-                    <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
-                </div>
-                </div>
-
-                <div class="pcard4">
-                <div class="prod-card">
-                    <div class="image">
-                    <i class="fa fa-heart-o"></i>
-                    </div>
-                    <div class="prod-contain">
-                    <h1>Tailored Jeans</h1>
-                    <p class="price">£9.99
-                        <div class="rating-stars">
-                            <span id="star-icon">&star;</span>
-                            <span id="star-icon">&star;</span>
-                            <span id="star-icon">&star;</span>
-                            <span id="star-icon">&star;</span>
-                            <span id="star-icon">&star;</span><b>(0)</b>
-                        </div>
-                    </p>
-                    </div>
-                    <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
-                </div>
-                </div>
-
-            </div>
         </div>
 
 </div>

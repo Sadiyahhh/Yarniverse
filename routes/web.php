@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\BasketController;
+use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\PurchaseController;
 
@@ -124,6 +125,11 @@ Route::post('/basket/remove', [BasketController::class, 'remove'])->name('basket
 
 //Checkout function
 Route::post('/basket/checkout', [BasketController::class, 'checkout'])->name('basket.checkout');
+
+//Wishlist routes
+Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist');
+Route::post('/wishlist/addToWishlist', [WishlistController::class, 'addToWishlist'])->name('wishlist.addToWishlist');
+Route::post('/wishlist/removeFromWishlist', [WishlistController::class, 'removeFromWishlist'])->name('wishlist.removeFromWishlist');
 
 //Download file
 Route::get('/download', [DownloadController::class, 'download'])->name('download');

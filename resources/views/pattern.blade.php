@@ -46,6 +46,26 @@
                 <p>{{ session('add') }} <a href="{{ route('basket', auth()->user()->id) }}">View basket</a>
             </div>
             @endif
+            <h1>space</h1>
+            @if (Auth::check())
+            <form action="{{ route ('wishlist.addToWishlist') }}" method="POST">
+            <input type="hidden" name="product" id="product" value="{{ $item->productID }}">
+                @csrf
+                <button type="submit" class="addto-basket"><i class="material-symbols-outlined">shopping_bag</i><span>Add to Wishlist</span></button>
+                <!-- <button type="submit">Add to Basket</button> -->
+            </form>
+            @else
+            <form action="/login" class="form-group">
+                <button type="submit" class="addto-basket"><i class="material-symbols-outlined">shopping_bag</i><span>Add to Wishlist</span></button>
+            <!-- <button type="submit" class="addto-basket"><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button> -->
+            </form>
+            @endif
+            <br>
+            @if (session('wishlist-add'))
+            <div class="alert alert-success" role="alert">
+                <p>{{ session('wishlist-add') }} <a href="{{ route('wishlist', auth()->user()->id) }}">View wishlist</a>
+            </div>
+            @endif
             <button class="accordion" id="dd-start">Pattern Description</button>
                 <div class="panel">
                     <p>{{$item->productDescription}}</p>

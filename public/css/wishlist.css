@@ -1,20 +1,33 @@
 .wishlist-contain {
   margin: 3%;
-  /* display: grid;
-  grid-template-columns: .3fr .8fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px; */
 }
-
-/* .account-nav {
-  grid-area: 1 / 1 / 2 / 2;
-}
-*/
 
 .wishlist {
-  /* grid-area: 1 / 2 / 2 / 3; */
-  width: 58%;
   margin-left: 31%;
-  margin-top: -47%;
+  margin-top: -38%;
 }
+
+.wishlist-empty {
+  width: 100%;
+  height: 25rem;
+}
+
+.wcards-contain {
+  position: relative;
+  margin-top: 4%;
+  display: grid;
+  grid-template-columns: repeat(3, 0.5fr);
+  grid-template-rows: .7fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 38px;
+}
+
+#wishlist-remove {
+  background: transparent;
+  color: #573B38;
+  font-size: 26px !important;
+  position: relative;
+  bottom: 14.8rem;
+  left: 6.2rem;
+}
+

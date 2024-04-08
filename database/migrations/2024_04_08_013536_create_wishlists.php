@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('order_details', function (Blueprint $table) {
-            $table->id();
-            $table->integer('orderID')->references('id')->on('orders');
-            $table->integer('productID')->references('id')->on('products');
+        Schema::create('wishlists', function (Blueprint $table) {
+            $table->id('wishlistID')->autoIncrement();
+            $table->integer('userID')->references('id')->on('users');
+            $table->integer('productID')->references('id')->on('products');  
         });
     }
 
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('order_details');
+        Schema::dropIfExists('wishlists');
     }
 };
