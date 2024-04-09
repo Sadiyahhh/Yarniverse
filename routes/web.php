@@ -137,8 +137,12 @@ Route::post('/wishlist/removeFromWishlist', [WishlistController::class, 'removeF
 Route::get('/download', [DownloadController::class, 'download'])->name('download');
 
 //Project routes
-Route::get('/myprojects', [ProjectController::class, 'index']);
+Route::get('/myprojects', [ProjectController::class, 'index'])->name('myprojects');
 
 Route::post('/addproject', [ProjectController::class, 'store'])->name('addproject');
+
+Route::post('/editproject/{id}', [ProjectController::class, 'edit'])->name('editproject');
+
+Route::post('/updateproject/{id}', [ProjectController::class, 'update'])->name('updateproject');
 
 Route::post('/removeproject', [ProjectController::class, 'removeProject'])->name('removeproject');

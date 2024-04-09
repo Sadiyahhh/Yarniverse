@@ -10,19 +10,17 @@ use App\Models\Project;
 
 class ProjectController extends Controller
 {
+
+    //Function to fetch and display all user's projects
     public function index ()
     {
-        // $projects =  DB::table('projects')
-        // ->where('projects.userID', '=', auth()->id())
-        // ->get();
-
         $projects = Project::where('userID', '=', auth()->id())
         ->get();
 
-        // return view ('myprojects');
         return view('myprojects', [ 'projects' => $projects ]);
     }
 
+    //Function to create and store a new project in the 'projects' table
     public function store(Request $request) {
 
         // $userID = $request->user;
@@ -61,6 +59,24 @@ class ProjectController extends Controller
         return back()->with('store', 'Project added!');
         // return view('myprojects')->with('project', $project);
         return view('myprojects', [ 'project' => $project ]);
+
+    }
+
+    //Function to click into an individual project to edit it
+    public function edit($projectID)
+    {
+
+        $proj = Project::findOrFail($projectID);
+        return view('editproject', ['proj' => $proj]);
+
+    }
+
+    public function update(Request $request, $projectID)
+    {
+        $project = Project::findOrFail($projectID);
+        $project->update($request->all());
+
+        return redirect()->route('myprojects')->with('update', 'Project updated.');
 
     }
 

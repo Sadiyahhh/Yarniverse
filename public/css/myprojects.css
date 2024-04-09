@@ -75,11 +75,18 @@
 
 #pencil {
     color: #573B38;
-    position: relative;
+    /* position: relative;
     left: 20rem;
     margin-bottom: 2%;
-    font-size: 31px;
+    font-size: 31px; */
 }  
+
+#edit_button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    float: right;
+}
 
 #project-remove {
     background: transparent;

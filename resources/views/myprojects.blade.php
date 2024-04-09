@@ -100,14 +100,22 @@
                             <!-- <button class="btn btn-danger" id = "remove_button">Remove</button> -->
                             <button class="btn btn-danger" id = "project-remove">✕</button>
                         </form>
-                        {{$project->projectTitle}}&nbsp;<i class="fa fa-pencil" id="pencil"></i>
+                        {{$project->projectTitle}}&nbsp;
+
+                        <form action="{{ route('editproject', $project->projectID) }}" method="POST">
+                            <input type="hidden" name="projectID" id="projectID" value="{{ $project->projectID }}">
+                            @csrf
+                            <button class="btn btn-danger" id="edit_button"><span class="material-symbols-outlined" id="pencil">edit</span></button>
+                        </form>
+
                     </h1>
                     <div class="p-desc">
                         <p><b>Project Description</b></p>
                         <p>{{$project->projectDescription}}</p>
-                        <!-- <div class="project-img">
+                        <p>{{$project->notes}}</p>
+                        <div class="project-img">
                         <img src="{{$project->image}}" alt="img">
-                        </div> -->
+                        </div>
                         <p><b>My Progress</b></p>
                         <div class="progress-bar"></div>
 
@@ -165,11 +173,6 @@
         </form>
     </div>
     @endif
-    <!-- @if (session('store'))
-    <div class="alert alert-success" role="alert">
-        <p>{{ session('store') }} <a href="{{ route('myprojects', auth()->user()->id) }}">View your projects</a>
-    </div>
-    @endif -->
-
+ 
 
 @endsection
