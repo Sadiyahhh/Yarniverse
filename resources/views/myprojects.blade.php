@@ -54,49 +54,85 @@
         </div>
 </div>
 
-    <div class="projects">
-        @foreach ($projects as $project)
-            <div class="project">
-                <h1>
-                    <form action="{{ route('removeproject') }}" method="POST">
-                        <input type="hidden" name="projectID" id="projectID" value="{{ $project->projectID }}">
-                        @csrf
-                        <!-- <button class="btn btn-danger" id = "remove_button">Remove</button> -->
-                        <button class="btn btn-danger" id = "project-remove">✕</button>
-                    </form>
-                    {{$project->projectTitle}}&nbsp;<i class="fa fa-pencil" id="pencil"></i>
-                </h1>
-                <div class="p-desc">
-                    <p><b>Project Description</b></p>
-                    <p>{{$project->projectDescription}}</p>
-                    <!-- <div class="project-img">
-                    <img src="{{$project->image}}" alt="img">
-                    </div> -->
-                    <p><b>My Progress</b></p>
-                    <div class="progress-bar"></div>
+    @if($projects->count()==0)
+    <div class="noprojects">
+        <h3>Looks like you don't have any projects. Add one below!</h3>
+            <div class="add-project">
+                <form action="{{ route('addproject') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
 
-                    <div class="progress-tabs">
-                        <div class="tab1">
-                            <p>Starting Slipknot</p>
-                        </div>
-                        <div class="tab2">
-                            <p>In the Loop</p>
-                        </div>
-                        <div class="tab3">
-                            <p>Halfway Hooked</p>
-                        </div>
-                        <div class="tab4">
-                            <p>Final Stitches</p>
-                        </div>
-                        <div class="tab5">
-                            <p>Complete!</p>
+                    <div class="form-control">
+                        <label>Project Title</label>
+                        <input type="text" name="projectTitle" required class="form-control" placeholder="Enter a title">
+                    </div>
+
+                    <div class="form-control">
+                        <label>Project Description</label>
+                        <textarea id="projectDescription" name="projectDescription" required class="form-control" placeholder="Enter a description:"></textarea>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" name="image" class="custom-file-input">
+                            <label class="custom-file-label">Upload Image</label>
                         </div>
                     </div>
 
-                </div>
+                    <div class="form-control">
+                        <label>Notes</label>
+                        <!-- <input type="text" name="notes" required class="form-control" placeholder="Your notes:"> -->
+                        <textarea id="notes" name="notes" placeholder="Your notes:"></textarea>
+                        <!-- <input type="submit" value="Submit"> -->
+                    </div>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                </form>
             </div>
-        @endforeach
     </div>
+    @else
+
+        <div class="projects">
+            @foreach ($projects as $project)
+                <div class="project">
+                    <h1>
+                        <form action="{{ route('removeproject') }}" method="POST">
+                            <input type="hidden" name="projectID" id="projectID" value="{{ $project->projectID }}">
+                            @csrf
+                            <!-- <button class="btn btn-danger" id = "remove_button">Remove</button> -->
+                            <button class="btn btn-danger" id = "project-remove">✕</button>
+                        </form>
+                        {{$project->projectTitle}}&nbsp;<i class="fa fa-pencil" id="pencil"></i>
+                    </h1>
+                    <div class="p-desc">
+                        <p><b>Project Description</b></p>
+                        <p>{{$project->projectDescription}}</p>
+                        <!-- <div class="project-img">
+                        <img src="{{$project->image}}" alt="img">
+                        </div> -->
+                        <p><b>My Progress</b></p>
+                        <div class="progress-bar"></div>
+
+                        <div class="progress-tabs">
+                            <div class="tab1">
+                                <p>Starting Slipknot</p>
+                            </div>
+                            <div class="tab2">
+                                <p>In the Loop</p>
+                            </div>
+                            <div class="tab3">
+                                <p>Halfway Hooked</p>
+                            </div>
+                            <div class="tab4">
+                                <p>Final Stitches</p>
+                            </div>
+                            <div class="tab5">
+                                <p>Complete!</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            @endforeach
+        </div>
 
     <div class="add-project">
         <form action="{{ route('addproject') }}" method="POST" enctype="multipart/form-data">
@@ -128,6 +164,7 @@
                 <button type="submit" class="btn btn-primary">Save</button>
         </form>
     </div>
+    @endif
     <!-- @if (session('store'))
     <div class="alert alert-success" role="alert">
         <p>{{ session('store') }} <a href="{{ route('myprojects', auth()->user()->id) }}">View your projects</a>

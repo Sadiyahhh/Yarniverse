@@ -52,8 +52,12 @@
 
             @if($wishlist->count()==0)
             <div class="wishlist-empty">
-                <h4>Wishlist is Empty.</h4>
-                </div>
+                <h4>Your wishlist is currently empty.</h4>
+                <!-- <p>Have a look at our pattern range</p>
+                <div class="ew-icon">
+                    <img src="/site-images/love.png" alt="icon">
+                </div> -->
+            </div>
             @else
                 <h2>{{ Auth::user()->name }}'s Wishlist</h2>
 

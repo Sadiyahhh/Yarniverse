@@ -12,6 +12,20 @@
   height: 25rem;
 }
 
+/* .ew-icon {
+  position: relative;
+  top: 3rem;
+  left: 31rem;
+  height: 12rem;
+  width: 12rem;
+}
+
+.ew-icon img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+} */
+
 .wcards-contain {
   position: relative;
   margin-top: 4%;
