@@ -54,11 +54,51 @@
         </div>
 </div>
 
-<!-- Old download file  -->
-    
-    
     <div class="projects">
+        @foreach ($projects as $project)
+            <div class="project">
+                <h1>
+                    <form action="{{ route('removeproject') }}" method="POST">
+                        <input type="hidden" name="projectID" id="projectID" value="{{ $project->projectID }}">
+                        @csrf
+                        <!-- <button class="btn btn-danger" id = "remove_button">Remove</button> -->
+                        <button class="btn btn-danger" id = "project-remove">✕</button>
+                    </form>
+                    {{$project->projectTitle}}&nbsp;<i class="fa fa-pencil" id="pencil"></i>
+                </h1>
+                <div class="p-desc">
+                    <p><b>Project Description</b></p>
+                    <p>{{$project->projectDescription}}</p>
+                    <!-- <div class="project-img">
+                    <img src="{{$project->image}}" alt="img">
+                    </div> -->
+                    <p><b>My Progress</b></p>
+                    <div class="progress-bar"></div>
 
+                    <div class="progress-tabs">
+                        <div class="tab1">
+                            <p>Starting Slipknot</p>
+                        </div>
+                        <div class="tab2">
+                            <p>In the Loop</p>
+                        </div>
+                        <div class="tab3">
+                            <p>Halfway Hooked</p>
+                        </div>
+                        <div class="tab4">
+                            <p>Final Stitches</p>
+                        </div>
+                        <div class="tab5">
+                            <p>Complete!</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        @endforeach
+    </div>
+
+    <div class="add-project">
         <form action="{{ route('addproject') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
@@ -87,39 +127,12 @@
             </div>
                 <button type="submit" class="btn btn-primary">Save</button>
         </form>
-
     </div>
-
-    <!-- <div class="projects"> -->
-            <!-- <div class="project">
-                <h1>Project Name&nbsp<i class="fa fa-pencil" id="pencil"></i></h1>
-                <div class="p-desc">
-                    <p><b>Project Description</b></p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, </p>
-                    <p><b>My Progress</b></p>
-                    <div class="progress-bar"></div>
-                    <div class="progress-tabs">
-                        <div class="tab1">
-                            <p>Starting Slipknot</p>
-                        </div>
-                        <div class="tab2">
-                            <p>In the Loop</p>
-                        </div>
-                        <div class="tab3">
-                            <p>Halfway Hooked</p>
-                        </div>
-                        <div class="tab4">
-                            <p>Final Stitches</p>
-                        </div>
-                        <div class="tab5">
-                            <p>Complete!</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div> -->
-    <!-- </div> -->
+    <!-- @if (session('store'))
+    <div class="alert alert-success" role="alert">
+        <p>{{ session('store') }} <a href="{{ route('myprojects', auth()->user()->id) }}">View your projects</a>
+    </div>
+    @endif -->
 
 
 @endsection

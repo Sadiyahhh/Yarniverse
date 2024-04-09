@@ -6,30 +6,21 @@
     text-align: center;
 }
 
-.project, .project1 {
-    background-color: #AF8683;
-    border: 2px solid #573B38;
-    width: 65%;
-    height: 45%;
-    /* position: absolute; */
-    margin-left: 30%;
-    margin-top: 2%;
-}
+/* .projects {
+    padding: 2% 0%;
+} */
 
 .project {
-    bottom: 14%;
+    background-color: #AF8683;
+    border: 2px solid #573B38;
+    width: 47.4rem;
+    position: relative;
+    left: 22rem;
+    bottom: 24.8rem;
+    margin: 1% 0%;
 }
 
-.project1 {
-    top: 95%;
-}
-
-.projects {
-    margin-bottom: 1%;
-    /* margin-top: -41.5%; */
-}
-
-.project h1, .project1 h1 {
+.project h1 {
     text-align: center;
     font-weight: bold;
     font-size: x-large;
@@ -39,9 +30,20 @@
     margin: 2%;
 }
 
-.project p, .project1 p {
+.project p {
     margin-left: 2%;
     font-weight: 500;
+}
+
+.project-img {
+    height: 15px;
+    width: 15px;
+}
+
+.project-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
 }
 
 .progress-bar {
@@ -74,7 +76,22 @@
 #pencil {
     color: #573B38;
     position: relative;
-    left: 35%;
+    left: 20rem;
     margin-bottom: 2%;
     font-size: 31px;
 }  
+
+#project-remove {
+    background: transparent;
+    border: transparent;
+    color: #573B38;
+    cursor: pointer;
+    font-size: 26px !important;
+    position: relative;
+    left: .2rem;
+}
+
+.add-project {
+    float: right;
+    width: 25rem;
+}

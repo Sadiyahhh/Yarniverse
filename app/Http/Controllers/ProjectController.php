@@ -12,23 +12,35 @@ class ProjectController extends Controller
 {
     public function index ()
     {
-        $project =  DB::table('projects')
-        ->where('projects.userID', '=', auth()->id())
+        // $projects =  DB::table('projects')
+        // ->where('projects.userID', '=', auth()->id())
+        // ->get();
+
+        $projects = Project::where('userID', '=', auth()->id())
         ->get();
 
-        return view ('myprojects');
+        // return view ('myprojects');
+        return view('myprojects', [ 'projects' => $projects ]);
     }
 
     public function store(Request $request) {
 
-        // $project = new Project();
+        // $userID = $request->user;
 
         $project = Project::create([
             'userID' => auth()->id(),
-        ]);
+            'projectTitle' => $request->projectTitle,
+            'projectDescription' => $request->projectDescription,
+            'image' => $request->image,
+            'notes' => $request->notes,
 
-        $project->projectTitle = $request->input('projectTitle');
-        $project->projectDescription = $request->input('projectDescription');
+        ]);
+        // $project = new Project();
+        // $userID = auth()->user()->id;
+
+
+        // $project->projectTitle = $request->input('projectTitle');
+        // $project->projectDescription = $request->input('projectDescription');
 
         if ($request->hasfile('image'))
         {
@@ -42,12 +54,21 @@ class ProjectController extends Controller
             $project->image = ''; 
         }
 
-        $project->notes = $request->input('notes');
+        // $project->notes = $request->input('notes');
 
         $project->save();
 
-        return view('myprojects')->with('project', $project);
-
+        return back()->with('store', 'Project added!');
+        // return view('myprojects')->with('project', $project);
+        return view('myprojects', [ 'project' => $project ]);
 
     }
+
+    public function removeProject (Request $request)
+    {
+        Project::where('projectID', $request->projectID)->delete();
+        return back()->with('removeproject', 'Project deleted.');
+
+    }
+
 }

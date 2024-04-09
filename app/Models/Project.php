@@ -9,7 +9,9 @@ class Project extends Model
 {
     protected $table = 'projects';
 
-    protected $fillable = ['projectTitle' , 'projectDescription' , 'image' , 'notes'];
+    protected $primaryKey = 'projectID';
+
+    protected $fillable = ['userID', 'projectTitle' , 'projectDescription' , 'image' , 'notes'];
 
     use HasFactory;
 }

@@ -128,7 +128,9 @@ Route::post('/basket/checkout', [BasketController::class, 'checkout'])->name('ba
 
 //Wishlist routes
 Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist');
+
 Route::post('/wishlist/addToWishlist', [WishlistController::class, 'addToWishlist'])->name('wishlist.addToWishlist');
+
 Route::post('/wishlist/removeFromWishlist', [WishlistController::class, 'removeFromWishlist'])->name('wishlist.removeFromWishlist');
 
 //Download file
@@ -136,4 +138,7 @@ Route::get('/download', [DownloadController::class, 'download'])->name('download
 
 //Project routes
 Route::get('/myprojects', [ProjectController::class, 'index']);
+
 Route::post('/addproject', [ProjectController::class, 'store'])->name('addproject');
+
+Route::post('/removeproject', [ProjectController::class, 'removeProject'])->name('removeproject');
