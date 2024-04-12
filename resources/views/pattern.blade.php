@@ -7,22 +7,33 @@
 <div class="prod-body">
 
         <div class="pattern-left">
-                <div class="pattern-img-cont"><img src="{{ $item->productImage }}" alt="Image"></div>
-            <div class="pattern-rec">
-            </div>
+            @if (Auth::check())
+            <form action="{{ route ('wishlist.addToWishlist') }}" method="POST">
+            <input type="hidden" name="product" id="product" value="{{ $item->productID }}">
+                @csrf
+                <button type="submit" class="wishlist-btn"><span class="material-symbols-outlined">favorite</span></button>
+            </form>
+            @else
+            <form action="/login" class="form-group">
+                <button type="submit" class="wishlist-btn"><span class="material-symbols-outlined">favorite</span></button>
+            </form>
+            @endif
+            <div class="pattern-img-cont"><img src="{{ $item->productImage }}" alt="Image"></div>
+            <!-- <div class="pattern-rec">
+            </div> -->
         </div>
         <div class="pattern-desc"> 
             <div class="pattern-text">
                 <h2>{{$item->productName}}</h2>
                 <p>Skill Level: <b>{{$item->productLevel}}</b></p>
-                <h4>£{{$item->productPrice}}</h4>
+                <h3>£{{$item->productPrice}}</h3>
             </div>
             <div class="rating-stars">
                 <span id="star-icon">&star;</span>
                 <span id="star-icon">&star;</span>
                 <span id="star-icon">&star;</span>
                 <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span>
+                <span id="star-icon">&star;</span><span class="reviews"><u><b>Read all reviews</b></u></span>
             </div>
             <br>
             <br>
@@ -44,31 +55,20 @@
             </div>
             @endif
             <!-- <h1>space</h1> -->
-            @if (Auth::check())
-            <form action="{{ route ('wishlist.addToWishlist') }}" method="POST">
-            <input type="hidden" name="product" id="product" value="{{ $item->productID }}">
-                @csrf
-                <button type="submit"><span class="material-symbols-outlined">favorite</span></button>
-            </form>
-            @else
-            <form action="/login" class="form-group">
-                <button type="submit"><span class="material-symbols-outlined">favorite</span></button>
-            </form>
-            @endif
             <br>
             @if (session('wishlist-add'))
             <div class="alert alert-success" role="alert">
                 <p>{{ session('wishlist-add') }} <a href="{{ route('wishlist', auth()->user()->id) }}">View wishlist</a>
             </div>
             @endif
-            <button class="accordion" id="dd-start">Pattern Description</button>
+            <button class="accordion">Pattern Description</button>
                 <div class="panel">
                     <p>{{$item->productDescription}}</p>
                 </div>
-            <button class="accordion" id="dd-start">Materials Needed</button>
-            <div class="panel">
-                <p>{{$item->productMaterials}}</p>
-            </div>
+            <button class="accordion">Materials Needed</button>
+                <div class="panel">
+                    <p>{{$item->productMaterials}}</p>
+                </div>
         </div>
 </div>
 

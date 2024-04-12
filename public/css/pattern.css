@@ -1,6 +1,6 @@
 .prod-body {
     display: grid;
-    grid-template-columns: 2fr .8fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -17,17 +17,17 @@
 .pattern-img-cont {
   background-color: grey;
   border: 1px solid;
-  width: 21rem;
-  height: 23rem;
+  width: 25rem;
+  height: 26rem;
   position: relative;
-  left: 16rem;
-  top: 9rem;
+  left: 13rem;
+  top: 1rem;
 }
 
 .pattern-img-cont img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 
 /* .pattern-rec {
@@ -35,14 +35,20 @@
 } */
 
 .pattern-desc {
-    grid-area: 1 / 2 / 2 / 3;
-    background-color: #A06F6A;
-    border: 1px solid black;
-    height: 48rem;
+  padding-top: 8%;
+  grid-area: 1 / 2 / 2 / 3;
+  background-color: #A06F6A;
+  border: 1px solid black;
+  height: 44rem;
 }
 
 .pattern-desc .pattern-text {
-    padding: 4%;
+  padding: 4%;
+}
+
+.pattern-text p {
+  font-weight: 500;
+  font-size: large;
 }
 
 .addto-basket {
@@ -52,7 +58,7 @@
     padding: 2%;
     cursor: pointer;
     color: white;
-    margin-left: 15%;
+    margin-left: 5.5rem;
     width: 14rem;
 }
 
@@ -62,11 +68,13 @@ button span {
     bottom: 5.5px;
   }
 
-/* Dropdown Formatting */
+.reviews {
+  bottom: 0.4rem;
+  left: .5rem;
+  position: relative;
+}
 
-.accordion {
-    color: #A06F6A;
-  }
+/* Dropdown Formatting */
   
   .accordion {
     background-color: #A06F6A;
@@ -107,4 +115,22 @@ button span {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+  }
+
+  .wishlist-btn {
+    background: transparent;
+    border: transparent;
+    color: #573B38;
+    cursor: pointer;
+    position: relative;
+    left: 39rem;
+    top: 4.5rem;
+  }
+
+  .wishlist-btn:hover {
+    color: #A06F6A;
+  }
+
+  .wishlist-btn span {
+    font-size: 50px;
   }

@@ -55,32 +55,34 @@
 </div>
 
     <div class="update-project">
+        <h3>Update your Project's Details</h3>
         <form action="{{ route ('updateproject', $proj->projectID) }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             <div class="form-control">
                 <label>Project Title</label>
-                <input type="text" name="projectTitle" required class="form-control" placeholder="Enter a title">
+                <input type="text" name="projectTitle" required class="form-control update-field" placeholder="Enter a title">
             </div>
 
             <div class="form-control">
                 <label>Project Description</label>
-                <textarea id="projectDescription" name="projectDescription" required class="form-control" placeholder="Enter a description:"></textarea>
+                <textarea id="projectDescription" name="projectDescription" required class="form-control update-field" placeholder="Enter a description:"></textarea>
+            </div>
+
+            <div class="form-control">
+                <label>Materials</label>
+                <textarea id="notes" name="notes" required class="form-control update-field" placeholder="Your notes:"></textarea>
             </div>
 
             <div class="input-group">
                 <div class="custom-file">
+                    <label class="custom-file-label" id="login-submit" >Replace Image</label>
                     <input type="file" name="image" class="custom-file-input">
-                    <label class="custom-file-label">Upload Image</label>
                 </div>
             </div>
-
-            <div class="form-control">
-                <label>Notes</label>
-                <textarea id="notes" name="notes" placeholder="Your notes:"></textarea>
-            </div>
-                <button type="submit" id="update-submit" class="btn btn-primary">Update</button>
+                <button type="submit" id="update-submit" class="btn btn-primary">Update Project</button>
         </form>
+
     </div>
 
 @endsection

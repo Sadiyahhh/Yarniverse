@@ -54,6 +54,7 @@
         </div>
 </div>
 
+<div class="project-body">
     @if($projects->count()==0)
     <div class="noprojects">
         <h3>Looks like you don't have any projects. Add one below!</h3>
@@ -90,17 +91,15 @@
     </div>
     @else
 
-        <div class="projects">
+        <!-- <div class="projects"> -->
             @foreach ($projects as $project)
                 <div class="project">
-                    <h1>
                         <form action="{{ route('removeproject') }}" method="POST">
                             <input type="hidden" name="projectID" id="projectID" value="{{ $project->projectID }}">
                             @csrf
-                            <!-- <button class="btn btn-danger" id = "remove_button">Remove</button> -->
-                            <button class="btn btn-danger" id = "project-remove">✕</button>
+                            <button class="btn btn-danger" id = "project-remove"><span class="remove-icon">✕</span></button>
                         </form>
-                        {{$project->projectTitle}}&nbsp;
+                        <h1>{{$project->projectTitle}}&nbsp;</h1>
 
                         <form action="{{ route('editproject', $project->projectID) }}" method="POST">
                             <input type="hidden" name="projectID" id="projectID" value="{{ $project->projectID }}">
@@ -108,13 +107,13 @@
                             <button class="btn btn-danger" id="edit_button"><span class="material-symbols-outlined" id="pencil">edit</span></button>
                         </form>
 
-                    </h1>
                     <div class="p-desc">
                         <p><b>Project Description</b></p>
                         <p>{{$project->projectDescription}}</p>
+                        <p><b>Materials Needed</b></p>
                         <p>{{$project->notes}}</p>
                         <div class="project-img">
-                        <img src="{{$project->image}}" alt="img">
+                        <img src="{{ $project->image }}" alt="img">
                         </div>
                         <p><b>My Progress</b></p>
                         <div class="progress-bar"></div>
@@ -140,39 +139,39 @@
                     </div>
                 </div>
             @endforeach
-        </div>
+        <!-- </div> -->
 
     <div class="add-project">
+        <h3>Add a new Project:</h3>
         <form action="{{ route('addproject') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             <div class="form-control">
                 <label>Project Title</label>
-                <input type="text" name="projectTitle" required class="form-control" placeholder="Enter a title">
+                <input type="text" name="projectTitle" required class="form-control add-field" placeholder="Enter a title">
             </div>
 
             <div class="form-control">
                 <label>Project Description</label>
-                <textarea id="projectDescription" name="projectDescription" required class="form-control" placeholder="Enter a description:"></textarea>
+                <textarea id="projectDescription" name="projectDescription" required class="form-control add-field" placeholder="Enter a description:"></textarea>
+            </div>
+
+            <div class="form-control">
+                <label>Materials</label>
+                <textarea id="notes" name="notes" required class="form-control add-field" placeholder="Your notes:"></textarea>
             </div>
 
             <div class="input-group">
                 <div class="custom-file">
-                    <input type="file" name="image" class="custom-file-input">
-                    <label class="custom-file-label">Upload Image</label>
+                    <label class="custom-file-label" id="login-submit" >Upload Image</label>
+                    <input type="file" name="image" required class="custom-file-input">
                 </div>
             </div>
 
-            <div class="form-control">
-                <label>Notes</label>
-                <!-- <input type="text" name="notes" required class="form-control" placeholder="Your notes:"> -->
-                <textarea id="notes" name="notes" placeholder="Your notes:"></textarea>
-                <!-- <input type="submit" value="Submit"> -->
-            </div>
-                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="submit" id="add-project" class="btn btn-primary">Add Project</button>
         </form>
     </div>
     @endif
- 
+</div>
 
 @endsection

@@ -6,13 +6,56 @@
     text-align: center;
 }
 
-/* .projects {
-    padding: 2% 0%;
-} */
+.update-project {
+    background-color: #AF8683;
+    border: 2px solid #573B38;
+    width: 47.4rem;
+    position: relative;
+    left: 22rem;
+    bottom: 23.8rem;
+    margin: 1% 0%;
+}
 
+.update-project h3 {
+    text-align: center;
+}
+
+.update-project form {
+    padding: 9%;
+    margin-top: -4rem;
+}
+
+.update-field {
+    width: 95%;
+    padding: 2%;
+    background-color: #CCC7C7;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-top: 1%;
+    margin-bottom: 2.5%;
+}
+
+#update-submit {
+    background-color: #7A524E;
+    border: 1px solid #573B38;
+    color: #D0B7B4;
+    font-weight: bold;
+    padding: 1% 5%;
+    position: relative;
+    left: 15rem;
+    top: 1.5rem;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+      
+#update-submit:hover {
+    background-color: #A06F6A;
+}
+
+
+/* 
 .project {
-    /* background-color: #AF8683;
-    border: 2px solid #573B38; */
     width: 47.4rem;
     position: relative;
     left: 22rem;
@@ -44,8 +87,5 @@
     height: 100%;
     width: 100%;
     object-fit: fill;
-}
+} */
 
-.update-project {
-    float: right;
-}

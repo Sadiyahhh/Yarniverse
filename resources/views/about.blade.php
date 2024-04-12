@@ -36,7 +36,7 @@
     </div>
     <hr>
 
-    <div class="loyal">
+    <!-- <div class="loyal">
         <h1 id="l-h1">Loyal Customers</h1>
         <p id="l-p">Meet the heart of Yarniverse – a showcase of our cherished community members 
             who have embarked on their creative journeys with us. Join us in celebrating the stories and talents 
@@ -65,22 +65,8 @@
                     <p>blah blah blhadnkjo dajcjoi sdjsockxov</p>
                 </div>
             </div>
-            <!-- <div class="image2">
-                <div class="loyal-text">
-                    <h1>John Doe</h1>
-                    <p>blah blah blhaddddddddddddddddddddddddddddddddddddddddddddd</p>
-                </div>
-            </div>
-
-            <div class="image3">
-            </div>
-            <div class="loyal-text">
-                    <h1>John Doe</h1>
-                    <p>blah blah blhaddddddddddddddddddddddddddddddddddddddddddddd</p>
-            </div> -->
-
         </div>
-    </div>
+    </div> -->
 
 </div>
 @endsection

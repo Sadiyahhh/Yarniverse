@@ -3,7 +3,6 @@
   }
   
   .about-contain h1 {
-    /* margin-left: 5%; */
     text-align: center;
   }
   
@@ -31,7 +30,6 @@
   }
   
   .who-text p {
-    /* padding: 1%; */
     font-size: medium;
   }
   
@@ -63,13 +61,11 @@
     margin-right: 2.5%;  
     background-color: #AF8683;
     border: 1px solid black;
-    /* width: 92%; */
     height: 81.5%;
     padding: 2% 4%;
   }
   
   .purpose-text p {
-    /* padding: 1%; */
     font-size: medium;
   }
   
@@ -152,14 +148,3 @@
     text-align: left;
   }
   
-  /* .image1 {
-  
-  }
-  
-  .image2 {
-  
-  }
-  
-  .image3 {
-  
-  } */
