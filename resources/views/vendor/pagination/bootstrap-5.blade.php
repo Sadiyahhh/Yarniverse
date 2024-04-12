@@ -127,7 +127,7 @@
 
 #display-text {
     position: relative;
-    left: 36rem;
+    left: 33rem;
 }
 
 </style>

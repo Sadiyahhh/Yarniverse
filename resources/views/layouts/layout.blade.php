@@ -14,10 +14,12 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        <!-- <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
 
         <title>Yarniverse</title>
         <link rel="icon" type="image/x-icon" href="/site-images/icon-nobg.png">
@@ -98,21 +100,13 @@
                 <a href="/basket" i class="material-symbols-outlined" id="header-icons">shopping_bag</i></a>
             </div>
             <div class="icon-text">
-                <!-- <a href="/myprojects" class="loggedin-icons" id="logged-a">My Account</a>
-                <a href="/wishlist" class="loggedin-icons" id="logged-w">Wishlist</a>
-                <a href="/basket" class="loggedin-icons" id="logged-b">Basket</a> -->
                 <a href="/myprojects" class="loggedin-icons" id="text-a">My Account</a>
                 <a href="/wishlist" class="loggedin-icons" id="text-w">Wishlist</a>
                 <a href="/basket" class="loggedin-icons" id="text-b">Basket</a>
             </div>
 
         @endguest
-<!-- 
-        @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif -->
+
     </div>
 
     <div class="navigation" id="navigation">
@@ -123,25 +117,11 @@
         <a href="{{route('homedecor')}}" id="homedecor">Home Decor</a>
     </div>
 
-<!--     
-    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="{{ route('logout') }}"
-            onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
-            {{ __('Logout') }}
-        </a>
-
-        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-            @csrf
-        </form>
-    </div> -->
-
 <div class="container">
 @yield('content')
-
 </div>
 
-    <div class="footer">
+    <!-- <div class="footer">
         <div class="footer-content">
             <div class="footer-logo">
                 <a href="/welcome" class="logo"><img src="/site-images/lightvert-nobg.png" alt="" /></a>
@@ -213,6 +193,49 @@
             </div>
           </div>
         </div>
-    </div>  
+    </div>   -->
+
+    <footer class="footer">
+        <div class="foot-contain">
+            <div class="foot-row">
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                    @if (Route::has('login'))
+                        <li><a href="{{route('login')}}">My Account</a></li>
+                    @else
+                        <li><a href="{{route('myprojects')}}">My Account</a></li>
+                    @endif
+                        <li><a href="/shop">Shop</a></li>
+                        <li><a href="/faqs">FAQs</a></li>
+                        <li><a href="/contactus">Contact</a></li>
+                        <li><a href="/about">About Yarniverse</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Patterns</h4>
+                    <ul>
+                        <li><a href="{{route('amigurumi')}}">Amigurumi</a></li>
+                        <li><a href="{{route('clothing')}}">Clothing</a></li>
+                        <li><a href="{{route('accessories')}}">Accessories</a></li>
+                        <li><a href="{{route('pets')}}">Pets</a></li>
+                        <li><a href="{{route('homedecor')}}">Home Decor</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.tiktok.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-logo">
+                    <a href="/welcome" class="logo"><img src="/site-images/lightvert-nobg.png" alt="" /></a>
+                    </div>
+                </div>
+        </div>
+    </footer>
 
 </html>

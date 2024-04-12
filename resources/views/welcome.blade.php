@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/css/welcome.css">
 
 <div class="welcome-contain">
-  <section class="carousel" aria-label="Gallery">
+  <!-- <section class="carousel" aria-label="Gallery">
     <ol class="carousel__viewport">
       <li id="carousel__slide1"
           tabindex="0"
@@ -62,198 +62,46 @@
         </li>
       </ol>
     </aside>
-  </section>
-  <!-- <div class="welcome-gif">
-    <img src="/site-images/homepage-ezgif.com-optimize.gif" alt="gif">
-    <p>some text</p>
-  </div> -->
-
- 
-
-
-    <div class="most-liked">
-      <h1>Most Liked by Users</h1>
+  </section> -->
+  <div class="welcome-gif">
+    <img src="/site-images/about1.jpeg" alt="gif">
+    <div class="welcome-text">
+    <h1>Track your Project Progress</h1>
+    <p>Browse through our pattern range to find your next project - sign up with us to monitor your creations!</p>
     </div>
+    <a href="/shop"><input type="submit" id="shop" value="Browse Patterns"></a>
+  </div>
 
-    <div class="pcards">
-
-      <div class="pcard1">
-        <div class="prod-card">
-          <div class="image">
-            <i class="fa fa-heart-o"></i>
-          </div>
-          <div class="prod-contain">
-            <h1>Tailored Jeans</h1>
-            <p class="price">£9.99
-                <div class="rating-stars">
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span><b>(0)</b>
-                </div>
-            </p>
-          </div>
-          <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
-        </div>
+  <div class="welcome-section">
+    <div class="sect1">
+      <div class="section-img">
+      <img src="/site-images/yarn-ball.png" alt="gift">
       </div>
-
-      <div class="pcard2">
-        <div class="prod-card">
-          <div class="image">
-            <i class="fa fa-heart-o"></i>
-          </div>
-          <div class="prod-contain">
-            <h1>Tailored Jeans</h1>
-            <p class="price">£9.99
-                <div class="rating-stars">
-                  <span id="star-icon" data-rating="1">&star;</span>
-                  <span id="star-icon" data-rating="2">&star;</span>
-                  <span id="star-icon" data-rating="3">&star;</span>
-                  <span id="star-icon" data-rating="4">&star;</span>
-                  <span id="star-icon" data-rating="5">&star;</span><b>(0)</b>
-                </div>
-            </p>
-          </div>
-          <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
-        </div>
-      </div>
-
-      <div class="pcard3">
-        <div class="prod-card">
-          <div class="image">
-            <i class="fa fa-heart-o"></i>
-          </div>
-          <div class="prod-contain">
-            <h1>Tailored Jeans</h1>
-            <p class="price">£9.99
-                <div class="rating-stars">
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span><b>(0)</b>
-                </div>
-            </p>
-          </div>
-          <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
-        </div>
-      </div>
-
-      <div class="pcard4">
-        <div class="prod-card">
-          <div class="image">
-            <i class="fa fa-heart-o"></i>
-          </div>
-          <div class="prod-contain">
-            <h1>Tailored Jeans</h1>
-            <p class="price">£9.99
-                <div class="rating-stars">
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span><b>(0)</b>
-                </div>
-            </p>
-          </div>
-          <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
-        </div>
-      </div>
-
+      <h2>Creative Craft</h2>
+      <p>Yarniverse is designed to fit your crafting needs</p>
+      <a href="/about"><input type="submit" id="sect" value="Read More"></a>
     </div>
-
-    <div class="pyl">
-      <h1>Patterns You'll Love</h1>
+    <div class="sect2">
+      <div class="section-img">
+      <img src="/site-images/diary.png" alt="gift">
+      </div>
+      <h2>Progress Planning</h2>
+      <p>Monitor and update the progress of crochet projects</p>
+      @if (Route::has('login'))
+      <a href="{{route('login')}}"><input type="submit" id="sect" value="View Profile"></a>
+      @else
+      <a href="{{route('myprojects')}}"><input type="submit" id="sect" value="View Profile"></a>
+      @endif
     </div>
-
-    <div class="pcards">
-
-      <div class="pcard1">
-        <div class="prod-card">
-          <div class="image">
-            <i class="fa fa-heart-o"></i>
-          </div>
-          <div class="prod-contain">
-            <h1>Tailored Jeans</h1>
-            <p class="price">£9.99
-                <div class="rating-stars">
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span><b>(0)</b>
-                </div>
-            </p>
-          </div>
-          <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
-        </div>
+    <div class="sect3">
+      <div class="section-img">
+      <img src="/site-images/knitting.png" alt="gift">
       </div>
-
-      <div class="pcard2">
-        <div class="prod-card">
-          <div class="image">
-            <i class="fa fa-heart-o"></i>
-          </div>
-          <div class="prod-contain">
-            <h1>Tailored Jeans</h1>
-            <p class="price">£9.99
-                <div class="rating-stars">
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span><b>(0)</b>
-                </div>
-            </p>
-          </div>
-          <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
-        </div>
-      </div>
-
-      <div class="pcard3">
-        <div class="prod-card">
-          <div class="image">
-            <i class="fa fa-heart-o"></i>
-          </div>
-          <div class="prod-contain">
-            <h1>Tailored Jeans</h1>
-            <p class="price">£9.99
-                <div class="rating-stars">
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span><b>(0)</b>
-                </div>
-            </p>
-          </div>
-          <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
-        </div>
-      </div>
-
-      <div class="pcard4">
-        <div class="prod-card">
-          <div class="image">
-            <i class="fa fa-heart-o"></i>
-          </div>
-          <div class="prod-contain">
-            <h1>Tailored Jeans</h1>
-            <p class="price">£9.99
-                <div class="rating-stars">
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span>
-                  <span id="star-icon">&star;</span><b>(0)</b>
-                </div>
-            </p>
-          </div>
-          <button><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
-        </div>
-      </div>
-
+      <h2>Craft your Own</h2>
+      <p>Shop patterns and form your perfect craft</p>
+      <a href="/shop"><input type="submit" id="sect" value="Shop Now"></a>
     </div>
+  </div>
 
 
 </div>
