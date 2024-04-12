@@ -20,13 +20,6 @@ class ProductController extends Controller
         return view ('shop', ['products' => $products]);
     }
 
-    public function carousel()
-    {
-        //Method created to get data from the 'product' table and to show them on the products view in carousel.
-        $products = Product::skip(5)->take(16)->get();
-        return $products;
-    }
-
     public function item ($productID) 
     {
         // Method to fetch/return single product - used on pattern details page.

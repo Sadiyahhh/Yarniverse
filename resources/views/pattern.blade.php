@@ -22,8 +22,7 @@
                 <span id="star-icon">&star;</span>
                 <span id="star-icon">&star;</span>
                 <span id="star-icon">&star;</span>
-                <!-- Reviews function/link will be inserted here -->
-                <span id="star-icon">&star;</span><b><u>Read all reviews</u></b>
+                <span id="star-icon">&star;</span>
             </div>
             <br>
             <br>
@@ -32,12 +31,10 @@
             <input type="hidden" name="product" id="product" value="{{ $item->productID }}">
                 @csrf
                 <button type="submit" class="addto-basket"><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
-                <!-- <button type="submit">Add to Basket</button> -->
             </form>
             @else
             <form action="/login" class="form-group">
                 <button type="submit" class="addto-basket"><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button>
-            <!-- <button type="submit" class="addto-basket"><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button> -->
             </form>
             @endif
             <br>
@@ -46,18 +43,16 @@
                 <p>{{ session('add') }} <a href="{{ route('basket', auth()->user()->id) }}">View basket</a>
             </div>
             @endif
-            <h1>space</h1>
+            <!-- <h1>space</h1> -->
             @if (Auth::check())
             <form action="{{ route ('wishlist.addToWishlist') }}" method="POST">
             <input type="hidden" name="product" id="product" value="{{ $item->productID }}">
                 @csrf
-                <button type="submit" class="addto-basket"><i class="material-symbols-outlined">shopping_bag</i><span>Add to Wishlist</span></button>
-                <!-- <button type="submit">Add to Basket</button> -->
+                <button type="submit"><span class="material-symbols-outlined">favorite</span></button>
             </form>
             @else
             <form action="/login" class="form-group">
-                <button type="submit" class="addto-basket"><i class="material-symbols-outlined">shopping_bag</i><span>Add to Wishlist</span></button>
-            <!-- <button type="submit" class="addto-basket"><i class="material-symbols-outlined">shopping_bag</i><span>Add to basket</span></button> -->
+                <button type="submit"><span class="material-symbols-outlined">favorite</span></button>
             </form>
             @endif
             <br>
@@ -77,7 +72,5 @@
         </div>
 </div>
 
-<!-- <h1>Pattern page</h1>
-<p>{{$item->productDescription}}</p> -->
 
 @endsection

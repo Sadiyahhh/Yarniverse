@@ -51,22 +51,23 @@
     </div>
     <br>
 
-    <p id="acc3">Interaction Features</p>
-    <button class="accordion" id="dd-start">Can other users see my reviews and ratings?</button>
+    <p id="acc3">Downloading Patterns</p>
+    <button class="accordion" id="dd-start">I've lost my pattern PDF. How can I access it?</button>
     <div class="panel">
-    <p>Yes, and you theirs, but don't worry! Account information is for your eyes only.</p>
+    <p>Not to worry, simply navigate to your account, and click to the "Purchase History" section to view and download your pattern PDF.</p>
     </div>
 
-    <button class="accordion" id="dd">How do I upload images to a product review?</button>
+    <button class="accordion" id="dd">When are patterns available for download?</button>
     <div class="panel">
-    <p>Under a product lies a section for leaving a review/rating. In this section there is a tab for uploading
-        images from your device - this is optional.</p>
+    <p>We value the effort our creators put into their patterns. For this reason, patterns can only be donwloaded upon purchase,
+        by accessing your purchase history.</p>
     </div>
 
-    <button class="accordion" id="dd">How do I find patterns to leave comments under?</button>
+    <button class="accordion" id="dd">Can I save my downloadable pattern?</button>
     <div class="panel">
-    <p>Simply navigate to a product via the navigation tab with our pattern categories, or use the search bar to find 
-        a product.</p>
+    <p>Yes! On clicking, our patterns are automatically saved to your downloads, so you can access patterns from your device at 
+        any time.
+    </p>
     </div>
     <br>
 
