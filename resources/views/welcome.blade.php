@@ -9,64 +9,11 @@
 <link rel="stylesheet" href="/css/welcome.css">
 
 <div class="welcome-contain">
-  <!-- <section class="carousel" aria-label="Gallery">
-    <ol class="carousel__viewport">
-      <li id="carousel__slide1"
-          tabindex="0"
-          class="carousel__slide">
-        <div class="carousel__snapper">
-          <a href="#carousel__slide3"
-            class="carousel__prev">
-            <i class="arrow left"></i></a>
-          <a href="#carousel__slide2"
-            class="carousel__next">
-            <i class="arrow right"></i></a>
-        </div>
-      </li>
-      <li id="carousel__slide2"
-          tabindex="0"
-          class="carousel__slide">
-        <div class="carousel__snapper"></div>
-        <a href="#carousel__slide1"
-          class="carousel__prev">
-          <i class="arrow left"></i></a>
-        <a href="#carousel__slide3"
-          class="carousel__next">
-          <i class="arrow right"></i></a>
-      </li>
-      <li id="carousel__slide3"
-          tabindex="0"
-          class="carousel__slide">
-        <div class="carousel__snapper"></div>
-        <a href="#carousel__slide2"
-          class="carousel__prev">
-          <i class="arrow left"></i></a>
-        <a href="#carousel__slide1"
-          class="carousel__next">
-          <i class="arrow right"></i></a>
-      </li>
-    </ol>
-    <aside class="carousel__navigation">
-      <ol class="carousel__navigation-list">
-        <li class="carousel__navigation-item">
-          <a href="#carousel__slide1"
-            class="carousel__navigation-button">Go to slide 1</a>
-        </li>
-        <li class="carousel__navigation-item">
-          <a href="#carousel__slide2"
-            class="carousel__navigation-button">Go to slide 2</a>
-        </li>
-        <li class="carousel__navigation-item">
-          <a href="#carousel__slide3"
-            class="carousel__navigation-button">Go to slide 3</a>
-        </li>
-      </ol>
-    </aside>
-  </section> -->
+
   <div class="welcome-gif">
     <img src="/site-images/about1.jpeg" alt="gif">
     <div class="welcome-text">
-    <h1>Track your Project Progress</h1>
+    <h1>Start your Project Journey</h1>
     <p>Browse through our pattern range to find your next project - sign up with us to monitor your creations!</p>
     </div>
     <a href="/shop"><input type="submit" id="shop" value="Browse Patterns"></a>

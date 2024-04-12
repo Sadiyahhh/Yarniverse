@@ -36,37 +36,18 @@
     </div>
     <hr>
 
-    <!-- <div class="loyal">
-        <h1 id="l-h1">Loyal Customers</h1>
-        <p id="l-p">Meet the heart of Yarniverse – a showcase of our cherished community members 
-            who have embarked on their creative journeys with us. Join us in celebrating the stories and talents 
-            of these dedicated individuals who made Yarniverse their crafting home</p>
-        <div class="loyal-contain">
-            <div class="loyalc">
-                <div class="image1">
-                </div>
-                <div class="loyal-text">
-                    <h1>@mia_w90</h1>
-                    <p>blah blah blhadnkjo dajcjoi sdjsockxov</p>
-                </div>
-            </div>
-            <div class="loyalc">
-                <div class="image2">
-                </div>
-                <div class="loyal-text">
-                    <h1>@_curlywurly03</h1>
-                    <p>blah blah blhadnkjo dajcjoi sdjsockxov</p>
-                </div>
-            </div><div class="loyalc">
-                <div class="image3">
-                </div>
-                <div class="loyal-text">
-                    <h1>@hooknstitch22</h1>
-                    <p>blah blah blhadnkjo dajcjoi sdjsockxov</p>
-                </div>
-            </div>
+    <div class="about-sect">
+        <div class="asect-img">
+        <img src="/site-images/gift.png" alt="gift">
         </div>
-    </div> -->
+        <div class="a-sect">
+        <h2>The First Stitch</h2>
+        <p>Founded in 2023, Yarniverse was formed with the intention of combining e-commerce with an online project 
+            management tool for crafty lovers everywhere. We appreciate the difficulty faced with keeping on top of 
+            your crochet projects, so our project management tools are a great way to keep on top of things.
+        </p>
+        </div>
+    </div>
 
 </div>
 @endsection
