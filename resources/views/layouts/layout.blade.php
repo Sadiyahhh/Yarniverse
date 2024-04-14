@@ -121,93 +121,12 @@
 @yield('content')
 </div>
 
-    <!-- <div class="footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <a href="/welcome" class="logo"><img src="/site-images/lightvert-nobg.png" alt="" /></a>
-            </div>
-
-            <div class="footer-links" id="foot-content-box">
-                    <a href="/faqs">FAQs</a><br>
-                    <a href="/contactus">Contact Us</a><br>
-                    <a href="/about">About Yarniverse</a><br>
-                    <a href="/shop">Shop</a><br>
-            </div>
-        </div>
-        <div class="newsletter" id="foot-content-box">
-                <form action="/" method="post" >
-                @csrf
-                    <div class="news-text">
-                        <h3>Sign up to our weekly newsletter</h3>
-                        <p>Be the first to hear about our latest deals and more!</p>
-                    </div>
-
-                    <br>
-
-                    <div class="news-email">
-                        <input type="text" id="news-email" placeholder="Email address" name="email" required><br>
-                    </div>
-
-                    <br>
-
-                    <div class="news-submit">
-                        <input type="submit" id="news-submit" value="Submit">
-                    </div>
-                </form>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <hr>
-        
-        <div class="footer-bottom">
-          <div class="d-flex justify-content-between my-4">
-            <div class="col-md-4 d-flex align-items-center" style="width: 31%;">
-              <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-              </a>
-              <p class= "mb-md-0 text-muted" style="color: #D0B7B4; margin-top:3%;">&copy; Copyright Yarniverse LTD, 2023</p>
-            </div>
-
-            <div class="social">
-                <div class="facebook">
-                    <a href="https://www.facebook.com/" target="_blank">
-                        <i class='bx bxl-facebook  bx-sm'></i>
-                    </a>
-                </div>
-                <div class="instagram">
-                    <a href="https://www.instagram.com/" target="_blank">
-                        <i class='bx bxl-instagram bx-sm'></i>
-                    </a>
-                </div>
-                <div class="tiktok">
-                    <a href="https://www.tiktok.com/" target="_blank">
-                        <i class='bx bxl-tiktok bx-sm'></i>
-                    </a>
-                </div>
-                  <div class="twitter">
-                    <a href="https://www.twitter.com/" target="_blank">
-                        <i class='bx bxl-twitter bx-sm'></i>
-                    </a>
-                </div>
-            </div>
-          </div>
-        </div>
-    </div>   -->
-
     <footer class="footer">
         <div class="foot-contain">
             <div class="foot-row">
                 <div class="footer-col">
                     <h4>Support</h4>
                     <ul>
-                    <!-- @guest
-                    @if (Route::has('login'))
-                        <li><a href="{{route('login')}}">My Account</a></li>
-                    @else
-                        <li><a href="{{route('myprojects')}}">My Account</a></li>
-                    @endif
-                    @endguest -->
                         <li><a href="/shop">Shop</a></li>
                         <li><a href="/faqs">FAQs</a></li>
                         <li><a href="/contactus">Contact</a></li>
@@ -227,10 +146,10 @@
                 <div class="footer-col">
                     <h4>Follow Us</h4>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.tiktok.com/"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.tiktok.com/"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://www.facebook.com/"><img src="/site-images/facebook.png" alt="fb"></a>
+                        <a href="https://www.instagram.com/"><img src="/site-images/instagram.png" alt="ig"></a>
+                        <a href="https://www.pinterest.com/"><img src="/site-images/pinterest.png" alt="pin"></a>
+                        <a href="https://www.twitter.com/"><img src="/site-images/twitter.png" alt="twitter"></a>
                     </div>
                 </div>
                 <div class="footer-logo">
