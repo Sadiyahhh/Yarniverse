@@ -7,8 +7,9 @@
     left: 30%;
     top: 28%;
     width: 68%; */
+    position: relative;
     left: 30%;
-    float: right;
+    min-height: 25rem;
     margin-top: -37%;
     width: 68%;
     padding-bottom: 3%;
@@ -27,7 +28,7 @@
 
 .ph-img {
     width: 185px;
-    height: 210px;
+    height: 200px;
     margin: 6% 9%;
     background-color: #CCC7C7;
     border: 1px solid;

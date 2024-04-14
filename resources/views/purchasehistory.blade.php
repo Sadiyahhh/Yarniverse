@@ -52,6 +52,7 @@
 
         <div class="ph">
             <h2>Purchase History</h2>
+            <div class="ph-contain">
             @foreach ($purchases as $product)
                 <div class="purchase-card">
                     <div class="ph-img">
@@ -76,6 +77,7 @@
                     </div>
                 </div>
             @endforeach
+            </div>
         </div>
         
 

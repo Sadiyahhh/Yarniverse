@@ -4,7 +4,27 @@
 
 <link rel="stylesheet" href="css/basket.css">
 
-    @if($basket->count()==0)
+    @if(!isset($basket))
+    <div class="checkout-screen" style="text-align:center;">
+        <div class="checkout-icon" style="position: relative; left: 29rem; height: 15rem; width: 15rem;">
+            <img src="/site-images/purchase.png" style="height: 100%; width: 100%; object-fit: fill;" alt="icon">
+        </div>
+        <h2>Thank you for your purchase!</h2>
+        <p>Navigate to your purchase history to view and download your new pattern's PDF. Get stitching!</p>
+        <a href="/purchasehistory"><input type="submit" id="purchase-shop" 
+        style="background-color: #7A524E;
+        border: 1px solid #573B38;
+        color: #D0B7B4;
+        font-weight: bold;
+        padding: 1% 2%;
+        margin-top: 2%;
+        margin-left: 1rem;
+        outline: none;
+        border-radius: 20px;
+        cursor: pointer;" value="View Purchase"></input></a>
+    </div>
+
+    @elseif($basket->count()==0)
     <div class="empty-basket">
         <div class="eb-icon">
             <img src="/site-images/shopping.png" alt="icon">
@@ -13,7 +33,6 @@
         <p>Looks like you've not added any patterns to your cart just yet. Browse our patterns and start your next crafty creation!</p>
         <a href="/shop"><input type="submit" id="bask-shop" value="Browse Patterns"></input></a>
     </div>
-
     @else
 
         <h1>Your Basket</h1>

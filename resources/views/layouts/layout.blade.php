@@ -201,11 +201,13 @@
                 <div class="footer-col">
                     <h4>Support</h4>
                     <ul>
+                    <!-- @guest
                     @if (Route::has('login'))
                         <li><a href="{{route('login')}}">My Account</a></li>
                     @else
                         <li><a href="{{route('myprojects')}}">My Account</a></li>
                     @endif
+                    @endguest -->
                         <li><a href="/shop">Shop</a></li>
                         <li><a href="/faqs">FAQs</a></li>
                         <li><a href="/contactus">Contact</a></li>
