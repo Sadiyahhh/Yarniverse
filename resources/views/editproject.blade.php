@@ -11,7 +11,7 @@
 
         <div class="account-nav">
                 <div class="user-info">
-                    <span class="dot"></span>
+                <div class="dot"><img src="/site-images/userprofile.avif" alt="img"></div>
                     <div class="userinfo-t">
                         <div class="user"> 
                             @if (Auth::check())
