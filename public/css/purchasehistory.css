@@ -3,10 +3,6 @@
 }
 
 .ph {
-    /* position: absolute;
-    left: 30%;
-    top: 28%;
-    width: 68%; */
     position: relative;
     left: 30%;
     min-height: 25rem;
@@ -42,11 +38,7 @@
 }
 
 .ph hr {
-    /* width: 115%; */
     margin-left: 3%;
-    /* position: absolute;
-    left: 23%;
-    bottom: 52%; */
 }
 
 .ph-text {
@@ -63,25 +55,13 @@
     margin-left: 4%;
 }
 
-/* .ph-text-content h1{
-    position: absolute;
-    right: 3%;
-    top: 48%;
-    font-size: large;
-    float: right;
-} */
-
 .ph-text p {
     font-weight: 500;
 }
 
 .ph-det {
-    /* position: absolute;
-    right: 3%;
-    top: 81%; */
     font-size: large;
     float: right;
-    /* margin-right: 2%; */
 }
 
 .ph-price {

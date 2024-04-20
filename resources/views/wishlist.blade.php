@@ -51,7 +51,8 @@
 
             @if($wishlist->count()==0)
             <div class="wishlist-empty">
-                <h4>Your wishlist is currently empty.</h4>
+                <h3>Oh no, your wishlist is currently empty..</h3>
+                <img src="/site-images/love.png" alt="img">
             </div>
             @else
                 <h2>{{ Auth::user()->name }}'s Wishlist</h2>

@@ -6,10 +6,6 @@
     text-align: center;
 }
 
-/* .projects {
-    padding: 2% 0%;
-} */
-
 .project-body {
     margin-bottom: -23rem;
 }
@@ -64,8 +60,6 @@
     width: 93%;
     margin-left: 8%;
     height: 14px;
-    /* background-color: #573B38; */
-    /* border: 2px solid; */
 }
 
 .project-progress {
@@ -76,9 +70,6 @@
 .progress-slider .range {
     width: 94%;
     cursor: pointer;
-    /* -webkit-appearance: none;
-    background-color: transparent;
-    border: 2px solid; */
     z-index: 1;
     height: -2rem;
 }
@@ -172,7 +163,3 @@
 #add-project:hover {
     background-color: #A06F6A;
 }
-
-/* .remove-icon {
-
-} */

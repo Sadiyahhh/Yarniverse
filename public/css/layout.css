@@ -227,15 +227,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 	display: flex;
   position: relative;
   left: 3rem;
-	/* flex-wrap: wrap; */
 }
 
 .footer-logo {
   height: 13rem;
   width: 16rem;
-  /* margin: 44px 40px;
-  position: relative;
-  left: 66rem; */
 }
 
 .footer-logo img {
@@ -256,7 +252,6 @@ ul {
 
 .footer-col {
   width: 25%;
-  /* padding: 0 15px; */
 }
 
 .footer-col h4 {
@@ -308,7 +303,6 @@ ul {
 	display: inline-block;
 	height: 40px;
 	width: 40px;
-	/* background-color: rgba(255,255,255,0.2); */
 	margin:0 10px 10px 0;
 	text-align: center;
 	line-height: 40px;
@@ -338,18 +332,6 @@ ul {
 }
 
 /* Accounts Sidebar */
-
-/* .user-info span {
-  background-color: #CCC7C7;
-  display: inline-flex;
-  position: relative;
-  width: 65px;
-  height: 65px;
-  left: 12.5%;
-  margin-bottom: -27%;
-  border-radius: 90px;
-  border: 1px solid;
-} */
 
 .user-info .dot {
   background-color: #CCC7C7;
