@@ -11,7 +11,6 @@
 
         <div class="account-nav">
                 <div class="user-info">
-                    <!-- <span class="dot"><img src="/site-images/userprofile.avif" alt="img"></span> -->
                     <div class="dot"><img src="/site-images/userprofile.avif" alt="img"></div>
                     <div class="userinfo-t">
                         <div class="user"> 
@@ -28,7 +27,6 @@
                         </a></p>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
-                            <!-- <p><u> {{ __('Sign Out') }}</u></p> -->
                         </form>
                         </div>
                     </div>
@@ -57,7 +55,6 @@
 
 <div class="project-body">
     @if($projects->count()==0)
-    <!-- <div class="noprojects"> -->
         <div class="add-project">
             <h3>Add a new Project:</h3>
             <form action="{{ route('addproject') }}" method="POST" enctype="multipart/form-data">
@@ -88,10 +85,8 @@
                     <button type="submit" id="add-project" class="btn btn-primary">Add Project</button>
             </form>
         </div>
-    <!-- </div> -->
     @else
 
-        <!-- <div class="projects"> -->
             @foreach ($projects as $project)
                 <div class="project">
                         <form action="{{ route('removeproject') }}" method="POST">
@@ -145,7 +140,6 @@
                     </div>
                 </div>
             @endforeach
-        <!-- </div> -->
 
     <div class="add-project">
         <h3>Add a new Project:</h3>

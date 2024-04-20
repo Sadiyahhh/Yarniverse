@@ -22,7 +22,6 @@
                         </a></p>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
-                            <!-- <p><u> {{ __('Sign Out') }}</u></p> -->
                         </form>
                         </div>
                     </div>
@@ -53,10 +52,6 @@
             @if($wishlist->count()==0)
             <div class="wishlist-empty">
                 <h4>Your wishlist is currently empty.</h4>
-                <!-- <p>Have a look at our pattern range</p>
-                <div class="ew-icon">
-                    <img src="/site-images/love.png" alt="icon">
-                </div> -->
             </div>
             @else
                 <h2>{{ Auth::user()->name }}'s Wishlist</h2>

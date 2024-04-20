@@ -19,8 +19,6 @@
             </form>
             @endif
             <div class="pattern-img-cont"><img src="{{ $item->productImage }}" alt="Image"></div>
-            <!-- <div class="pattern-rec">
-            </div> -->
         </div>
         <div class="pattern-desc"> 
             <div class="pattern-text">
@@ -33,7 +31,7 @@
                 <span id="star-icon">&star;</span>
                 <span id="star-icon">&star;</span>
                 <span id="star-icon">&star;</span>
-                <span id="star-icon">&star;</span><span class="reviews"><u><b>Read all reviews</b></u></span>
+                <span id="star-icon">&star;</span><span class="reviews"><u><b>Reviews coming soon!</b></u></span>
             </div>
             <br>
             <br>
@@ -54,7 +52,6 @@
                 <p>{{ session('add') }} <a href="{{ route('basket', auth()->user()->id) }}">View basket</a>
             </div>
             @endif
-            <!-- <h1>space</h1> -->
             <br>
             @if (session('wishlist-add'))
             <div class="alert alert-success" role="alert">
@@ -71,6 +68,23 @@
                 </div>
         </div>
 </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+        } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+    });
+    }
+    </script>
 
 
 @endsection

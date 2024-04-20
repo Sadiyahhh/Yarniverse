@@ -30,16 +30,11 @@
   object-fit: fill;
 }
 
-/* .pattern-rec {
-    grid-area: 2 / 1 / 3 / 2;
-} */
-
 .pattern-desc {
   padding-top: 8%;
   grid-area: 1 / 2 / 2 / 3;
   background-color: #A06F6A;
   border: 1px solid black;
-  height: 44rem;
 }
 
 .pattern-desc .pattern-text {

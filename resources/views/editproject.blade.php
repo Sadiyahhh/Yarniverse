@@ -27,7 +27,6 @@
                         </a></p>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
-                            <!-- <p><u> {{ __('Sign Out') }}</u></p> -->
                         </form>
                         </div>
                     </div>
@@ -74,12 +73,6 @@
                 <textarea id="notes" name="notes" required class="form-control update-field" placeholder="Your notes:"></textarea>
             </div>
 
-            <div class="input-group">
-                <div class="custom-file">
-                    <label class="custom-file-label" id="login-submit" >Replace Image</label>
-                    <input type="file" name="image" class="custom-file-input">
-                </div>
-            </div>
                 <button type="submit" id="update-submit" class="btn btn-primary">Update Project</button>
         </form>
 

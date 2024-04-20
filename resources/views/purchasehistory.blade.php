@@ -23,7 +23,6 @@
                         </a></p>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
-                            <!-- <p><u> {{ __('Sign Out') }}</u></p> -->
                         </form>
                         </div>
                     </div>
@@ -31,7 +30,6 @@
 
                 <div class="acc-tab">
                     <div class="myprojects">
-                        <!-- <img src="/site-images/yarn-removebg-preview.png"><p><a href="/myprojects">My Projects</a></p> -->
                         <span class="material-symbols-outlined" id="account-icons">edit_square</span><p><a href="/myprojects">My Projects</a></p>
                     </div>
                 </div>
