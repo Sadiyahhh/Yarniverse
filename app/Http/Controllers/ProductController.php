@@ -9,7 +9,6 @@ class ProductController extends Controller
 {
     public function allProducts (Request $request) 
     {
-        // $products = Product::all();
 
         // Method to sort products by price filter if needed, otherwise display all products, 12 per page.
         if ($request->exists('sort')) {

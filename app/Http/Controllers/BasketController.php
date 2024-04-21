@@ -18,10 +18,6 @@ class BasketController extends Controller
         ->select('baskets.basketID', 'products.*')
         ->get();
 
-        // if (count($basket) == 0) {
-        //     return view('emptybasket');
-        // }
-
         return view('basket', [
             'basket' => $basket,
         ]);
@@ -91,6 +87,5 @@ class BasketController extends Controller
 
         return view('basket');
 
-        //return redirect()->route('shop')->with('success', 'Checkout completed successfully.');
     }
 }

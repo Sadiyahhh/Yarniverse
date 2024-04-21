@@ -10,12 +10,6 @@ use App\Models\Wishlist;
 
 class WishlistController extends Controller
 {
-    // public function index() 
-    // {
-    //     $wishlist = Wishlist::where('userID', Auth::id())->get();
-    //     return view('wishlist', compact('wishlist'));
-
-    // }
 
     public function index() {
         $wishlist =  DB::table('wishlists')
@@ -51,26 +45,4 @@ class WishlistController extends Controller
         return back()->with('success', 'Product removed from your wishlist.');
     }
 
-    // public function add(Request $request) 
-    // {
-    //     if(Auth::check())
-    //     {
-    //         $productID = $request->input('productID');
-    //         if(Product::find($productID))
-    //         {
-    //             $wish = new Wishlist();
-    //             $wish->productID = $productID;
-    //             $wish->userID = Auth::id();
-    //             $wish->save();
-
-    //             return response()->json(['status' => "Added to wishlist."]);
-
-    //         } else {
-    //             return response()->json(['status' => "Product not found."]);
-    //         }
-
-    //     } else {
-    //         return response()->json(['status' => "Sign in to view your wishlist."]);
-    //     }
-    // }
 }

@@ -33,12 +33,6 @@ class ProjectController extends Controller
             'notes' => $request->notes,
 
         ]);
-        // $project = new Project();
-        // $userID = auth()->user()->id;
-
-
-        // $project->projectTitle = $request->input('projectTitle');
-        // $project->projectDescription = $request->input('projectDescription');
 
         if ($request->hasfile('image'))
         {
@@ -52,12 +46,10 @@ class ProjectController extends Controller
             $project->image = ''; 
         }
 
-        // $project->notes = $request->input('notes');
 
         $project->save();
 
         return back()->with('store', 'Project added!');
-        // return view('myprojects')->with('project', $project);
         return view('myprojects', [ 'project' => $project ]);
 
     }

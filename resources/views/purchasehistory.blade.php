@@ -63,7 +63,7 @@
                             <div class="ph-grid">
                                 <div class="ph-creator"> <p>Creator: <b>{{ $product->productCreator }}</b></p></div>
                                 <div class="ph-empty"> </div>
-                                <div class="ph-price"> <h1>{{ $product->productPrice }}</h1></div>
+                                <div class="ph-price"> <h1>£{{ $product->productPrice }}</h1></div>
                             </div>
                             <p>Category: <b>{{ $product->productCategory }}</b></p>
                             <form action="{{ route('download') }}" method="GET">
