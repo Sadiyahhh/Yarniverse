@@ -14,7 +14,7 @@
     </div>
 
     <div class="contact-form">
-        <form action="/views/contactus.blade.php">
+        <form action="#">
             <label for="fname">First Name</label>
             <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
