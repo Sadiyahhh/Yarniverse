@@ -113,9 +113,13 @@
 
                         <div class="progress">
                             <p><b>My Progress</b></p>
+                                <div class="progress-edit">
+                                    <img src="/site-images/edit.png" alt="edit" onclick="edit()">
+                                </div>
+                                <p id="p">40</p>
                             <div class="progress-slider">
-                                <input type="range" class="range" id="range">
-                                <div class="project-progress"></div>
+                                <input type="range" class="range" id="range" max="90">
+                                <div id="project-progress"></div>
                             </div>
 
                             <div class="progress-tabs">
@@ -173,5 +177,23 @@
     </div>
     @endif
 </div>
+
+<script>
+    click = false;
+    function edit (){
+        if (click == false) {
+            document.querySelector(".progress-edit img").src = "/site-images/close.png";
+            document.getElementById("range").oninput = (()=>{
+                document.getElementById("project-progress").style.width = document.getElementById("range").value + "%";
+                document.getElementById("p").innerHTML = parseInt(document.getElementById("range").value) + 10;
+            });
+            click = true;
+        } else {
+            document.querySelector(".progress-edit img").src = "/site-images/edit.png";
+            document.getElementById("range").oninput = "";
+            click = false;
+        }
+    }
+</script>
 
 @endsection
