@@ -10,7 +10,7 @@
             <img src="/site-images/purchase.png" style="height: 100%; width: 100%; object-fit: fill;" alt="icon">
         </div>
         <h2>Thank you for your purchase!</h2>
-        <p>Navigate to your purchase history to view and download your new pattern's PDF. Get stitching!</p>
+        <p>Navigate to your purchase history to view and download your new pattern PDFs. Get stitching!</p>
         <a href="/purchasehistory"><input type="submit" id="purchase-shop" 
         style="background-color: #7A524E;
         border: 1px solid #573B38;
